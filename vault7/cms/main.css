@@ -1,0 +1,145 @@
+
+table {
+	margin: 1em;
+}
+
+th, td {
+	padding: 0.2em 0.5em;
+}
+
+th.highlight-green, td.highlight-green {
+	background-color: #99ff99;
+}
+
+th.highlight-blue, td.highlight-blue {
+	background-color: #9999ff;
+}
+
+th.highlight-gray, td.highlight-gray {
+	background-color: #999999;
+}
+
+th.highlight-red, td.highlight-red {
+	background-color: #ff9999;
+}
+
+th.highlight-yellow, td.highlight-yellow {
+	background-color: #ffff99;
+}
+
+thead, th {
+	background-color: #cccccc;
+	font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #eeeeee;
+}
+
+div.code, div.code-block, div.instruction-block, div.wiki-markup {
+	background-color: #eeeeee;
+	padding: 0.5em;
+	font-family: monospace;
+	margin: 0.5em;
+	text-align: left;
+}
+
+div.warning {
+	border: 2px solid red;
+	background-color: #ffeeee;
+	color: red;
+	font-size: 120%;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+div.html {
+	border: 1px solid black;
+	background-color: #eeeeff;
+	color: black;
+	font-size: 100%;
+	font-style: italic;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+div.tip {
+	border: 1px solid black;
+	background-color: #ffffee;
+	color: black;
+	font-size: 100%;
+	font-style: italic;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+div.info {
+	border: 1px solid green;
+	background-color: #eeffee;
+	color: black;
+	font-size: 100%;
+	font-weight: bold;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+div.note {
+	border: 1px solid black;
+	background-color: #eeeeee;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+div.status {
+	border: 1px solid black;
+	padding: 0.5em;
+	margin: 0.5em;
+}
+
+.user, .redact {
+	color: gray !important;
+	background-color: black !important;
+}
+
+a.mail {
+	color: orange;
+	text-decoration: underline;
+}
+
+a.internal, a.extern, span.space-link, span.link-page {
+	color: red;
+	text-decoration: underline;
+}
+
+span.glossary {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    cursor: help;
+}
+
+span.glossary span.glossary-tt {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1; 
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+span.glossary:hover span.glossary-tt {
+    visibility: visible;
+}
+
+span.pg-tag {
+	font-size: 60%;
+	vertical-align: super;
+}

@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="http://localhost:6081/IMG/favicon.ico">
+        <title>Firmware Reverse Engineering</title>
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/cerulean.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/new-gen.css" rel="stylesheet">
+        <link href="../../css/leak-styles.css" rel="stylesheet">
+        <link href="../../highlighter/efatmarker.css" rel="stylesheet">
+        <style>
+          #efm-button {margin:0 0 4px 0;padding:0 0 0 30px;position:fixed;height:48px;width:52px;bottom:0;right:0;background:transparent '/highlighter/kedit-2.png' no-repeat bottom right;cursor:pointer;opacity:0.4;z-index:99999999999}
+          #efm-button:hover {opacity:1}
+          #efm-button #efm-menu {margin:0 0 52px 0;border:1px outset gray;padding:0;display:none;background:#eee;position:fixed;bottom:0;right:0;width:20em;opacity:1;cursor:auto}
+          #efm-button:hover #efm-menu {display:block;font-size:smaller;color:#999}
+          #efm-button #efm-menu p {margin:0;padding:0 3px}
+          #efm-button #efm-menu a {margin:1px;padding:3px 3px;display:block;font:12px sans-serif;white-space:nowrap;opacity:inherit;cursor:pointer}
+          #efm-button #efm-menu a:hover {color:black;background-color:white;opacity:1}
+          #efm-button #efm-menu a > span {color:gray;position:absolute;right:4px}
+          .efm-hi {background-color:#ff8;font-weight:normal;}
+        </style>
+        <link href="../../bootstrap/css/submit.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="submit_wlkey" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_16384171.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_16384171.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_16384171.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_16384171.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+		<p>This key's fingerprint is A04C 5E09 ED02 B328 03EB  6116 93ED 732E 9231 8DBA</p>
+		<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQQNBFUoCGgBIADFLp+QonWyK8L6SPsNrnhwgfCxCk6OUHRIHReAsgAUXegpfg0b
+rsoHbeI5W9s5to/MUGwULHj59M6AvT+DS5rmrThgrND8Dt0dO+XW88bmTXHsFg9K
+jgf1wUpTLq73iWnSBo1m1Z14BmvkROG6M7+vQneCXBFOyFZxWdUSQ15vdzjr4yPR
+oMZjxCIFxe+QL+pNpkXd/St2b6UxiKB9HT9CXaezXrjbRgIzCeV6a5TFfcnhncpO
+ve59rGK3/az7cmjd6cOFo1Iw0J63TGBxDmDTZ0H3ecQvwDnzQSbgepiqbx4VoNmH
+OxpInVNv3AAluIJqN7RbPeWrkohh3EQ1j+lnYGMhBktX0gAyyYSrkAEKmaP6Kk4j
+/ZNkniw5iqMBY+v/yKW4LCmtLfe32kYs5OdreUpSv5zWvgL9sZ+4962YNKtnaBK3
+1hztlJ+xwhqalOCeUYgc0Clbkw+sgqFVnmw5lP4/fQNGxqCO7Tdy6pswmBZlOkmH
+XXfti6hasVCjT1MhemI7KwOmz/KzZqRlzgg5ibCzftt2GBcV3a1+i357YB5/3wXE
+j0vkd+SzFioqdq5Ppr+//IK3WX0jzWS3N5Lxw31q8fqfWZyKJPFbAvHlJ5ez7wKA
+1iS9krDfnysv0BUHf8elizydmsrPWN944Flw1tOFjW46j4uAxSbRBp284wiFmV8N
+TeQjBI8Ku8NtRDleriV3djATCg2SSNsDhNxSlOnPTM5U1bmh+Ehk8eHE3hgn9lRp
+2kkpwafD9pXaqNWJMpD4Amk60L3N+yUrbFWERwncrk3DpGmdzge/tl/UBldPoOeK
+p3shjXMdpSIqlwlB47Xdml3Cd8HkUz8r05xqJ4DutzT00ouP49W4jqjWU9bTuM48
+LRhrOpjvp5uPu0aIyt4BZgpce5QGLwXONTRX+bsTyEFEN3EO6XLeLFJb2jhddj7O
+DmluDPN9aj639E4vjGZ90Vpz4HpN7JULSzsnk+ZkEf2XnliRody3SwqyREjrEBui
+9ktbd0hAeahKuwia0zHyo5+1BjXt3UHiM5fQN93GB0hkXaKUarZ99d7XciTzFtye
+/MWToGTYJq9bM/qWAGO1RmYgNr+gSF/fQBzHeSbRN5tbJKz6oG4NuGCRJGB2aeXW
+TIp/VdouS5I9jFLapzaQUvtdmpaeslIos7gY6TZxWO06Q7AaINgr+SBUvvrff/Nl
+l2PRPYYye35MDs0b+mI5IXpjUuBC+s59gI6YlPqOHXkKFNbI3VxuYB0VJJIrGqIu
+Fv2CXwy5HvR3eIOZ2jLAfsHmTEJhriPJ1sUG0qlfNOQGMIGw9jSiy/iQde1u3ZoF
+so7sXlmBLck9zRMEWRJoI/mgCDEpWqLX7hTTABEBAAG0x1dpa2lMZWFrcyBFZGl0
+b3JpYWwgT2ZmaWNlIEhpZ2ggU2VjdXJpdHkgQ29tbXVuaWNhdGlvbiBLZXkgKFlv
+dSBjYW4gY29udGFjdCBXaWtpTGVha3MgYXQgaHR0cDovL3dsY2hhdGMzcGp3cGxp
+NXIub25pb24gYW5kIGh0dHBzOi8vd2lraWxlYWtzLm9yZy90YWxrKSA8Y29udGFj
+dC11cy11c2luZy1vdXItY2hhdC1zeXN0ZW1Ad2lraWxlYWtzLm9yZz6JBD0EEwEK
+ACcCGwMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AFAlb6cdIFCQOznOoACgkQk+1z
+LpIxjbrlqh/7B2yBrryWhQMGFj+xr9TIj32vgUIMohq94XYqAjOnYdEGhb5u5B5p
+BNowcqdFB1SOEvX7MhxGAqYocMT7zz2AkG3kpf9f7gOAG7qA1sRiB+R7mZtUr9Kv
+fQSsRFPb6RNzqqB9I9wPNGhBh1YWusUPluLINwbjTMnHXeL96HgdLT+fIBa8ROmn
+0fjJVoWYHG8QtsKiZ+lo2m/J4HyuJanAYPgL6isSu/1bBSwhEIehlQIfXZuS3j35
+12SsO1Zj2BBdgUIrADdMAMLneTs7oc1/PwxWYQ4OTdkay2deg1g/N6YqM2N7rn1W
+7A6tmuH7dfMlhcqw8bf5veyag3RpKHGcm7utDB6k/bMBDMnKazUnM2VQoi1mutHj
+kTCWn/vF1RVz3XbcPH94gbKxcuBi8cjXmSWNZxEBsbirj/CNmsM32Ikm+WIhBvi3
+1mWvcArC3JSUon8RRXype4ESpwEQZd6zsrbhgH4UqF56pcFT2ubnqKu4wtgOECsw
+K0dHyNEiOM1lL919wWDXH9tuQXWTzGsUznktw0cJbBVY1dGxVtGZJDPqEGatvmiR
+o+UmLKWyxTScBm5o3zRm3iyU10d4gka0dxsSQMl1BRD3G6b+NvnBEsV/+KCjxqLU
+vhDNup1AsJ1OhyqPydj5uyiWZCxlXWQPk4p5WWrGZdBDduxiZ2FTj17hu8S4a5A4
+lpTSoZ/nVjUUl7EfvhQCd5G0hneryhwqclVfAhg0xqUUi2nHWg19npPkwZM7Me/3
++ey7svRUqxVTKbXffSOkJTMLUWqZWc087hL98X5rfi1E6CpBO0zmHeJgZva+PEQ/
+ZKKi8oTzHZ8NNlf1qOfGAPitaEn/HpKGBsDBtE2te8PF1v8LBCea/d5+Umh0GELh
+5eTq4j3eJPQrTN1znyzpBYkR19/D/Jr5j4Vuow5wEE28JJX1TPi6VBMevx1oHBuG
+qsvHNuaDdZ4F6IJTm1ZYBVWQhLbcTginCtv1sadct4Hmx6hklAwQN6VVa7GLOvnY
+RYfPR2QA3fGJSUOg8xq9HqVDvmQtmP02p2XklGOyvvfQxCKhLqKi0hV9xYUyu5dk
+2L/A8gzA0+GIN+IYPMsf3G7aDu0qgGpi5Cy9xYdJWWW0DA5JRJc4/FBSN7xBNsW4
+eOMxl8PITUs9GhOcc68Pvwyv4vvTZObpUjZANLquk7t8joky4Tyog29KYSdhQhne
+oVODrdhTqTPn7rjvnwGyjLInV2g3pKw/Vsrd6xKogmE8XOeR8Oqk6nun+Y588Nsj
+XddctWndZ32dvkjrouUAC9z2t6VE36LSyYJUZcC2nTg6Uir+KUTs/9RHfrvFsdI7
+iMucdGjHYlKc4+YwTdMivI1NPUKo/5lnCbkEDQRVKAhoASAAvnuOR+xLqgQ6KSOO
+RTkhMTYCiHbEsPmrTfNA9VIip+3OIzByNYtfFvOWY2zBh3H2pgf+2CCrWw3WqeaY
+wAp9zQb//rEmhwJwtkW/KXDQr1k95D5gzPeCK9R0yMPfjDI5nLeSvj00nFF+gjPo
+Y9Qb10jp/Llqy1z35Ub9ZXuA8ML9nidkE26KjG8FvWIzW8zTTYA5Ezc7U+8HqGZH
+VsK5KjIO2GOnJiMIly9MdhawS2IXhHTV54FhvZPKdyZUQTxkwH2/8QbBIBv0OnFY
+3w75Pamy52nAzI7uOPOU12QIwVj4raLC+DIOhy7bYf9pEJfRtKoor0RyLnYZTT3N
+0H4AT2YeTra17uxeTnI02lS2Jeg0mtY45jRCU7MrZsrpcbQ464I+F411+AxI3NG3
+cFNJOJO2HUMTa+2PLWa3cERYM6ByP60362co7cpZoCHyhSvGppZyH0qeX+BU1oyn
+5XhT+m7hA4zupWAdeKbOaLPdzMu2Jp1/QVao5GQ8kdSt0n5fqrRopO1WJ/S1eoz+
+Ydy3dCEYK+2zKsZ3XeSC7MMpGrzanh4pk1DLr/NMsM5L5eeVsAIBlaJGs75Mp+kr
+ClQL/oxiD4XhmJ7MlZ9+5d/o8maV2K2pelDcfcW58tHm3rHwhmNDxh+0t5++i30y
+BIa3gYHtZrVZ3yFstp2Ao8FtXe/1ALvwE4BRalkh+ZavIFcqRpiF+YvNZ0JJF52V
+rwL1gsSGPsUY6vsVzhpEnoA+cJGzxlor5uQQmEoZmfxgoXKfRC69si0ReoFtfWYK
+8Wu9sVQZW1dU6PgBB30X/b0Sw8hEzS0cpymyBXy8g+itdi0NicEeWHFKEsXa+HT7
+mjQrMS7c84Hzx7ZOH6TpX2hkdl8Nc4vrjF4iff1+sUXj8xDqedrg29TseHCtnCVF
+kfRBvdH2CKAkbgi9Xiv4RqAP9vjOtdYnj7CIG9uccek/iu/bCt1y/MyoMU3tqmSJ
+c8QeA1L+HENQ/HsiErFGug+Q4Q1SuakHSHqBLS4TKuC+KO7tSwXwHFlFp47GicHe
+rnM4v4rdgKic0Z6lR3QpwoT9KwzOoyzyNlnM9wwnalCLwPcGKpjVPFg1t6F+eQUw
+WVewkizhF1sZBbED5O/+tgwPaD26KCNuofdVM+oIzVPOqQXWbaCXisNYXoktH3Tb
+0X/DjsIeN4TVruxKGy5QXrvo969AQNx8Yb82BWvSYhJaXX4bhbK0pBIT9fq08d5R
+IiaN7/nFU3vavXa+ouesiD0cnXSFVIRiPETCKl45VM+f3rRHtNmfdWVodyXJ1O6T
+ZjQTB9ILcfcb6XkvH+liuUIppINu5P6i2CqzRLAvbHGunjvKLGLfvIlvMH1mDqxp
+VGvNPwARAQABiQQlBBgBCgAPAhsMBQJW+nHeBQkDs5z2AAoJEJPtcy6SMY26Qtgf
+/0tXRbwVOBzZ4fI5NKSW6k5A6cXzbB3JUxTHMDIZ93CbY8GvRqiYpzhaJVjNt2+9
+zFHBHSfdbZBRKX8N9h1+ihxByvHncrTwiQ9zFi0FsrJYk9z/F+iwmqedyLyxhIEm
+SHtWiPg6AdUM5pLu8GR7tRHagz8eGiwVar8pZo82xhowIjpiQr0Bc2mIAusRs+9L
+jc+gjwjbhYIg2r2r9BUBGuERU1A0IB5Fx+IomRtcfVcL/JXSmXqXnO8+/aPwpBuk
+bw8sAivSbBlEu87P9OovsuEKxh/PJ65duQNjC+2YxlVcF03QFlFLGzZFN7Fcv5JW
+lYNeCOOz9NP9TTsR2EAZnacNk75/FYwJSJnSblCBre9xVA9pI5hxb4zu7CxRXuWc
+QJs8Qrvdo9k4Jilx5U9X0dsiNH2swsTM6T1gyVKKQhf5XVCS4bPWYagXcfD9/xZE
+eAhkFcAuJ9xz6XacT9j1pw50MEwZbwDneV93TqvHmgmSIFZow1aU5ACp+N/ksT6E
+1wrWsaIJjsOHK5RZj/8/2HiBftjXscmL3K8k6MbDI8P9zvcMJSXbPpcYrffw9A6t
+ka9skmLKKFCcsNJ0coLLB+mw9DVQGc2dPWPhPgtYZLwG5tInS2bkdv67qJ4lYsRM
+jRCW5xzlUZYk6SWD4KKbBQoHbNO0Au8Pe/N1SpYYtpdhFht9fGmtEHNOGPXYgNLq
+VTLgRFk44Dr4hJj5I1+d0BLjVkf6U8b2bN5PcOnVH4Mb+xaGQjqqufAMD/IFO4Ro
+TjwKiw49pJYUiZbw9UGaV3wmg+fue9To1VKxGJuLIGhRXhw6ujGnk/CktIkidRd3
+5pAoY5L4ISnZD8Z0mnGlWOgLmQ3IgNjAyUzVJRhDB5rVQeC6qX4r4E1xjYMJSxdz
+Aqrk25Y//eAkdkeiTWqbXDMkdQtig2rY+v8GGeV0v09NKiT+6extebxTaWH4hAgU
+FR6yq6FHs8mSEKC6Cw6lqKxOn6pwqVuXmR4wzpqCoaajQVz1hOgD+8QuuKVCcTb1
+4IXXpeQBc3EHfXJx2BWbUpyCgBOMtvtjDhLtv5p+4XN55GqY+ocYgAhNMSK34AYD
+AhqQTpgHAX0nZ2SpxfLr/LDN24kXCmnFipqgtE6tstKNiKwAZdQBzJJlyYVpSk93
+6HrYTZiBDJk4jDBh6jAx+IZCiv0rLXBM6QxQWBzbc2AxDDBqNbea2toBSww8HvHf
+hQV/G86Zis/rDOSqLT7e794ezD9RYPv55525zeCk3IKauaW5+WqbKlwosAPIMW2S
+kFODIRd5oMI51eof+ElmB5V5T9lw0CHdltSM/hmYmp/5YotSyHUmk91GDFgkOFUc
+J3x7gtxUMkTadELqwY6hrU8=
+=BLTH
+-----END PGP PUBLIC KEY BLOCK-----
+		</pre>
+	</div>
+</div>
+
+<div id="submit_help_contact" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_16384171.html#submit_help_contact" class="btn-wl">How to contact WikiLeaks?</a>
+			<a href="page_16384171.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_16384171.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_16384171.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Contact</h3>
+		<p>If you need help using Tor you can contact WikiLeaks for assistance in setting it up using our simple webchat available at: <a href="https://wikileaks.org/talk">https://wikileaks.org/talk</a></p>
+		<p>If you can use Tor, but need to contact WikiLeaks for other reasons use our secured webchat available at <b>http://wlchatc3pjwpli5r.onion</b></p>
+		<p>We recommend contacting us over Tor if you can.</p>
+	</div>
+</div>
+
+<div id="submit_help_tor" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_16384171.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_16384171.html#submit_help_tor" class="btn-wl">What is Tor?</a>
+			<a href="page_16384171.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_16384171.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Tor</h3>
+		<p><a href="https://www.torproject.org">Tor</a> is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+		<p>In order to use the WikiLeaks public submission system as detailed above you can download the Tor Browser Bundle, which is a Firefox-like browser available for Windows, Mac OS X and GNU/Linux and pre-configured to connect using the anonymising system Tor.</p>
+		<h4>Tails</h4>
+		<p>If you are at high risk and you have the capacity to do so, you can also access the submission system through a secure operating system called <a href="https://tails.boum.org">Tails</a>. Tails is an operating system launched from a USB stick or a DVD that aim to leaves no traces when the computer is shut down after use and automatically routes your internet traffic through Tor. Tails will require you to have either a USB stick or a DVD at least 4GB big and a laptop or desktop computer.</p>
+	</div>
+</div>
+
+<div id="submit_help_tips" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_16384171.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_16384171.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_16384171.html#submit_help_tips" class="btn-wl">Tips for Sources</a>
+				<a href="page_16384171.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>Tips</h3>
+		<p>Our submission system works hard to preserve your anonymity, but we recommend you also take some of your own precautions. Please review these basic guidelines. </p>
+		<div>
+			<h4>1. Contact us if you have specific problems</h4>
+			<p>If you have a very large submission, or a submission with a complex format, or are a high-risk source, please <a href="page_16384171.html#submit_help_contact">contact us</a>. In our experience it is always possible to find a custom solution for even the most seemingly difficult situations.</p>
+		</div>
+		<div>
+			<h4>2. What computer to use</h4>
+			<p>If the computer you are uploading from could subsequently be audited in an investigation, consider using a computer that is not easily tied to you. Technical users can also use <a href="https://tails.boum.org">Tails</a> to help ensure you do not leave any records of your submission on the computer.</p>
+		</div>
+		<div>
+			<h4>3. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+	</div>
+</div>
+
+<div id="submit_help_after" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_16384171.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_16384171.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_16384171.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_16384171.html#submit_help_after" class="btn-wl">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>After</h3>
+
+		<div>
+			<h4>1. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+		<div>
+			<h4>2. Act normal</h4>
+			<p>If you are a high-risk source, avoid saying anything or doing anything after submitting which might promote suspicion. In particular, you should try to stick to your normal routine and behaviour.</p>
+		</div>
+
+		<div>
+			<h4>3. Remove traces of your submission</h4>
+			<p>If you are a high-risk source and the computer you prepared your submission on, or uploaded it from, could subsequently be audited in an investigation, we recommend that you format and dispose of the computer hard drive and any other storage media you used.</p>
+			<p>In particular, hard drives retain data after formatting which may be visible to a digital forensics team and flash media (USB sticks, memory cards and SSD drives) retain data even after a secure erasure. If you used flash media to store sensitive data, it is important to destroy the media.</p>
+			<p>If you do this and are a high-risk source you should make sure there are no traces of the clean-up, since such traces themselves may draw suspicion.</p>
+			<div>
+				<h4>4. If you face legal action</h4>
+				<p>If a legal action is brought against you as a result of your submission, there are organisations that may help you. The Courage Foundation is an international organisation dedicated to the protection of journalistic sources. You can find more details at <a href="https://www.couragefound.org">https://www.couragefound.org</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="submit" class="submit_banner">
+	<div class="container">
+		<div class="page-header">
+			<h1>Submit documents to WikiLeaks</h1>
+			<a class="remove-button" href="page_16384171.html#"><span class="glyphicon glyphicon-remove-circle"></span></a>
+		</div>
+		<p>WikiLeaks publishes documents of political or historical importance that are censored or otherwise suppressed. We specialise in strategic global publishing and large archives.</p>
+		<p>The following is the address of our secure site where you can anonymously upload your documents to WikiLeaks editors. You can only access this submissions system through Tor. (See our <a href="page_16384171.html#submit_help_tor">Tor tab</a> for more information.) We also advise you to read our <a href="page_16384171.html#submit_help_tips">tips for sources</a> before submitting.</p>
+
+		<div class="alert alert-info">
+			<div class="onion-url">wlupld3ptjvsgwqw.onion</div>
+			<div>
+				Copy this address into your Tor browser. Advanced users, if they wish, can also add a further layer of encryption to their submission using <a href="page_16384171.html#submit_wlkey">our public PGP key</a>.
+			</div>
+		</div>
+
+		<p>If you cannot use Tor, or your submission is very large, or you have specific requirements, WikiLeaks provides several alternative methods. <a href="page_16384171.html#submit_help_contact">Contact us</a> to discuss how to proceed.</p>
+	</div>
+</div>
+<div id="submit_help_buttons" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_16384171.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_16384171.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_16384171.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_16384171.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+        <div id="main">
+            
+
+<link href="../../static/css/styles_topnav.css" rel="stylesheet">
+<link href="../../static/css/styles_sidenav.css" rel="stylesheet">
+<div class="top-navigation">
+  <nav class="navbar">
+      <a href="page_16384171.html#menu" class="mobile-only hot-dog nav-element">
+      </a>
+    <div class="nav-logo">
+      <a href="https://wikileaks.org">
+        <h1>WikiLeaks</h1>
+      </a>
+    </div>
+    <div class="action-buttons">
+      <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+      <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+      <a class="button-face submit-link" href="page_16384171.html#submit">Submit</a>
+    </div>
+    <form class="global-search" method="get" action="https://search.wikileaks.org/">
+      <input type="text" name="q" placeholder="Search">
+      <button class="btn-search" type="submit"></button>
+    </form>
+    <div class="main-nav">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            </li>
+          
+            <li>
+              <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            </li>
+          
+            <li>
+              <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            </li>
+          
+            <li>
+              <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </nav>
+</div><nav id="menu" class="side-nav rub">
+  <div class="menu-wrapper">
+    <a class="close-btn nav-element" href="page_16384171.html#"></a>
+    
+      <ul class="first-level">
+        
+          <li>
+            <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            
+          </li>
+        
+          <li>
+            <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            
+          </li>
+        
+          <li>
+            <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            
+          </li>
+        
+          <li>
+            <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            
+          </li>
+        
+      </ul>
+    
+    <aside class="friends mobile-only">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a href="https://www.torproject.org/" target="_blank">Tor Project</a>
+            </li>
+          
+            <li>
+              <a href="https://tails.boum.org/" target="_blank">Tails</a>
+            </li>
+          
+            <li>
+              <a href="https://www.couragefound.org/" target="_blank">Courage</a>
+            </li>
+          
+            <li>
+              <a href="https://www.bitcoin.org/" target="_blank">Bitcoin</a>
+            </li>
+          
+        </ul>
+      
+    </aside>
+    <aside class="social mobile-only">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/wikileaks" class="nav-element" target="_blank" alt="Facebook">
+            <img class="img-responsive" src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" class="nav-element" target="_blank" alt="Twitter">
+            <img class="img-responsive" src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</nav>
+
+            <div class="container-fluid row-fluid">
+                <div class="col-xs-12 col-sm-12 col-md-10 container-text">
+                    <div class="leak-header">
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<div class="title-area">
+    <h1 class="leak-title">Vault7: CIA Hacking Tools Revealed</h1>
+    <img src="../logo.png">
+</div>
+
+</body></html>
+
+                        <ul class="leak-navigation">
+                            <a href="../index.html"><li>Releases</li></a>
+                            <a href="index.html"><li class="active">Documents</li></a>
+                       </ul>
+                    </div>
+                    <p>Navigation:  » <a href="page_15728683.html">Latest version</a></p>
+<hr>
+                    <div id="uniquer">
+                        <p>Owner: <a class="user" href="user_524297.html"><span class="user">User #524297</span></a></p>
+<h2>Firmware Reverse Engineering</h2>
+<h2></h2>
+<p><i>('toc' missing)</i></p>
+<p> </p>
+<hr>
+<h2>Firmware Images</h2>
+<p>We modified flashrom v0.9.7 ( <span class="external">http://www.flashrom.org/Flashrom</span> ) to make it work with our 32MB flash from Macronix ( MX25L25635FZ2I-10G ).  Eventually, we will attach the modified flashrom source code to this page when the source code is more stable.</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">flashrom -V -p buspirate_spi:dev=/dev/ttyUSB0,spispeed=8M,pullups=on -c MX25L25635F -r ./tmp/a1470-timecapsule-20150225.bin</div></code></pre></div>
+<p> </p>
+<p> </p>
+<table><tbody>
+<tr>
+<th style="text-align: center;">Airport Device</th>
+<th style="text-align: center;">Model</th>
+<th style="text-align: center;">Date of Capture</th>
+<th style="text-align: center;">MD5</th>
+<th style="text-align: center;">Download File</th>
+</tr>
+<tr>
+<td style="text-align: center;">Time Capsule</td>
+<td style="text-align: center;">A1470 - ME177LL/A</td>
+<td style="text-align: center;">25 February 2015</td>
+<td style="text-align: center;"><span>2b0d2c5657daa8b65ac1141c912beaa3</span></td>
+<td style="text-align: center;"><a href="files/a1470-timecapsule-20150225.bin.pdf">a1470-timecapsule-20150225.bin</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+</tr>
+<tr>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+</tr>
+</tbody></table>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<hr>
+<h2><span style="line-height: 1.4285715;">Firmware Image Parsing</span></h2>
+<p><span style="line-height: 1.4285715;">The binwalk command ( <span class="external">http://binwalk.org</span> ) is usually helpful when parsing a known binary file, however, we found that binwalk does not do well against the Apple Airport firmware.  Binwalk did identify a few locations to examine further by hand.</span></p>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ binwalk -Bv a1470-timecapsule-20150225.bin 
+
+Scan Time:     2015-03-24 15:21:11
+Target File:   /home/<span class="user">User #71383</span>/tmp/a1470-timecapsule-20150225.bin
+MD5 Checksum:  2b0d2c5657daa8b65ac1141c912beaa3
+Signatures:    328
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+74424         0x122B8         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/siutils.c
+79068         0x134DC         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/aiutils.c
+93208         0x16C18         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/load.c
+93340         0x16C9C         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/hndchipc.c
+147460        0x24004         LZMA compressed data, properties: 0x5D, dictionary size: 65536 bytes, uncompressed size: 610436 bytes
+1072251       0x105C7B        Copyright string: "Copyright 1995-2005 <span class="user">User #71419</span> "
+1072536       0x105D98        CRC32 polynomial table, little endian
+1076632       0x106D98        CRC32 polynomial table, big endian
+1081700       0x108164        gzip compressed data, maximum compression, has original file name: "netbsd.j28_release.image.bin", from Unix, last modified: 2014-04-14 22:11:40
+8214656       0x7D5880        Minix filesystem, V1, little endian, -20629 zones
+15752315      0xF05C7B        Copyright string: "Copyright 1995-2005 <span class="user">User #71419</span> "
+15752600      0xF05D98        CRC32 polynomial table, little endian
+15756696      0xF06D98        CRC32 polynomial table, big endian
+15761764      0xF08164        gzip compressed data, maximum compression, has original file name: "netbsd.j28_release.image.bin", from Unix, last modified: 2014-04-14 22:11:40
+22894720      0x15D5880       Minix filesystem, V1, little endian, -20629 zones
+30584320      0x1D2AE00       OpenSSH RSA1 private key, version "1.1"
+30591488      0x1D2CA00       <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> private key
+30595072      0x1D2D800       OpenSSH <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> public key
+30598144      0x1D2E400       <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> private key
+30602240      0x1D2F400       OpenSSH <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> public key
+
+</div></code></pre></div>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<p><span style="line-height: 1.4285715;">The "Unix path:" information found by binwalk is simply strings within the Broadcom/Apple <span class="glossary">CFE<span class="glossary-tt">Common Firmware Environment</span></span> bootloader.  Analysis of the <span class="glossary">CFE<span class="glossary-tt">Common Firmware Environment</span></span> bootloader is still needed.</span></p>
+<p><span style="line-height: 1.4285715;">The "LZMA compressed data" information found by binwalk is could be associated with the Broadcom/Apple <span class="glossary">CFE<span class="glossary-tt">Common Firmware Environment</span></span> bootloader.</span></p>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./lzma_compressed_data.lzma ibs=1 skip=147460 count=178288
+178288+0 records in
+348+1 records out
+178288 bytes (178 kB) copied, 0.0819817 s, 2.2 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ file lzma_compressed_data.lzma 
+lzma_compressed_data.lzma: data
+<span class="user">User #71383</span>@andromeda:~/tmp$ lzmainfo lzma_compressed_data.lzma 
+lzma_compressed_data.lzma
+Uncompressed size:             1 MB (610436 bytes)
+Dictionary size:               0 MB (2^16 bytes)
+Literal context bits (lc):     3
+Literal pos bits (lp):         0
+Number of pos bits (pb):       2
+<span class="user">User #71383</span>@andromeda:~/tmp$ unlzma lzma_compressed_data.lzma 
+<span class="user">User #71383</span>@andromeda:~/tmp$ ll
+total 126112
+drwxr-xr-x  2 <span class="user">User #71383</span> <span class="user">User #71383</span>     4096 2015-03-26 20:46 ./
+drwxr-xr-x 31 <span class="user">User #71383</span> <span class="user">User #71383</span>     4096 2015-03-26 19:10 ../
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 33558528 2015-02-24 23:37 a1470-timecapsule-20150224.bin
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 33554432 2015-02-25 14:24 a1470-timecapsule-20150225.bin
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>    52930 2015-03-26 18:25 binwalk-0x108164.txt
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>    52930 2015-03-26 18:26 binwalk-0xf08164.txt
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 22652736 2015-03-26 18:16 compressed_netbsd_kernel-0x108164
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>  7849964 2015-03-26 18:18 compressed_netbsd_kernel-0x108164.gz.orig
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 22652736 2015-03-26 18:17 compressed_netbsd_kernel-0xf08164
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>  7849964 2015-03-26 18:18 compressed_netbsd_kernel-0xf08164.gz.orig
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>    33124 2015-03-25 15:41 gzboot-0x100000
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>    33124 2015-03-25 15:39 gzboot-0xf00000
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>   610436 2015-03-26 20:45 lzma_compressed_data
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>   178288 2015-03-26 20:45 lzma_compressed_data.lzma.orig
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     3072 2015-03-25 14:32 openssh_dsa_public_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     7168 2015-03-25 14:27 openssh_rsa1_private_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     6144 2015-03-25 15:18 openssh_rsa_public_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     3584 2015-03-25 14:30 pem_dsa_private_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     4096 2015-03-25 14:35 pem_rsa_private_key </div></code></pre></div>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<p>We examined the Airport firmware at offset 0x1D2AE00 ( OpenSSH RSA1 private key, version "1.1" ), and determined the five keys found by binwalk to be listed sequentially in the firmware.  Where the last key ( OpenSSH <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> public key ) ended was a guess.</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./openssh_rsa1_private_key ibs=1 skip=30584320 count=7168
+7168+0 records in
+14+0 records out
+7168 bytes (7.2 kB) copied, 0.00173387 s, 4.1 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ ssh-keygen -e -f openssh_rsa1_private_key
+version 1 keys are not supported </div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./pem_dsa_private_key ibs=1 skip=30591488 count=3584
+3584+0 records in
+7+0 records out
+3584 bytes (3.6 kB) copied, 0.000970766 s, 3.7 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ openssl dsa -inform <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> -text -in pem_dsa_private_key
+read <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> key
+Private-Key: (1024 bit)
+priv:
+    00:96:17:5f:40:3c:2e:0a:50:e1:58:5f:89:eb:25:
+    61:42:11:04:25:78
+pub: 
+    31:4b:4e:ca:45:e7:60:54:a8:a2:64:fc:32:cf:fb:
+    fd:3e:98:66:ef:7f:9a:a7:a7:2a:d1:99:2e:97:5e:
+    cf:2a:64:3a:fb:01:c8:fe:b3:1b:bf:ba:e8:4d:f0:
+    03:dc:ce:52:28:de:8e:a7:b4:9a:a5:33:93:52:09:
+    f5:06:57:a6:fa:32:74:7a:69:be:9b:20:5e:51:88:
+    2a:13:81:85:77:f7:fc:f1:ee:1e:db:bb:ca:3a:07:
+    50:75:29:92:07:4d:e1:87:0a:55:2d:c4:8c:8a:83:
+    fd:63:bf:d0:6b:e1:a6:eb:a7:64:2c:66:c0:8f:fe:
+    c0:a9:c0:d3:72:24:95:91
+P:   
+    00:e5:9c:e6:b0:cc:d7:a8:20:af:e5:85:04:43:d2:
+    d2:32:74:03:67:b4:86:3a:96:3c:3a:5b:28:27:c6:
+    c9:b4:dd:da:a8:12:93:4a:be:bf:bc:da:df:6e:55:
+    93:a4:cf:74:91:c1:ed:64:a1:9d:69:ff:d5:1d:d0:
+    f4:60:3f:98:15:1a:fa:54:43:1f:37:49:b4:0c:a8:
+    ef:8b:cc:27:fe:66:90:78:3d:80:74:25:a3:f7:fa:
+    0a:65:d6:70:27:5a:f0:34:13:34:ef:0a:7d:d0:40:
+    3a:cb:6b:ac:87:0d:a4:01:cd:24:8e:6c:32:07:86:
+    82:d0:6f:38:7e:ea:82:64:a7
+Q:   
+    00:ff:bb:d1:e9:a8:b4:da:a9:03:23:84:86:fa:cc:
+    f2:bc:1d:89:7b:37
+G:   
+    00:92:4c:d6:64:1c:4d:c2:a6:f1:20:1e:55:77:27:
+    e6:32:3a:c1:ef:d1:58:49:8f:d5:1e:4b:18:fa:ad:
+    5f:87:da:ec:83:69:04:5e:60:64:3b:36:09:c2:11:
+    33:be:2c:56:1b:52:14:46:27:eb:67:f8:31:3a:85:
+    c3:6f:7e:cd:f7:0d:b8:6b:7b:6a:d1:1a:96:44:45:
+    df:3a:89:fd:f1:4b:d6:9c:67:0c:98:cc:95:9c:87:
+    b5:52:3b:3b:f0:54:ae:be:ab:71:14:10:c5:83:c9:
+    23:bb:55:db:32:56:0e:48:1c:3c:36:5a:d8:09:42:
+    05:62:f4:2c:99:0d:c1:44:a0
+writing <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> key
+-----BEGIN <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----
+MIIBvAIBAAKBgQDlnOawzNeoIK/lhQRD0tIydANntIY6ljw6Wygnxsm03dqoEpNK
+vr+82t9uVZOkz3SRwe1koZ1p/9Ud0PRgP5gVGvpUQx83SbQMqO+LzCf+ZpB4PYB0
+JaP3+gpl1nAnWvA0EzTvCn3QQDrLa6yHDaQBzSSObDIHhoLQbzh+6oJkpwIVAP+7
+0emotNqpAyOEhvrM8rwdiXs3AoGBAJJM1mQcTcKm8SAeVXcn5jI6we/RWEmP1R5L
+GPqtX4fa7INpBF5gZDs2CcIRM74sVhtSFEYn62f4MTqFw29+zfcNuGt7atEalkRF
+3zqJ/fFL1pxnDJjMlZyHtVI7O/BUrr6rcRQQxYPJI7tV2zJWDkgcPDZa2AlCBWL0
+LJkNwUSgAoGAMUtOykXnYFSoomT8Ms/7/T6YZu9/mqenKtGZLpdezypkOvsByP6z
+G7+66E3wA9zOUijejqe0mqUzk1IJ9QZXpvoydHppvpsgXlGIKhOBhXf3/PHuHtu7
+yjoHUHUpkgdN4YcKVS3EjIqD/WO/0GvhpuunZCxmwI/+wKnA03IklZECFQCWF19A
+PC4KUOFYX4nrJWFCEQQleA==
+-----END <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./openssh_dsa_public_key ibs=1 skip=30595072 count=3072
+3072+0 records in
+6+0 records out
+3072 bytes (3.1 kB) copied, 0.000795556 s, 3.9 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ ssh-keygen -e -f openssh_dsa_public_key
+---- BEGIN SSH2 PUBLIC KEY ----
+Comment: "1024-bit DSA, converted by <span class="user">User #71383</span>@andromeda from OpenSSH"
+AAAAB3NzaC1kc3MAAACBAOWc5rDM16ggr+WFBEPS0jJ0A2e0hjqWPDpbKCfGybTd2qgSk0
+q+v7za325Vk6TPdJHB7WShnWn/1R3Q9GA/mBUa+lRDHzdJtAyo74vMJ/5mkHg9gHQlo/f6
+CmXWcCda8DQTNO8KfdBAOstrrIcNpAHNJI5sMgeGgtBvOH7qgmSnAAAAFQD/u9HpqLTaqQ
+MjhIb6zPK8HYl7NwAAAIEAkkzWZBxNwqbxIB5VdyfmMjrB79FYSY/VHksY+q1fh9rsg2kE
+XmBkOzYJwhEzvixWG1IURifrZ/gxOoXDb37N9w24a3tq0RqWREXfOon98UvWnGcMmMyVnI
+e1Ujs78FSuvqtxFBDFg8kju1XbMlYOSBw8NlrYCUIFYvQsmQ3BRKAAAACAMUtOykXnYFSo
+omT8Ms/7/T6YZu9/mqenKtGZLpdezypkOvsByP6zG7+66E3wA9zOUijejqe0mqUzk1IJ9Q
+ZXpvoydHppvpsgXlGIKhOBhXf3/PHuHtu7yjoHUHUpkgdN4YcKVS3EjIqD/WO/0Gvhpuun
+ZCxmwI/+wKnA03IklZE=
+---- END SSH2 PUBLIC KEY ----</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./pem_rsa_private_key ibs=1 skip=30598144 count=4096
+4096+0 records in
+8+0 records out
+4096 bytes (4.1 kB) copied, 0.00101769 s, 4.0 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ openssl rsa -inform <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> -text -in pem_rsa_private_key
+Private-Key: (2048 bit)
+modulus:
+    00:e5:9f:ce:d6:ee:d6:85:83:ac:70:15:18:0f:b3:
+    74:c4:75:4e:bb:7e:1c:51:6d:49:87:8c:46:cc:a5:
+    df:b7:60:af:ec:2a:2f:6c:41:28:47:74:72:80:36:
+    0c:ca:ce:8e:fd:d1:d4:28:4e:62:60:30:d8:8c:e5:
+    ba:b6:79:e4:c8:19:cb:89:c7:9f:71:4e:17:07:fc:
+    29:4c:16:48:15:7e:c4:dc:e7:18:9c:6e:b9:a5:b2:
+    3a:75:95:d8:cd:8f:2a:8e:8f:e7:9c:e4:94:fc:93:
+    9e:a4:71:ad:d6:37:a5:e0:c4:6e:fd:12:93:e2:f6:
+    82:1c:8d:7a:8b:b9:ca:1b:db:98:64:45:e1:d0:94:
+    ed:cb:a9:51:e4:c2:cd:be:a0:78:01:76:1e:be:a3:
+    bb:2e:0a:99:0d:5b:81:6b:c8:40:c1:1a:90:56:35:
+    a1:ed:e8:b6:fb:69:c5:33:46:a0:c7:9e:9e:f0:01:
+    95:e8:a9:81:23:03:4d:1f:42:a1:eb:2e:b7:03:4b:
+    97:21:d6:70:41:96:cc:22:0f:60:9f:2f:58:e2:42:
+    b7:2c:fb:24:9f:e1:42:c4:88:16:e0:35:f6:a7:e2:
+    c8:00:14:1c:c6:8c:ff:02:06:ba:69:1c:3b:b4:75:
+    d4:d0:f3:56:58:b8:f7:1c:60:f3:54:03:66:c7:7e:
+    03:b5
+publicExponent: 65537 (0x10001)
+privateExponent:
+    6c:64:3b:67:09:e7:09:af:56:3e:b2:36:61:72:fc:
+    b3:a0:0c:42:45:0d:69:02:85:ab:0e:74:7d:35:ef:
+    9c:c8:6f:42:b3:c7:1e:fa:c2:e0:b7:ff:34:b6:4e:
+    e3:8d:0d:c2:92:c1:eb:24:d5:1b:42:f3:75:cf:1b:
+    8b:f7:8e:1f:46:cd:e5:83:ed:a7:b6:8c:f8:9f:f7:
+    7e:8b:26:0b:bf:83:7e:23:38:62:df:81:92:cd:c6:
+    fa:aa:79:64:cf:27:ef:93:ce:69:29:1d:8a:fc:c3:
+    ee:2c:1b:3a:fb:99:b9:b8:00:0c:46:30:b8:fa:54:
+    00:d6:67:fa:7d:01:02:94:89:0a:51:62:07:d6:8a:
+    0d:0a:01:13:1a:88:61:d4:6c:3d:fd:a0:72:f3:54:
+    9a:b2:13:5f:5a:95:ff:a7:e3:8b:31:01:8c:ef:a6:
+    f6:d7:37:68:1c:53:3d:ac:35:47:14:6e:18:8c:5c:
+    2b:7c:5b:49:76:26:20:d9:41:73:b8:e2:a1:43:6e:
+    89:03:bc:b3:a9:b2:59:72:f2:54:03:c4:0e:d5:c8:
+    b5:76:50:76:39:5e:f2:4d:04:5c:21:5c:c5:77:b2:
+    e7:3e:f9:96:8b:d1:f4:84:ad:6a:4e:dc:8b:c5:e4:
+    94:4e:ac:7f:a0:e7:47:c6:39:19:ac:f8:5d:f2:a1:
+    21
+prime1:
+    00:fc:c0:3f:70:9c:d7:89:03:4c:fe:32:b9:87:e5:
+    2e:1c:4d:10:5e:8c:01:92:c1:1d:64:91:0d:3e:79:
+    fc:f7:fb:b1:24:b0:9c:d8:cd:18:98:90:2a:ea:a1:
+    82:cb:ad:a6:05:b7:8b:32:48:77:35:15:50:fa:32:
+    54:1c:d9:a2:20:1d:40:bc:df:c5:6c:7e:57:4f:29:
+    f1:14:ac:02:09:e7:4d:61:1e:1b:5a:56:6e:62:be:
+    20:f4:c2:e4:0d:f2:96:94:f1:b8:57:e4:76:7c:76:
+    75:3e:0d:15:eb:25:22:56:e1:57:fe:9b:a3:55:7e:
+    7b:10:87:49:e1:07:1e:99:cf
+prime2:
+    00:e8:93:74:6e:be:18:78:8c:15:81:dc:92:e0:53:
+    ae:38:55:51:2c:d4:43:f5:11:d8:3c:38:22:a8:25:
+    c7:8c:ee:d0:eb:7f:96:5e:c1:5d:ab:e5:7c:fd:2d:
+    13:d8:62:61:8c:ff:93:47:b0:ad:1c:46:38:73:70:
+    47:ac:7b:b7:6f:6c:c7:21:63:36:e6:92:ab:69:9c:
+    c8:77:fb:77:c8:c4:db:52:a7:ac:b3:36:1a:52:42:
+    04:70:38:f1:d7:f8:0e:c2:fc:77:f6:c0:cf:67:dd:
+    01:d0:2d:b6:f2:ed:f9:41:bd:aa:08:60:9f:78:a1:
+    f4:f8:fa:5a:70:ce:c7:9f:3b
+exponent1:
+    00:ea:22:95:22:16:c8:bb:0d:a9:b7:18:fa:31:5f:
+    26:55:e5:35:b2:bf:f3:7d:25:13:bb:63:7b:67:52:
+    cd:fa:52:d8:08:6a:eb:01:13:0d:23:d6:f9:4a:9d:
+    0f:72:ea:8b:8f:64:35:b8:00:d5:1d:01:80:20:25:
+    9b:31:96:91:cf:3a:0a:0c:6d:26:8f:98:81:fc:bd:
+    97:ac:54:a3:16:d5:84:22:e1:26:e9:8a:83:7b:49:
+    31:72:4b:4f:c3:73:e3:f6:59:ed:30:ce:5c:cc:73:
+    57:ac:81:a6:ba:4b:8e:01:f9:81:f0:43:f1:0c:73:
+    bc:40:d5:72:a4:d8:59:8a:95
+exponent2:
+    55:4e:30:78:a6:15:07:b2:29:f9:55:d4:31:9f:bf:
+    d9:3d:c1:e6:75:7c:ef:98:b9:fd:6c:81:99:b7:31:
+    b8:49:a8:2b:98:c2:a8:c2:b7:fe:e2:cf:b3:75:23:
+    40:4c:e5:86:f7:ff:27:5e:70:40:5c:a9:3b:fe:44:
+    eb:c8:fd:01:4b:9e:c6:6a:43:aa:d2:c5:38:99:9f:
+    16:13:10:5e:7d:86:0c:8d:1f:d5:23:d5:07:b2:db:
+    39:e6:49:1e:74:07:c6:11:20:57:4b:65:47:ad:52:
+    8a:ef:19:99:85:1b:d5:b7:21:74:ad:2c:10:ed:26:
+    93:64:10:64:2c:14:20:1d
+coefficient:
+    51:f8:15:70:fd:36:b0:84:a5:11:66:ac:e1:53:41:
+    33:fa:6b:ef:cb:59:60:e6:1a:cb:5c:cc:5a:1e:ed:
+    f2:cd:1b:84:2e:7a:c1:6d:31:e4:a0:f6:99:d7:80:
+    d5:21:89:9a:85:f7:7d:4b:1a:48:21:8c:a4:4e:f4:
+    fe:35:60:0e:b7:87:39:c1:22:fb:1d:ef:69:26:10:
+    bd:a6:3f:d3:d9:72:ac:e2:50:54:f2:08:98:7e:1c:
+    aa:35:fc:05:0e:d4:d4:a8:48:e6:15:b3:56:40:3a:
+    20:45:1e:85:9d:f0:e7:89:08:1e:9e:62:dc:3f:76:
+    7b:a6:d6:11:a6:15:40:80
+writing <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> key
+-----BEGIN <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----
+MIIEowIBAAKCAQEA5Z/O1u7WhYOscBUYD7N0xHVOu34cUW1Jh4xGzKXft2Cv7Cov
+bEEoR3RygDYMys6O/dHUKE5iYDDYjOW6tnnkyBnLicefcU4XB/wpTBZIFX7E3OcY
+nG65pbI6dZXYzY8qjo/nnOSU/JOepHGt1jel4MRu/RKT4vaCHI16i7nKG9uYZEXh
+0JTty6lR5MLNvqB4AXYevqO7LgqZDVuBa8hAwRqQVjWh7ei2+2nFM0agx56e8AGV
+6KmBIwNNH0Kh6y63A0uXIdZwQZbMIg9gny9Y4kK3LPskn+FCxIgW4DX2p+LIABQc
+xoz/Aga6aRw7tHXU0PNWWLj3HGDzVANmx34DtQIDAQABAoIBAGxkO2cJ5wmvVj6y
+NmFy/LOgDEJFDWkChasOdH0175zIb0Kzxx76wuC3/zS2TuONDcKSwesk1RtC83XP
+G4v3jh9GzeWD7ae2jPif936LJgu/g34jOGLfgZLNxvqqeWTPJ++TzmkpHYr8w+4s
+Gzr7mbm4AAxGMLj6VADWZ/p9AQKUiQpRYgfWig0KARMaiGHUbD39oHLzVJqyE19a
+lf+n44sxAYzvpvbXN2gcUz2sNUcUbhiMXCt8W0l2JiDZQXO44qFDbokDvLOpslly
+8lQDxA7VyLV2UHY5XvJNBFwhXMV3suc++ZaL0fSErWpO3IvF5JROrH+g50fGORms
++F3yoSECgYEA/MA/cJzXiQNM/jK5h+UuHE0QXowBksEdZJENPnn89/uxJLCc2M0Y
+mJAq6qGCy62mBbeLMkh3NRVQ+jJUHNmiIB1AvN/FbH5XTynxFKwCCedNYR4bWlZu
+Yr4g9MLkDfKWlPG4V+R2fHZ1Pg0V6yUiVuFX/pujVX57EIdJ4Qcemc8CgYEA6JN0
+br4YeIwVgdyS4FOuOFVRLNRD9RHYPDgiqCXHjO7Q63+WXsFdq+V8/S0T2GJhjP+T
+R7CtHEY4c3BHrHu3b2zHIWM25pKraZzId/t3yMTbUqesszYaUkIEcDjx1/gOwvx3
+9sDPZ90B0C228u35Qb2qCGCfeKH0+PpacM7HnzsCgYEA6iKVIhbIuw2ptxj6MV8m
+VeU1sr/zfSUTu2N7Z1LN+lLYCGrrARMNI9b5Sp0PcuqLj2Q1uADVHQGAICWbMZaR
+zzoKDG0mj5iB/L2XrFSjFtWEIuEm6YqDe0kxcktPw3Pj9lntMM5czHNXrIGmukuO
+AfmB8EPxDHO8QNVypNhZipUCgYBVTjB4phUHsin5VdQxn7/ZPcHmdXzvmLn9bIGZ
+tzG4SagrmMKowrf+4s+zdSNATOWG9/8nXnBAXKk7/kTryP0BS57GakOq0sU4mZ8W
+ExBefYYMjR/VI9UHsts55kkedAfGESBXS2VHrVKK7xmZhRvVtyF0rSwQ7SaTZBBk
+LBQgHQKBgFH4FXD9NrCEpRFmrOFTQTP6a+/LWWDmGstczFoe7fLNG4QuesFtMeSg
+9pnXgNUhiZqF931LGkghjKRO9P41YA63hznBIvsd72kmEL2mP9PZcqziUFTyCJh+
+HKo1/AUO1NSoSOYVs1ZAOiBFHoWd8OeJCB6eYtw/dnum1hGmFUCA
+-----END <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./openssh_rsa_public_key ibs=1 skip=30602240 count=3071
+3071+0 records in
+5+1 records out
+3071 bytes (3.1 kB) copied, 0.000776856 s, 4.0 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ ssh-keygen -e -f openssh_rsa_public_key
+---- BEGIN SSH2 PUBLIC KEY ----
+Comment: "2048-bit RSA, converted by <span class="user">User #71383</span>@andromeda from OpenSSH"
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDln87W7taFg6xwFRgPs3TEdU67fhxRbUmHjEbMpd
++3YK/sKi9sQShHdHKANgzKzo790dQoTmJgMNiM5bq2eeTIGcuJx59xThcH/ClMFkgVfsTc
+5xicbrmlsjp1ldjNjyqOj+ec5JT8k56kca3WN6XgxG79EpPi9oIcjXqLucob25hkReHQlO
+3LqVHkws2+oHgBdh6+o7suCpkNW4FryEDBGpBWNaHt6Lb7acUzRqDHnp7wAZXoqYEjA00f
+QqHrLrcDS5ch1nBBlswiD2CfL1jiQrcs+ySf4ULEiBbgNfan4sgAFBzGjP8CBrppHDu0dd
+TQ81ZYuPccYPNUA2bHfgO1
+---- END SSH2 PUBLIC KEY ----</div></code></pre></div>
+<p> </p>
+<p>Now we want to look by hand at the "netbsd.j28_release.image.bin" offsets ( 0x108164 and 0xf08164 ).  We confirmed with NetBSD source code ( src/sys/arch/evbarm/stand/gzboot/gzboot.c ) there is a gzboot header (gzip header) at these offsets.  Further review of the NetBSD source code ( src/sys/arch/evbarm/stand/gzboot/srtbegin.S ) indicated that the bytes starting at offsets 0x100000 and 0xf00000 are the beginning of the NetBSD gzboot decompressor.  To confirm our suspicions we copied the first 48 bytes at 0x100000 into the Online Disassembler ( <span class="external">http://www.onlinedisassembler.com</span> ) - the disassembly closely matched the assembly code in srtbegin.S.  Further disassembly of the gzboot loader via Ghidra is needed.  This review by hand further confirmed that the compressed NetBSD kernel begins at the offsets 0x108164 and 0xf08164.</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./gzboot-0x100000 ibs=1 skip=1048576 count=33124
+33124+0 records in
+64+1 records out
+33124 bytes (33 kB) copied, 0.011309 s, 2.9 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./gzboot-0xf00000 ibs=1 skip=15728640 count=33124
+33124+0 records in
+64+1 records out
+33124 bytes (33 kB) copied, 0.0119577 s, 2.8 MB/s</div></code></pre></div>
+<p> </p>
+<p>Additional disassembly of the gzboot code should reveal the size of the compressed NetBSD kernel.  But for now we want to look by hand at the "Minix filesystem" offsets ( 0x7d5880 and 0x15d5880 ) found by binwalk.  After skipping to offset 0x7d5880, we examined the binary bytes before the offset and found that the first "netbsd.j28_release.image.bin" image ends at 0x7d547b with zeros until 0x7d5880.  Therefore, we believe the first compressed NetBSD kernel can be found at 0x108164 - 0x7d5880 ( 7,132,956 bytes ).  We followed these same steps with the second "netbsd.j28_release.image.bin" image - the image ends at 0x15d547b with zeros until 0x15d5880.  Therefore, we believe the second compressed NetBSD kernel can be found at 0xf08164 - 0x15d5880 ( 7,132,956 bytes ).</p>
+<p>When we try to gunzip the extracted, compressed NetBSD kernels with the information above, we received the following message - "gzip: compressed_netbsd_kernel-0x108164.gz: unexpected end of file".  Therefore, we need to re-examine the compressed kernel's ending offsets until gunzip can properly uncompress the kernel.  The first question we have is - why did binwalk identify a "Minix filesystem" at offsets ( 0x7d5880 and 0x15d5880 )?  When looking at the firmware in a hex editor, we find all zeros before and after these offsets - no immediate data.  Since 0x7d5880 is not the end of the compressed NetBSD kernel, we started scanning the firmware below 0x7d5880 which discovered more binary data.  After several trial-and-error attempts, we found the end of the first compressed NetBSD kernel at 0x88494f offset.  If the second compressed NetBSD kernel follows the pattern of the first kernel, then the end of the second compressed NetBSD kernel would be at 0x168494f offset.  We were able to confirm our suspicions.  We now know that the first compressed NetBSD kernel can be found at 0x108164 - 0x88494f ( 7,849,964 bytes ) while the second compressed NetBSD kernel can be found at 0xf08164 - 0x168494f ( 7,849,964 bytes ).</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./compressed_netbsd_kernel-0x108164.gz ibs=1 skip=1081700 count=7849964
+7849964+0 records in
+15331+1 records out
+7849964 bytes (7.8 MB) copied, 2.56776 s, 3.1 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./compressed_netbsd_kernel-0xf08164.gz ibs=1 skip=15761764 count=7849964
+7849964+0 records in
+15331+1 records out
+7849964 bytes (7.8 MB) copied, 2.28769 s, 3.4 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ file compressed_netbsd_kernel-0x*
+compressed_netbsd_kernel-0x108164.gz: gzip compressed data, was "netbsd.j28_release.image.bin", from Unix, last modified: Mon Apr 14 18:11:40 2014, max compression
+compressed_netbsd_kernel-0xf08164.gz: gzip compressed data, was "netbsd.j28_release.image.bin", from Unix, last modified: Mon Apr 14 18:11:40 2014, max compression
+<span class="user">User #71383</span>@andromeda:~/tmp$ gunzip compressed_netbsd_kernel-0x108164.gz 
+<span class="user">User #71383</span>@andromeda:~/tmp$ gunzip compressed_netbsd_kernel-0xf08164.gz 
+<span class="user">User #71383</span>@andromeda:~/tmp$ ll
+total 125232
+drwxr-xr-x  2 <span class="user">User #71383</span> <span class="user">User #71383</span>     4096 2015-03-26 18:19 ./
+drwxr-xr-x 31 <span class="user">User #71383</span> <span class="user">User #71383</span>     4096 2015-03-24 19:06 ../
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 33558528 2015-02-24 23:37 a1470-timecapsule-20150224.bin
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 33554432 2015-02-25 14:24 a1470-timecapsule-20150225.bin
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 22652736 2015-03-26 18:16 compressed_netbsd_kernel-0x108164
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>  7849964 2015-03-26 18:18 compressed_netbsd_kernel-0x108164.gz.orig
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span> 22652736 2015-03-26 18:17 compressed_netbsd_kernel-0xf08164
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>  7849964 2015-03-26 18:18 compressed_netbsd_kernel-0xf08164.gz.orig
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>    33124 2015-03-25 15:41 gzboot-0x100000
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>    33124 2015-03-25 15:39 gzboot-0xf00000
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     3072 2015-03-25 14:32 openssh_dsa_public_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     7168 2015-03-25 14:27 openssh_rsa1_private_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     6144 2015-03-25 15:18 openssh_rsa_public_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     3584 2015-03-25 14:30 pem_dsa_private_key
+-rw-rw-r--  1 <span class="user">User #71383</span> <span class="user">User #71383</span>     4096 2015-03-25 14:35 pem_rsa_private_key</div></code></pre></div>
+<p> </p>
+<p>Now we needed to binwalk the newly uncompressed file images to learn more about the NetBSD kernel installed on the Apple Airport devices - lots of data to examine.</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ binwalk -Bv compressed_netbsd_kernel-0x108164 &gt;&gt; binwalk-0x108164.txt
+<span class="user">User #71383</span>@andromeda:~/tmp$ binwalk -Bv compressed_netbsd_kernel-0xf08164 &gt;&gt; binwalk-0xf08164.txt
+<span class="user">User #71383</span>@andromeda:~/tmp$ diff binwalk-0x108164.txt binwalk-0xf08164.txt 
+2,3c2,3
+&lt; Scan Time:     2015-03-26 18:25:38
+&lt; Target File:   /home/<span class="user">User #71383</span>/tmp/compressed_netbsd_kernel-0x108164
+---
+&gt; Scan Time:     2015-03-26 18:26:08
+&gt; Target File:   /home/<span class="user">User #71383</span>/tmp/compressed_netbsd_kernel-0xf08164
+<span class="user">User #71383</span>@andromeda:~/tmp$ view binwalk-0x108164.txt
+Scan Time:     2015-03-26 18:25:38
+Target File:   /home/<span class="user">User #71383</span>/tmp/compressed_netbsd_kernel-0x108164
+MD5 Checksum:  db9dfaa6fa24769d094e46c6972a4807
+Signatures:    328
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+187493        0x2DC65         Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+195445        0x2FB75         Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1284
+335729        0x51F71         Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 572
+397901        0x6124D         Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1280
+1188941       0x12244D        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 528
+1215657       0x128CA9        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+1237057       0x12E041        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1284
+1307357       0x13F2DD        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1280
+1713685       0x1A2615        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+1798453       0x1B7135        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+1807285       0x1B93B5        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5376
+1851817       0x1C41A9        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5388
+1855733       0x1C50F5        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5388
+2000373       0x1E85F5        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5376
+2060677       0x1F7185        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5396
+2540753       0x26C4D1        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5532
+2673185       0x28CA21        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+2833081       0x2B3AB9        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5484
+3153817       0x301F99        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+3521341       0x35BB3D        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1388
+3547033       0x361F99        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1388
+3580093       0x36A0BD        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1388
+3582629       0x36AAA5        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1388
+3892281       0x3B6439        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1288
+4005308       0x3D1DBC        VxWorks symbol table, little endian, first entry: [type: initialized data, code address: 0x805641F0, symbol address: 0xFFFF0012]
+4006508       0x3D226C        CRC32 polynomial table, little endian
+4442248       0x43C888        gzip compressed data, from Unix, NULL date (1970-01-01 00:00:00)
+4568243       0x45B4B3        Copyright string: "Copyright 1995-2002 Jean-loup Gailly "
+4569067       0x45B7EB        Copyright string: "Copyright 1995-2002 <span class="user">User #71419</span> "
+4572020       0x45C374        CRC32 polynomial table, little endian
+4576116       0x45D374        CRC32 polynomial table, big endian
+4581016       0x45E698        SHA256 hash constants, little endian
+4581640       0x45E908        <span class="glossary">XML<span class="glossary-tt">Extensible Markup Language</span></span> document, version: "1.0"
+4581980       0x45EA5C        Base64 standard index table
+4582306       0x45EBA2        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/Firmware/NetBSD/Targets/J28/release/obj/build.kernel-target.conf
+4582510       0x45EC6E        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/Firmware/NetBSD/Targets/J28/release/obj/build.kernel-target.conf
+4582648       0x45ECF8        Copyright string: "Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,"
+4582821       0x45EDA5        Copyright string: "Copyright (c) 1982, 1986, 1989, 1991, 1993"
+4624076       0x468ECC        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/miscfs/genfs/genfs_io.c
+4627036       0x469A5C        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/../../../apple_netbsd/fs/hfs/hfs_readwrite.c
+4627748       0x469D24        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/../../../apple_netbsd/fs/hfs/hfs_vfsops.c
+4629440       0x46A3C0        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/../../../apple_netbsd/fs/hfs/hfs_vnops.c
+4630684       0x46A89C        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netinet6/icmp6.c
+4643864       0x46DC18        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netinet6/ip6_input.c
+4644160       0x46DD40        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netinet6/ip6_output.c
+4644772       0x46DFA4        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netinet/ip_input.c
+4645168       0x46E130        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netinet/ip_output.c
+4645672       0x46E328        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/ipsec.c
+4647780       0x46EB64        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/ipsec_input.c
+4648832       0x46EF80        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/ipsec_netbsd.c
+4649404       0x46F1BC        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/ipsec_output.c
+4656092       0x470BDC        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/kern/kern_sysctl.c
+4659528       0x471948        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/key.c
+4671589       0x474865        Neighborly text, "neighboracket %d)"
+4671801       0x474939        Neighborly text, "neighbornput: invalid ND option, ignored"
+4692784       0x479B30        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/net/route.c
+4712120       0x47E6B8        MPFS filesystem, Microchop, version 44.32, 28020 file entries
+4722660       0x480FE4        Neighborly text, "neighbor anon/obj pg=%d/%d, gets(lock/unlock)=%d/%des: anon=%d, anoncow=%d, obj=%d, prcopy=%d, przero=%d"
+4728384       0x482640        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/../../../apple_netbsd/fs/vfs/vfs_journal.c
+4735308       0x48414C        MPFS filesystem, Microchop, version 0.0, 0 file entries
+4751560       0x4880C8        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/xform_ah.c
+4753176       0x488718        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/xform_esp.c
+4754620       0x488CBC        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/netipsec/xform_ipcomp.c
+4757148       0x48969C        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/lib/libkern/../../../common/lib/libppath/ppath.c
+4816540       0x497E9C        ELF, 32-bit LSB executable, ARM, version 1 (SYSV)
+5161711       0x4EC2EF        Neighborly text, "neighbors6_stats"
+5218732       0x4FA1AC        Neighborly text, "neighbor_count_neighbors"
+5218796       0x4FA1EC        Neighborly text, "neighbors"
+5280947       0x5094B3        Neighborly text, "neighborock"
+5809639       0x58A5E7        mcrypt 2.2 encrypted data, algorithm: blowfish-448, mode: CBC, keymode: 8bit
+6008126       0x5BAD3E        Minix filesystem, V1, big endian, 0 zones
+6076128       0x5CB6E0        ELF, 32-bit LSB executable, ARM, version 1 (SYSV)
+6084697       0x5CD859        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5376
+6770949       0x675105        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1300
+7084253       0x6C18DD        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5384
+7084301       0x6C190D        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+7086957       0x6C236D        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5384
+7087005       0x6C239D        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5380
+9044757       0x8A0315        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1456
+10796513      0xA4BDE1        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5400
+11565773      0xB07ACD        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 1280
+12098385      0xB89B51        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5384
+12098621      0xB89C3D        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 5460
+13223435      0xC9C60B        mcrypt 2.2 encrypted data, algorithm: blowfish-448, mode: CBC, keymode: 4bit
+13643589      0xD02F45        Certificate in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (x509 v3), header length: 4, sequence length: 771
+14046480      0xD65510        Unix path: /usr/share/misc/more.help
+14048508      0xD65CFC        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/usr.sbin/services_mkdb/services_mkdb.c
+14059692      0xD688AC        Neighborly text, "neighbors"
+14059718      0xD688C6        Neighborly text, "neighbor countst"
+14059739      0xD688DB        Neighborly text, "neighbors for %s%s"
+14059770      0xD688FA        Neighborly text, "neighbor listnnel: %d bssidinfo: %#x"
+14059784      0xD68908        Neighborly text, "Neighbor list for %sinfo: %#x"
+14072275      0xD6B9D3        VxWorks symbol table, big endian, first entry: [type: initialized data, code address: 0xFF30F47A, symbol address: 0x510000]
+14082580      0xD6E214        CRC32 polynomial table, little endian
+14090944      0xD702C0        Neighborly text, "Neighbor Report List:02x:%02x "
+14112148      0xD75594        Neighborly text, "Neighbor Reporteout Interval"
+14143185      0xD7CED1        Unix path: /cr1/cr2/pll/all ]
+14189669      0xD88465        Neighborly text, "neighbor report measurement requestd]"
+14189744      0xD884B0        Neighborly text, "neighbor report listm 11k neighbor report list"
+14189813      0xD884F5        Neighborly text, "neighbor report listnode to 11k neighbor report list"
+14189888      0xD88540        Neighborly text, "neighbor report listinfo] [regulatory] [channel] [phytype]"
+14199620      0xD8AB44        Neighborly text, "Neighbor_Report"
+14200048      0xD8ACF0        Neighborly text, "Neighbor_Report_TSF_Offsett"
+14265328      0xD9ABF0        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/pf/usr/sbin/pfctl/pfctl_optimize.c
+14289488      0xDA0A50        CRC32 polynomial table, little endian
+14312536      0xDA6458        Unix path: /System/Library/Filesystems/hfs.fs/Encodings/
+14332916      0xDAB3F4        Copyright string: "Copyright 2004-2010 Internet Systems Consortium."
+14333348      0xDAB5A4        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/server/dhcpd.c
+14335636      0xDABE94        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/server/dhcp.c
+14347000      0xDAEAF8        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/server/db.c
+14348160      0xDAEF80        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/server/class.c
+14362752      0xDB2880        Copyright string: "Copyright 2004-2010 Internet Systems Consortium."
+14365608      0xDB33A8        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/client/dhclient.c
+14368908      0xDB408C        Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/client/dhc6.c
+14409591      0xDBDF77        Unix path: /WPA/WPA2/EAP/RADIUS Authenticator
+14409626      0xDBDF9A        Copyright string: "Copyright (c) 2002-2008, <span class="user">User #71421</span> &lt;j@w1.fi&gt; and contributors"
+14436865      0xDC4A01        Neighborly text, "neighbor.set.]}"
+14473306      0xDCD85A        Copyright string: "Copyright (c) 2003-2008, <span class="user">User #71421</span> &lt;j@w1.fi&gt; and contributors"
+14474656      0xDCDDA0        Copyright string: "copyright"
+14474791      0xDCDE27        Copyright string: "copyright"
+14474991      0xDCDEEF        Copyright string: "copyright holder(s) nor the"
+14493468      0xDD271C        Unix path: /usr/local/share/curl/curl-ca-bundle.crt
+14496916      0xDD3494        gzip compressed data, maximum compression, from Unix, NULL date (1970-01-01 00:00:00)
+14542560      0xDDE6E0        Executable script, shebang: "/bin/sh -"
+14542797      0xDDE7CD        Copyright string: "Copyright (c) 2003,2007,2008 The NetBSD Foundation, Inc."
+14543086      0xDDE8EE        Copyright string: "copyright"
+14543224      0xDDE978        Copyright string: "copyright"
+14583520      0xDE86E0        Executable script, shebang: "/bin/sh"
+14583534      0xDE86EE        Copyright string: "Copyright (C) 2005-2006 Apple Computer, Inc.  All Rights Reserved."
+14588152      0xDE98F8        Copyright string: "Copyright (c) 2005-2013 Apple Inc. All rights reserved."
+14661344      0xDFB6E0        Executable script, shebang: "/bin/sh"
+14673124      0xDFE4E4        Copyright string: "Copyright (C) 2009 Apple Inc.  All rights reserved."
+14673632      0xDFE6E0        Executable script, shebang: "/bin/sh"
+14677792      0xDFF720        Copyright string: "Copyright (c) 1997-2011 The NetBSD Foundation, Inc."
+14678171      0xDFF89B        Copyright string: "copyright"
+14678309      0xDFF925        Copyright string: "copyright"
+14706404      0xE066E4        Copyright string: "Copyright (C) 2009 Apple Inc.  All rights reserved."
+14708448      0xE06EE0        Executable script, shebang: "/sbin/sysctl -f"
+14709476      0xE072E4        Copyright string: "Copyright (C) 2006 Apple Computer, Inc.  All rights reserved."
+14723559      0xE0A9E7        Neighborly text, "neighbor solicitation and advertisement.pv6-icmp all icmp6-type neighbrsol"
+14724832      0xE0AEE0        Executable script, shebang: "/bin/sh"
+14725856      0xE0B2E0        Executable script, shebang: "/bin/sh"
+14734720      0xE0D580        Unix path: /var/chroot/named/etc/namedb
+14741335      0xE0EF57        Unix path: /etc/racoon/remote/anonymous.conf
+14742433      0xE0F3A1        Unix path: /etc/racoon/remote/anonymous.conf
+14745312      0xE0FEE0        Executable script, shebang: "/bin/sh"
+14745824      0xE100E0        Executable script, shebang: "/bin/sh"
+14746336      0xE102E0        Executable script, shebang: "/bin/sh"
+14746848      0xE104E0        Executable script, shebang: "/bin/sh"
+14747360      0xE106E0        Executable script, shebang: "/bin/sh"
+14747872      0xE108E0        Executable script, shebang: "/bin/sh"
+14747886      0xE108EE        Copyright string: "Copyright (c) 2005 Apple Computer, Inc.  All rights reserved."
+14748896      0xE10CE0        Executable script, shebang: "/bin/sh"
+14749408      0xE10EE0        Executable script, shebang: "/bin/sh"
+14749920      0xE110E0        Executable script, shebang: "/bin/sh"
+14750944      0xE114E0        Executable script, shebang: "/bin/sh"
+14751456      0xE116E0        Executable script, shebang: "/bin/sh"
+14752480      0xE11AE0        Executable script, shebang: "/bin/sh"
+14752501      0xE11AF5        Unix path: /cvs/repository/Embedded/Firmware/NetBSD/Targets/K30A/all/etc/rc.d/flash,v $
+14753504      0xE11EE0        Executable script, shebang: "/bin/sh"
+14754016      0xE120E0        Executable script, shebang: "/bin/sh"
+14755040      0xE124E0        Executable script, shebang: "/bin/sh"
+14755552      0xE126E0        Executable script, shebang: "/bin/sh"
+14757600      0xE12EE0        Executable script, shebang: "/bin/sh"
+14759136      0xE134E0        Executable script, shebang: "/bin/sh"
+14759648      0xE136E0        Executable script, shebang: "/bin/sh"
+14760672      0xE13AE0        Executable script, shebang: "/bin/sh"
+14762208      0xE140E0        Executable script, shebang: "/bin/sh"
+14762720      0xE142E0        Executable script, shebang: "/bin/sh"
+14763744      0xE146E0        Executable script, shebang: "/bin/sh"
+14776032      0xE176E0        Executable script, shebang: "/bin/sh"
+14776544      0xE178E0        Executable script, shebang: "/bin/sh"
+14777056      0xE17AE0        Executable script, shebang: "/bin/sh"
+14779104      0xE182E0        Executable script, shebang: "/bin/sh"
+14787808      0xE1A4E0        Executable script, shebang: "/bin/sh"
+14788320      0xE1A6E0        Executable script, shebang: "/bin/sh"
+14788334      0xE1A6EE        Copyright string: "Copyright (C) 2009 Apple Inc.  All rights reserved."
+14798560      0xE1CEE0        Executable script, shebang: "/bin/sh"
+14798655      0xE1CF3F        Copyright string: "Copyright (C) 2009 Apple Inc.  All rights reserved."
+14800608      0xE1D6E0        Executable script, shebang: "/bin/sh"
+14800624      0xE1D6F0        Copyright string: "Copyright (C) 2009 Apple Inc.  All rights reserved."
+14803680      0xE1E2E0        Executable script, shebang: "/bin/sh"
+14804704      0xE1E6E0        Executable script, shebang: "/bin/sh"
+14813684      0xE209F4        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14818416      0xE21C70        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14822268      0xE22B7C        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14825144      0xE236B8        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14829954      0xE24982        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14833149      0xE255FD        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14836291      0xE26243        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14839413      0xE26E75        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14843220      0xE27D54        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14847646      0xE28E9E        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14851453      0xE29D7D        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14855849      0xE2AEA9        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14859731      0xE2BDD3        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14868878      0xE2E18E        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14873689      0xE2F459        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14878432      0xE306E0        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14882099      0xE31533        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14885777      0xE32391        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14888533      0xE32E55        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14891148      0xE3388C        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14893773      0xE342CD        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14896493      0xE34D6D        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14899215      0xE3580F        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14900112      0xE35B90        Unix path: /Iw/wnOc9GTq36ntTlvIAWDuOW1DJ/N/qgjS/k5v
+14903310      0xE3680E        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14907926      0xE37A16        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14910456      0xE383F8        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14915083      0xE3960B        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14919744      0xE3A840        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14920302      0xE3AA6E        Unix path: /Xz7nZvThPOw1EblVB/vwJ29i/844h8egStfYTpdPGTJMisAL/7h0M
+14924405      0xE3BA75        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14929044      0xE3CC94        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14929874      0xE3CFD2        Unix path: /8/UswDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0B
+14933489      0xE3DDF1        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14938006      0xE3EF96        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14942121      0xE3FFA9        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14946236      0xE40FBC        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14950351      0xE41FCF        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14954444      0xE42FCC        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14957690      0xE43C7A        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14960963      0xE44943        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14964219      0xE455FB        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14967457      0xE462A1        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14970663      0xE46F27        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14974601      0xE47E89        Unix path: /kzkyp/tgWpW/72M5We/XWIO/kR81jJP+5vvFIo8EBcua9wK3tJg3K
+14993662      0xE4C8FE        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+14998121      0xE4DA69        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15001168      0xE4E650        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15004215      0xE4F237        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15007278      0xE4FE2E        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15007911      0xE500A7        Unix path: /AAa19oM/DJhuBUNlvP6Vxt/M3yv6ZiaYch6s7f/sdyZ
+15010018      0xE508E2        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15012818      0xE513D2        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15016056      0xE52078        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15020703      0xE5329F        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15023498      0xE53D8A        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15026740      0xE54A34        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15031383      0xE55C57        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15034178      0xE56742        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15037416      0xE573E8        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15042073      0xE58619        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15045311      0xE592BF        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15049900      0xE5A4AC        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15052535      0xE5AEF7        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15055163      0xE5B93B        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15059528      0xE5CA48        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15064385      0xE5DD41        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15070911      0xE5F6BF        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15076471      0xE60C77        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15082015      0xE6221F        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15087584      0xE637E0        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15092926      0xE64CBE        <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> certificate
+15105771      0xE67EEB        Unix path: /usr/share/tabset/vt100
+15111392      0xE694E0        Executable script, shebang: "/bin/sh"
+15114976      0xE6A2E0        Unix path: /var/sv/dnscache/root
+15116512      0xE6A8E0        Executable script, shebang: "/bin/sh"
+15119072      0xE6B2E0        Executable script, shebang: "/bin/sh"
+15121120      0xE6BAE0        Unix path: /var/sv/walldns/root
+15122656      0xE6C0E0        Executable script, shebang: "/bin/sh"
+18719424      0x11DA2C0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/main.c
+18719692      0x11DA3CC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/session.c
+18720336      0x11DA650       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp.c
+18726168      0x11DBD18       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/handler.c
+18727392      0x11DC1E0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_ident.c
+18728532      0x11DC654       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_agg.c
+18728780      0x11DC74C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_base.c
+18728968      0x11DC808       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_quick.c
+18731688      0x11DD2A8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_inf.c
+18733652      0x11DDA54       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/dnssec.c
+18733980      0x11DDB9C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/privsep.c
+18736088      0x11DE3D8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/pfkey.c
+18740140      0x11DF3AC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/admin.c
+18740972      0x11DF6EC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/evt.c
+18741440      0x11DF8C0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/ipsec_doi.c
+18746732      0x11E0D6C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/oakley.c
+18758408      0x11E3B08       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/grabmyaddr.c
+18758748      0x11E3C5C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/vendorid.c
+18759600      0x11E3FB0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/policy.c
+18759840      0x11E40A0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/localconf.c
+18760124      0x11E41BC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/remoteconf.c
+18761840      0x11E4870       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/crypto_openssl.c
+18762640      0x11E4B90       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/algorithm.c
+18763412      0x11E4E94       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/proposal.c
+18765092      0x11E5524       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/sainfo.c
+18769504      0x11E6660       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/plog.c
+18769852      0x11E67BC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/backupsa.c
+18770356      0x11E69B4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/rsalist.c
+18770620      0x11E6ABC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/cftoken.l
+18771524      0x11E6E44       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/cfparse.y
+18774828      0x11E7B2C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/prsa_par.y
+18775456      0x11E7DA0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_xauth.c
+18777192      0x11E8468       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_cfg.c
+18779436      0x11E8D2C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_unity.c
+18779696      0x11E8E30       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/throttle.c
+18779836      0x11E8EBC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/isakmp_frag.c
+18780132      0x11E8FE4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/nattraversal.c
+18780580      0x11E91A4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/vmbuf.c
+18780812      0x11E928C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/dist/ipsec-tools/src/racoon/sockmisc.c
+18811194      0x11F093A       Unix path: /50/100/200/400/800 hz)
+18814679      0x11F16D7       Unix path: /50/100/200/400/800 Hz
+18819453      0x11F297D       Neighborly text, "NeighborInfo__ACPCloud_Update_imp"
+18838436      0x11F73A4       Neighborly text, "neighbor"
+18848520      0x11F9B08       Unix path: /var/sv/dnscache/root/servers/@
+18864216      0x11FD858       Unix path: /mnt/Flash/private/ca.key
+18882948      0x1202184       <span class="glossary">XML<span class="glossary-tt">Extensible Markup Language</span></span> document, version: "1.0"
+18885020      0x120299C       Base64 standard index table
+18992000      0x121CB80       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/bin/cp/cp.c
+18997744      0x121E1F0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/bin/df/df.c
+19011072      0x1221600       Neighborly text, "Neighbor Solicitationtination: %s"
+19011096      0x1221618       Neighborly text, "Neighbor Advertisement: %s"
+19032668      0x1226A5C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/sys/kern/vfs_wapbl.c
+19067020      0x122F08C       Unix path: /kern/coredump/setid/mode
+19068280      0x122F578       Unix path: /var/spool/lock/LCK..
+19073716      0x1230AB4       Copyright string: "Copyright (c) 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,"
+19073889      0x1230B61       Copyright string: "Copyright (c) 1982, 1986, 1989, 1991, 1993"
+19081260      0x123282C       Copyright string: "Copyright (c) 1984 through 2008, <span class="user">User #71420</span>"
+19103228      0x1237DFC       Unix path: /avg/max/total/stddev = %d/%.0f/%d/%.0f/%.1f
+19113188      0x123A4E4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/iperf/compat/Thread.c
+19114120      0x123A888       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/iperf/src/Reporter.c
+19114368      0x123A980       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/iperf/src/sockets.c
+19114872      0x123AB78       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/iperf/src/Listener.cpp
+19115216      0x123ACD0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/iperf/src/PerfSocket.cpp
+19119976      0x123BF68       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/sshd.c
+19126364      0x123D85C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/auth-rsa.c
+19130864      0x123E9F0       Unix path: /usr/X11R7/bin/xauth
+19136524      0x124000C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/auth1.c
+19144840      0x1242088       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/auth2-chall.c
+19166112      0x12473A0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/ssh.c
+19171572      0x12488F4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/clientloop.c
+19180560      0x124AC10       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/sshconnect1.c
+19192432      0x124DA70       OpenSSL encryption, salted, salt: 0x00
+19195444      0x124E634       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/apps.c
+19201336      0x124FD38       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/ecparam.c
+19205596      0x1250DDC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/pkeyutl.c
+19206288      0x1251090       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/ts.c
+19213724      0x1252D9C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/s_cb.c
+19214000      0x1252EB0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/s_socket.c
+19220384      0x12547A0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/dgst.c
+19222244      0x1254EE4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/dh.c
+19223312      0x1255310       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/dhparam.c
+19224004      0x12555C4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/enc.c
+19225092      0x1255A04       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/passwd.c
+19226888      0x1256108       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/ca.c
+19236544      0x12586C0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/rsa.c
+19237128      0x1258908       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/rsautl.c
+19237592      0x1258AD8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/dsaparam.c
+19238388      0x1258DF4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/x509.c
+19250392      0x125BCD8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/s_server.c
+19251396      0x125C0C4       <span class="glossary">HTML<span class="glossary-tt">Hypertext Markup Language</span></span> document header
+19251631      0x125C1AF       <span class="glossary">HTML<span class="glossary-tt">Hypertext Markup Language</span></span> document footer
+19252588      0x125C56C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/s_client.c
+19254847      0x125CE3F       Unix path: /-no_tls1_1/-no_tls1/-no_ssl3/-no_ssl2 - turn off that protocol
+19258304      0x125DBC0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/speed.c
+19263384      0x125EF98       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/srp.c
+19270680      0x1260C18       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/engine.c
+19276104      0x1262148       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/apps/ocsp.c
+19324820      0x126DF94       Neighborly text, "Neighbor Signaled Session Downwn"
+19335898      0x1270ADA       Neighborly text, "neighbor %ss metric %d"
+19335981      0x1270B2D       Neighborly text, "neighbors(old)ghbors2"
+19335997      0x1270B3D       Neighborly text, "Neighbors(old)rs2"
+19336041      0x1270B69       Neighborly text, "neighbors2nel"
+19336053      0x1270B75       Neighborly text, "Neighbors2/querier"
+19347037      0x127365D       Neighborly text, "Neighbor: %s"
+19349106      0x1273E72       Neighborly text, "Neighbor: %s%s"
+19349159      0x1273EA7       Neighborly text, "Neighbor: %sd vs %lu)"
+19349183      0x1273EBF       Neighborly text, "Neighbor: %s %s mask %s"
+19349588      0x1274054       Neighborly text, "Neighbor System-ID: %s-ID: 0x%08x"
+19349620      0x1274074       Neighborly text, "Neighbor Extended Local circuit-ID: 0x%08x"
+19349821      0x127413D       Neighborly text, "neighbor address: %s%s"
+19351159      0x1274677       Neighborly text, "Neighbor(s)"
+19351195      0x127469B       Neighborly text, "Neighbors"
+19351211      0x12746AB       Neighborly text, "Neighbor(s)ecksum"
+19351227      0x12746BB       Neighborly text, "Neighbor(s) (variable length)ffersize"
+19352237      0x1274AAD       Neighborly text, "neighbor addresswidth"
+19362422      0x1277276       Neighborly text, "Neighbor Router-ID: %s, Interface Address: %sRouter-ID: %s, Interface Address: %s"
+19362476      0x12772AC       Neighborly text, "Neighbor Router-ID: %s, Interface Address: %sr Network-ID: %s, Interface Address: %s"
+19362532      0x12772E4       Neighborly text, "Neighbor Network-ID: %s, Interface Address: %stwork: %s, Mask: %s"
+19363904      0x1277840       Neighborly text, "Neighbor List:"
+19367031      0x1278477       Neighborly text, "neighbor: "
+19401799      0x1280C47       Neighborly text, "NeighborLossn"
+19441500      0x128A75C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/external/bsd/tcpdump/bin/../dist/checksum.c
+19456112      0x128E070       Neighborly text, "neighbor-type %s, len %u%sx"
+19456157      0x128E09D       Neighborly text, "neighbor seq 0x%04xed networks (total %u)"
+19456372      0x128E174       Neighborly text, "neighbor %s, link-quality %.2lf%%, neighbor-link-quality %.2lf%%%"
+19456407      0x128E197       Neighborly text, "neighbor-link-quality %.2lf%%eq 0x%04x, length %u"
+19456448      0x128E1C0       Neighborly text, "neighbor"
+19456604      0x128E25C       Neighborly text, "Neighbored"
+19465284      0x1290444       Neighborly text, "Neighbor TLV02d)"
+19470132      0x1291734       Neighborly text, "neighborhood, block backup power source"
+19474392      0x12927D8       Neighborly text, "neighbor solicitationst listener report v2"
+19474424      0x12927F8       Neighborly text, "neighbor advertisementovery request"
+19475498      0x1292C2A       Neighborly text, "Neighbor Router-ID %se %s"
+19475527      0x1292C47       Neighborly text, "Neighbor Interface-ID %s, Interface %sr-ID %s"
+19475576      0x1292C78       Neighborly text, "Neighbor Router-ID %se %s"
+19475605      0x1292C95       Neighborly text, "Neighbor Interface-ID %s, Interface %s-ID %s"
+19475652      0x1292CC4       Neighborly text, "Neighbor Network-ID %sce %s"
+19475682      0x1292CE2       Neighborly text, "Neighbor Interface-ID %s, Interface %sr Links Type 0x%02x"
+19501208      0x1299098       Neighborly text, "neighbor solicitation%ss"
+19501248      0x12990C0       Neighborly text, "neighbor advertisement%s MLD query%s"
+19501813      0x12992F5       Neighborly text, "neighbor solicitation%ss"
+19501853      0x129931D       Neighborly text, "neighbor advertisement%stput MLD query%s"
+19503582      0x12999DE       Neighborly text, "neighbor solicitation message%sent message%s"
+19503626      0x1299A0A       Neighborly text, "neighbor advertisement message%s message%s"
+19548712      0x12A4A28       <span class="glossary">XML<span class="glossary-tt">Extensible Markup Language</span></span> document, version: "1.0"
+19548880      0x12A4AD0       Base64 standard index table
+19549528      0x12A4D58       Base64 standard index table
+19551277      0x12A542D       Unix path: /www.w3.org/XML/1998/namespace
+19551352      0x12A5478       CRC32 polynomial table, little endian
+19590004      0x12AEB74       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/curl/lib/ssluse.c
+19600460      0x12B144C       Base64 standard index table
+19610304      0x12B3AC0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/common/heap.c
+19614804      0x12B4C54       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/common/tables.c
+19622896      0x12B6BF0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/common/parse.c
+19629728      0x12B86A0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/common/dns.c
+19632688      0x12B9230       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/common/memory.c
+19633064      0x12B93A8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/common/execute.c
+19636184      0x12B9FD8       Base64 standard index table
+19640868      0x12BB224       Base64 standard index table
+19642176      0x12BB740       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/isc/dhcp/omapip/auth.c
+19728100      0x12D06E4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/protobuf-c/src/google/protobuf-c/protobuf-c.c
+19737368      0x12D2B18       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/ssl/d1_srvr.c
+19738584      0x12D2FD8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/ssl/ssl_txt.c
+19759364      0x12D8104       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/ssl/d1_lib.c
+19759584      0x12D81E0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/ssl/d1_enc.c
+19764656      0x12D95B0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/ssl/ssl_sess.c
+19771433      0x12DB029       eCos RTOS string reference: "ecos"
+19776932      0x12DC5A4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/lib/libutil/login_cap.c
+19786740      0x12DEBF4       Unix path: /usr/share/misc/terminfo
+19789145      0x12DF559       Unix path: /usr/share/tabset/vt100
+19790472      0x12DFA88       Unix path: /usr/share/tabset/vt100
+19813820      0x12E55BC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/lib/libpthread/pthread_rwlock.c
+19815052      0x12E5A8C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/lib/libpthread/pthread.c
+19817180      0x12E62DC       Unix path: /usr/X11R7/bin/ssh-askpass
+19824332      0x12E7ECC       OpenSSH RSA1 private key, version "1.1"
+19827236      0x12E8A24       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/packet.c
+19829648      0x12E9390       CRC32 polynomial table, little endian
+19841612      0x12EC24C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssh/dist/channels.c
+19852312      0x12EEC18       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/x509/x509spki.c
+19852624      0x12EED50       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ts/ts_conf.c
+19852880      0x12EEE50       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ts/ts_verify_ctx.c
+19855076      0x12EF6E4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ts/ts_rsp_utils.c
+19855228      0x12EF77C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/srp/srp_vfy.c
+19855844      0x12EF9E4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/pqueue/pqueue.c
+19857484      0x12F004C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ocsp/ocsp_srv.c
+19858080      0x12F02A0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ocsp/ocsp_ext.c
+19858932      0x12F05F4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ec/ec_check.c
+19859536      0x12F0850       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/comp/comp_lib.c
+19860732      0x12F0CFC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/asn_moid.c
+19861648      0x12F1090       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/t_crl.c
+19862016      0x12F1200       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/t_req.c
+19862172      0x12F129C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/i2d_pu.c
+19864772      0x12F1CC4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ts/ts_req_utils.c
+19865188      0x12F1E64       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/pkcs12/p12_mutl.c
+19866812      0x12F24BC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/engine/eng_cnf.c
+19905224      0x12FBAC8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/evp/e_rc5.c
+19905760      0x12FBCE0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/evp/e_rc2.c
+19910892      0x12FD0EC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/engines/e_ubsec.c
+19915848      0x12FE448       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/engines/e_atalla.c
+19923920      0x13003D0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/x_pkey.c
+19928744      0x13016A8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/pem/pem_pkey.c
+19933220      0x1302824       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/modes/gcm128.c
+19963328      0x1309DC0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/engines/ccgost/gost_crypt.c
+19963700      0x1309F34       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/engines/ccgost/gost2001.c
+19975784      0x130CE68       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/f_string.c
+19979620      0x130DD64       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/x509v3/v3_crld.c
+19981372      0x130E43C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/x509v3/v3_cpols.c
+19983620      0x130ED04       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/conf/conf_mod.c
+19986640      0x130F8D0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/stack/stack.c
+19988224      0x130FF00       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/rsa/rsa_lib.c
+19993852      0x13114FC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/evp/evp_key.c
+20053344      0x131FD60       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/hmac/hmac.c
+20056248      0x13208B8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/evp/bio_enc.c
+20056400      0x1320950       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/evp/p_lib.c
+20060156      0x13217FC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ec/ec_print.c
+20062992      0x1322310       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/conf/conf_lib.c
+20072796      0x132495C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/cms/cms_dd.c
+20074812      0x132513C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/a_i2d_fp.c
+20075724      0x13254CC       Base64 standard index table
+20075792      0x1325510       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/bio/bf_buff.c
+20081928      0x1326D08       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/tasn_prn.c
+20084156      0x13275BC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/t_x509.c
+20084684      0x13277CC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/objects/obj_xref.c
+20085688      0x1327BB8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/ameth_lib.c
+20086056      0x1327D28       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/dh/dh_ameth.c
+20086656      0x1327F80       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/cmac/cmac.c
+20086964      0x13280B4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/x_long.c
+20088032      0x13284E0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/x_name.c
+20090056      0x1328CC8       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/x509v3/v3_asid.c
+20091544      0x1329298       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/x509v3/v3_addr.c
+20094688      0x1329EE0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/a_bool.c
+20111012      0x132DEA4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/ec/ecp_nist.c
+20117660      0x132F89C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/asn1/tasn_dec.c
+20121520      0x13307B0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/cryptlib.c
+20122596      0x1330BE4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/x509v3/v3_sxnet.c
+20123308      0x1330EAC       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/x509v3/v3_pci.c
+20125852      0x133189C       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/rsa/rsa_pk1.c
+20128708      0x13323C4       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/crypto/external/bsd/openssl/dist/crypto/conf/conf_def.c
+20154560      0x13388C0       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/lib/libedit/tty.c
+20164575      0x133AFDF       Copyright string: "Copyright 1995-2005 <span class="user">User #71419</span> "
+20164875      0x133B10B       Copyright string: "Copyright 1995-2005 Jean-loup Gailly "
+20167776      0x133BC60       CRC32 polynomial table, little endian
+20171872      0x133CC60       CRC32 polynomial table, big endian
+20175968      0x133DC60       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/common/lib/libprop/prop_string.c
+20176736      0x133DF60       <span class="glossary">XML<span class="glossary-tt">Extensible Markup Language</span></span> document, version: "1.0"
+20176928      0x133E020       Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/netbsd6/src/common/lib/libprop/prop_number.c
+20178924      0x133E7EC       Base64 standard index table
+20253952      0x1350D00       SHA256 hash constants, little endian
+20261496      0x1352A78       Unix path: /usr/share/nls/nls.alias
+20271540      0x13551B4       Base64 standard index table
+20338024      0x1365568       Copyright string: "Copyright 1998  Apple Computer, Inc. All rights reserved."
+20368568      0x136CCB8       YAFFS filesystem
+20372327      0x136DB67       Private key in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (PKCS header length: 4, sequence length: 314
+20372645      0x136DCA5       Private key in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (PKCS header length: 4, sequence length: 604
+20373253      0x136DF05       Private key in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (PKCS header length: 4, sequence length: 1187
+20374444      0x136E3AC       Private key in <span class="glossary">DER<span class="glossary-tt">Distinguished Encoding Rules (certificate file format)</span></span> format (PKCS header length: 4, sequence length: 2345</div></code></pre></div>
+<p><span style="line-height: 1.4285715;"> </span></p>
+<hr>
+<h2><span style="line-height: 1.4285715;">Previous Attempts</span></h2>
+<p>Interesting points of </p>
+<table><tbody>
+<tr>
+<th>Offset</th>
+<th>Data</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td colspan="1">0x0000 - 0x003f</td>
+<td colspan="1">unknown, but repetitive data</td>
+<td colspan="1">inital bootstrap code?</td>
+</tr>
+<tr>
+<td colspan="1">0x03E0</td>
+<td colspan="1">"ZSIB"</td>
+<td colspan="1">Some kind of section header</td>
+</tr>
+<tr>
+<td colspan="1">0x0400</td>
+<td colspan="1">"FLSH"</td>
+<td colspan="1">
+<p><span>16 bytes of data, followed by what looks like null-terminated strings for <span class="glossary">NVRAM<span class="glossary-tt">Non-volatile Random Access Memory</span></span> variables.</span></p>
+<p><span>Seems data is repeated at offset 0x80000.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="1">0x1400</td>
+<td colspan="1">"AMZL"</td>
+<td colspan="1">AMZL == LZMA in reverse?</td>
+</tr>
+<tr>
+<td colspan="1">0x8230</td>
+<td colspan="1">"SHMOO VEPKID"</td>
+<td colspan="1">wtf?</td>
+</tr>
+<tr>
+<td colspan="1">0xB0008</td>
+<td colspan="1"><p>"C86439500FNF55QAX"</p></td>
+<td colspan="1">serial #? repeated later in variable as "mlbserial"</td>
+</tr>
+<tr>
+<td colspan="1">0xB0050</td>
+<td colspan="1">"141004141004p" 0x700a 0x07d4</td>
+<td colspan="1">unknown data</td>
+</tr>
+<tr>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">0x108164</td>
+<td colspan="1">gzip compressed data</td>
+<td colspan="1">filename included: "netbsd.j28_release.image.bin", file repeated again at offset 0xF08164</td>
+</tr>
+<tr>
+<td colspan="1"><span>0xF08164</span></td>
+<td colspan="1"><span>gzip compressed data</span></td>
+<td colspan="1"><span>filename included: "netbsd.j28_release.image.bin" (repeated)</span></td>
+</tr>
+</tbody></table>
+<p> </p>
+<p>My attempt at parsing the firmware for the Time Capsule -<span style="text-align: center;line-height: 1.4285715;"> </span></p>
+<table><tbody>
+<tr>
+<th>Start Offset</th>
+<th>End Offset</th>
+<th>Length (bytes)</th>
+<th colspan="1">Interesting Bytes</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td><strong>0x00000000</strong></td>
+<td>0x000003DF</td>
+<td>992</td>
+<td colspan="1">0xff 0x04 0x00 0xea ... 0x78 0x56 0x34 0x12</td>
+<td>strange/unknown header with several repeating values</td>
+</tr>
+<tr>
+<td>0x000003E0</td>
+<td>0x000003FF</td>
+<td>32</td>
+<td colspan="1"> </td>
+<td>
+<span style="color: rgb(0,0,255);"><strong>ZSIB</strong></span> – what is ZSIB</td>
+</tr>
+<tr>
+<td>0x00000400</td>
+<td>0x000013FF</td>
+<td>4096</td>
+<td colspan="1">0xb9 0xb3 0xac 0xb7 at the end of the section</td>
+<td>
+<span style="color: rgb(0,0,255);"><strong>FLSH</strong></span> – I believe this is NVRAM</td>
+</tr>
+<tr>
+<td colspan="1">0x00001400</td>
+<td colspan="1">0x0001FFFF</td>
+<td colspan="1">125,952</td>
+<td colspan="1"> </td>
+<td colspan="1">
+<span style="color: rgb(0,0,255);"><strong>AMZL</strong></span> – I believe this is Broadcom/Apple <span class="glossary">CFE<span class="glossary-tt">Common Firmware Environment</span></span> Bootloader</td>
+</tr>
+<tr>
+<td colspan="1">0x00020000</td>
+<td colspan="1">0x00023FFF</td>
+<td colspan="1">16,384</td>
+<td colspan="1"> </td>
+<td colspan="1">a simple pattern exists for what reason I don't know</td>
+</tr>
+<tr>
+<td colspan="1">0x00024000</td>
+<td colspan="1">0x0004F87F</td>
+<td colspan="1">178,304</td>
+<td colspan="1"> </td>
+<td colspan="1">binary, compressed, and/or encrypted information</td>
+</tr>
+<tr>
+<td colspan="1">0x0004F880</td>
+<td colspan="1">0x0007FFFF</td>
+<td colspan="1">198,528</td>
+<td colspan="1"> </td>
+<td colspan="1">all 0xff – uninitialized flash memory</td>
+</tr>
+<tr>
+<td colspan="1">0x00080000</td>
+<td colspan="1">0x0008026F</td>
+<td colspan="1">624</td>
+<td colspan="1"> </td>
+<td colspan="1">
+<span style="color: rgb(0,0,255);"><strong>FLSH</strong></span> – an almost complete copy of previous FLSH</td>
+</tr>
+<tr>
+<td colspan="1">0x00080270</td>
+<td colspan="1">0x0009FFFF</td>
+<td colspan="1">130,448</td>
+<td colspan="1"> </td>
+<td colspan="1">all 0xff – uninitialized flash memory</td>
+</tr>
+<tr>
+<td colspan="1">0x000A0000</td>
+<td colspan="1">0x000A7FFF</td>
+<td colspan="1">32,768</td>
+<td colspan="1">mlbserial=C86439500FNF55QAX.apple-sn=C86NH3UGF9H5</td>
+<td colspan="1">NULL terminated strings – transceiver settings</td>
+</tr>
+<tr>
+<td colspan="1">0x000A8000</td>
+<td colspan="1">0x000FFFFF</td>
+<td colspan="1">360,448</td>
+<td colspan="1"> </td>
+<td colspan="1">all 0xff – uninitialized flash memory with two exceptions (see above)</td>
+</tr>
+<tr>
+<td colspan="1">0x00100000</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">gzipped NetBSD for Broadcom BCM5301x</td>
+</tr>
+</tbody></table>
+<p>-- that is what I have so far</p>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="../../highlighter/mootools-core-and-more.js"></script>
+            <script type="text/javascript" src="../../highlighter/efatmarker.min.js"></script>
+            <div id="efm-button">
+            <div id="efm-menu">
+                <h3 style="margin:0 0 2px 0">e-Highlighter</h3>
+                <a id="efm-permalink" class="efm-need-highlight" href="page_16384171.html" style="margin-bottom:0;padding-bottom:0;"></a>
+                <p style="margin-top:0;padding-top:0" class="efm-need-highlight">Click to send permalink to address bar, or right-click to copy permalink.</p>
+                <p style="margin:0.5em 0;padding:0;border-top:1px dotted #ccc;height:1px"></p>
+                <a id="efm-unhighlightall" class="efm-need-highlight">Un-highlight all</a>
+                <a id="efm-unhighlight">Un-highlight selection<span>u</span></a>
+                <a id="efm-highlight">Highlight selection<span>h</span></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+
+            (function(){
+            window.addEvent('domready', function(){
+
+                var markerButton = $('efm-button');
+                if ( markerButton ) {
+                    eMarker = new EFatMarker($('uniquer'));
+                    eMarker.tokenToSpans(); // apply whatever token is there
+                    // need to act on mousedown or else selection disappear
+                    markerButton.addEvent('mousedown', function(){
+                        eMarker.interpretSelection(true);
+                        return false;
+                    });
+                    $('efm-unhighlightall').addEvent('mousedown', function(){
+                        eMarker.unhighlightAll(true);
+                        return false;
+                        });
+                    $('efm-unhighlight').addEvent('mousedown', function(){
+                        eMarker.unhighlightSelection(true);
+                        return false;
+                        });
+                    $('efm-highlight').addEvent('mousedown', function(){
+                        eMarker.highlightSelection(true);
+                        return false;
+                        });
+                    $('efm-permalink').addEvent('mousedown', function(){
+                        window.location.href = this.href;
+                        return false;
+                        });
+                    // if Mootools Keyboard is available, use it
+                    if (Keyboard) {
+                        var keyboard = new Keyboard({
+                            defaultEventType: 'keyup',
+                            events: {
+                                'h': function(){
+                                    eMarker.highlightSelection(true);
+                                    },
+                                'u': function(){
+                                    eMarker.unhighlightSelection(true);
+                                    }
+                                }
+                            });
+                        keyboard.activate();
+                        }
+                    eMarker.syncDOM();
+                    // auto scroll to first highlight, if any
+                    if (eMarker.hasSpans()) {
+                        var scroll = new Fx.Scroll(window,{offset:{'x':0,'y':-100}}),
+                            highlights = $$('#uniquer .efm-hi');
+                        if (highlights.length > 0) {
+                            scroll.toElement(highlights[0]);
+                            }
+                        }
+                    }
+                });
+            })();
+            </script>
+            
+
+<link href="../../static/css/styles_footer.css" rel="stylesheet">
+<footer id="page-footer" class="footer-recommendations">
+  <div class="footer-wrapper">
+    <div class="recommendation-container">
+      <a href="page_16384171.html#" class="top">Top</a>
+      
+        <ul class="recommendation-links">
+          
+            <li class="recommendation">
+              <a href="https://www.torproject.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton401.png?1461924517" width="300" height="180" /></div>
+                <p>
+<p>Tor is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://tails.boum.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton405.png?1461924517" width="446" height="223" /></div>
+                <p>
+<p>Tails is a live operating system, that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.couragefound.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton404.png?1461924517" width="357" height="50" /></div>
+                <p>
+<p>The Courage Foundation is an international organisation that supports those who risk life or liberty to make significant contributions to the historical record.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.bitcoin.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton403.png?1461924517" width="300" height="64" /></div>
+                <p>
+<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
+</p>
+              </a>
+            </li>
+          
+        </ul>
+      
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/wikileaks" target="_blank" alt="Facebook">
+            <img src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" target="_blank" alt="Twitter">
+            <img src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+        <script src="../../bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        </script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

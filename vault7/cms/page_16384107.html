@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="http://localhost:6081/IMG/favicon.ico">
+        <title>Firmware Reverse Engineering</title>
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/cerulean.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/new-gen.css" rel="stylesheet">
+        <link href="../../css/leak-styles.css" rel="stylesheet">
+        <link href="../../highlighter/efatmarker.css" rel="stylesheet">
+        <style>
+          #efm-button {margin:0 0 4px 0;padding:0 0 0 30px;position:fixed;height:48px;width:52px;bottom:0;right:0;background:transparent '/highlighter/kedit-2.png' no-repeat bottom right;cursor:pointer;opacity:0.4;z-index:99999999999}
+          #efm-button:hover {opacity:1}
+          #efm-button #efm-menu {margin:0 0 52px 0;border:1px outset gray;padding:0;display:none;background:#eee;position:fixed;bottom:0;right:0;width:20em;opacity:1;cursor:auto}
+          #efm-button:hover #efm-menu {display:block;font-size:smaller;color:#999}
+          #efm-button #efm-menu p {margin:0;padding:0 3px}
+          #efm-button #efm-menu a {margin:1px;padding:3px 3px;display:block;font:12px sans-serif;white-space:nowrap;opacity:inherit;cursor:pointer}
+          #efm-button #efm-menu a:hover {color:black;background-color:white;opacity:1}
+          #efm-button #efm-menu a > span {color:gray;position:absolute;right:4px}
+          .efm-hi {background-color:#ff8;font-weight:normal;}
+        </style>
+        <link href="../../bootstrap/css/submit.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="submit_wlkey" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_16384107.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_16384107.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_16384107.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_16384107.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+		<p>This key's fingerprint is A04C 5E09 ED02 B328 03EB  6116 93ED 732E 9231 8DBA</p>
+		<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQQNBFUoCGgBIADFLp+QonWyK8L6SPsNrnhwgfCxCk6OUHRIHReAsgAUXegpfg0b
+rsoHbeI5W9s5to/MUGwULHj59M6AvT+DS5rmrThgrND8Dt0dO+XW88bmTXHsFg9K
+jgf1wUpTLq73iWnSBo1m1Z14BmvkROG6M7+vQneCXBFOyFZxWdUSQ15vdzjr4yPR
+oMZjxCIFxe+QL+pNpkXd/St2b6UxiKB9HT9CXaezXrjbRgIzCeV6a5TFfcnhncpO
+ve59rGK3/az7cmjd6cOFo1Iw0J63TGBxDmDTZ0H3ecQvwDnzQSbgepiqbx4VoNmH
+OxpInVNv3AAluIJqN7RbPeWrkohh3EQ1j+lnYGMhBktX0gAyyYSrkAEKmaP6Kk4j
+/ZNkniw5iqMBY+v/yKW4LCmtLfe32kYs5OdreUpSv5zWvgL9sZ+4962YNKtnaBK3
+1hztlJ+xwhqalOCeUYgc0Clbkw+sgqFVnmw5lP4/fQNGxqCO7Tdy6pswmBZlOkmH
+XXfti6hasVCjT1MhemI7KwOmz/KzZqRlzgg5ibCzftt2GBcV3a1+i357YB5/3wXE
+j0vkd+SzFioqdq5Ppr+//IK3WX0jzWS3N5Lxw31q8fqfWZyKJPFbAvHlJ5ez7wKA
+1iS9krDfnysv0BUHf8elizydmsrPWN944Flw1tOFjW46j4uAxSbRBp284wiFmV8N
+TeQjBI8Ku8NtRDleriV3djATCg2SSNsDhNxSlOnPTM5U1bmh+Ehk8eHE3hgn9lRp
+2kkpwafD9pXaqNWJMpD4Amk60L3N+yUrbFWERwncrk3DpGmdzge/tl/UBldPoOeK
+p3shjXMdpSIqlwlB47Xdml3Cd8HkUz8r05xqJ4DutzT00ouP49W4jqjWU9bTuM48
+LRhrOpjvp5uPu0aIyt4BZgpce5QGLwXONTRX+bsTyEFEN3EO6XLeLFJb2jhddj7O
+DmluDPN9aj639E4vjGZ90Vpz4HpN7JULSzsnk+ZkEf2XnliRody3SwqyREjrEBui
+9ktbd0hAeahKuwia0zHyo5+1BjXt3UHiM5fQN93GB0hkXaKUarZ99d7XciTzFtye
+/MWToGTYJq9bM/qWAGO1RmYgNr+gSF/fQBzHeSbRN5tbJKz6oG4NuGCRJGB2aeXW
+TIp/VdouS5I9jFLapzaQUvtdmpaeslIos7gY6TZxWO06Q7AaINgr+SBUvvrff/Nl
+l2PRPYYye35MDs0b+mI5IXpjUuBC+s59gI6YlPqOHXkKFNbI3VxuYB0VJJIrGqIu
+Fv2CXwy5HvR3eIOZ2jLAfsHmTEJhriPJ1sUG0qlfNOQGMIGw9jSiy/iQde1u3ZoF
+so7sXlmBLck9zRMEWRJoI/mgCDEpWqLX7hTTABEBAAG0x1dpa2lMZWFrcyBFZGl0
+b3JpYWwgT2ZmaWNlIEhpZ2ggU2VjdXJpdHkgQ29tbXVuaWNhdGlvbiBLZXkgKFlv
+dSBjYW4gY29udGFjdCBXaWtpTGVha3MgYXQgaHR0cDovL3dsY2hhdGMzcGp3cGxp
+NXIub25pb24gYW5kIGh0dHBzOi8vd2lraWxlYWtzLm9yZy90YWxrKSA8Y29udGFj
+dC11cy11c2luZy1vdXItY2hhdC1zeXN0ZW1Ad2lraWxlYWtzLm9yZz6JBD0EEwEK
+ACcCGwMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AFAlb6cdIFCQOznOoACgkQk+1z
+LpIxjbrlqh/7B2yBrryWhQMGFj+xr9TIj32vgUIMohq94XYqAjOnYdEGhb5u5B5p
+BNowcqdFB1SOEvX7MhxGAqYocMT7zz2AkG3kpf9f7gOAG7qA1sRiB+R7mZtUr9Kv
+fQSsRFPb6RNzqqB9I9wPNGhBh1YWusUPluLINwbjTMnHXeL96HgdLT+fIBa8ROmn
+0fjJVoWYHG8QtsKiZ+lo2m/J4HyuJanAYPgL6isSu/1bBSwhEIehlQIfXZuS3j35
+12SsO1Zj2BBdgUIrADdMAMLneTs7oc1/PwxWYQ4OTdkay2deg1g/N6YqM2N7rn1W
+7A6tmuH7dfMlhcqw8bf5veyag3RpKHGcm7utDB6k/bMBDMnKazUnM2VQoi1mutHj
+kTCWn/vF1RVz3XbcPH94gbKxcuBi8cjXmSWNZxEBsbirj/CNmsM32Ikm+WIhBvi3
+1mWvcArC3JSUon8RRXype4ESpwEQZd6zsrbhgH4UqF56pcFT2ubnqKu4wtgOECsw
+K0dHyNEiOM1lL919wWDXH9tuQXWTzGsUznktw0cJbBVY1dGxVtGZJDPqEGatvmiR
+o+UmLKWyxTScBm5o3zRm3iyU10d4gka0dxsSQMl1BRD3G6b+NvnBEsV/+KCjxqLU
+vhDNup1AsJ1OhyqPydj5uyiWZCxlXWQPk4p5WWrGZdBDduxiZ2FTj17hu8S4a5A4
+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
+J3x7gtxUMkTadELqwY6hrU8=
+=BLTH
+-----END PGP PUBLIC KEY BLOCK-----
+		</pre>
+	</div>
+</div>
+
+<div id="submit_help_contact" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_16384107.html#submit_help_contact" class="btn-wl">How to contact WikiLeaks?</a>
+			<a href="page_16384107.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_16384107.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_16384107.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Contact</h3>
+		<p>If you need help using Tor you can contact WikiLeaks for assistance in setting it up using our simple webchat available at: <a href="https://wikileaks.org/talk">https://wikileaks.org/talk</a></p>
+		<p>If you can use Tor, but need to contact WikiLeaks for other reasons use our secured webchat available at <b>http://wlchatc3pjwpli5r.onion</b></p>
+		<p>We recommend contacting us over Tor if you can.</p>
+	</div>
+</div>
+
+<div id="submit_help_tor" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_16384107.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_16384107.html#submit_help_tor" class="btn-wl">What is Tor?</a>
+			<a href="page_16384107.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_16384107.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Tor</h3>
+		<p><a href="https://www.torproject.org">Tor</a> is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+		<p>In order to use the WikiLeaks public submission system as detailed above you can download the Tor Browser Bundle, which is a Firefox-like browser available for Windows, Mac OS X and GNU/Linux and pre-configured to connect using the anonymising system Tor.</p>
+		<h4>Tails</h4>
+		<p>If you are at high risk and you have the capacity to do so, you can also access the submission system through a secure operating system called <a href="https://tails.boum.org">Tails</a>. Tails is an operating system launched from a USB stick or a DVD that aim to leaves no traces when the computer is shut down after use and automatically routes your internet traffic through Tor. Tails will require you to have either a USB stick or a DVD at least 4GB big and a laptop or desktop computer.</p>
+	</div>
+</div>
+
+<div id="submit_help_tips" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_16384107.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_16384107.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_16384107.html#submit_help_tips" class="btn-wl">Tips for Sources</a>
+				<a href="page_16384107.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>Tips</h3>
+		<p>Our submission system works hard to preserve your anonymity, but we recommend you also take some of your own precautions. Please review these basic guidelines. </p>
+		<div>
+			<h4>1. Contact us if you have specific problems</h4>
+			<p>If you have a very large submission, or a submission with a complex format, or are a high-risk source, please <a href="page_16384107.html#submit_help_contact">contact us</a>. In our experience it is always possible to find a custom solution for even the most seemingly difficult situations.</p>
+		</div>
+		<div>
+			<h4>2. What computer to use</h4>
+			<p>If the computer you are uploading from could subsequently be audited in an investigation, consider using a computer that is not easily tied to you. Technical users can also use <a href="https://tails.boum.org">Tails</a> to help ensure you do not leave any records of your submission on the computer.</p>
+		</div>
+		<div>
+			<h4>3. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+	</div>
+</div>
+
+<div id="submit_help_after" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_16384107.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_16384107.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_16384107.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_16384107.html#submit_help_after" class="btn-wl">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>After</h3>
+
+		<div>
+			<h4>1. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+		<div>
+			<h4>2. Act normal</h4>
+			<p>If you are a high-risk source, avoid saying anything or doing anything after submitting which might promote suspicion. In particular, you should try to stick to your normal routine and behaviour.</p>
+		</div>
+
+		<div>
+			<h4>3. Remove traces of your submission</h4>
+			<p>If you are a high-risk source and the computer you prepared your submission on, or uploaded it from, could subsequently be audited in an investigation, we recommend that you format and dispose of the computer hard drive and any other storage media you used.</p>
+			<p>In particular, hard drives retain data after formatting which may be visible to a digital forensics team and flash media (USB sticks, memory cards and SSD drives) retain data even after a secure erasure. If you used flash media to store sensitive data, it is important to destroy the media.</p>
+			<p>If you do this and are a high-risk source you should make sure there are no traces of the clean-up, since such traces themselves may draw suspicion.</p>
+			<div>
+				<h4>4. If you face legal action</h4>
+				<p>If a legal action is brought against you as a result of your submission, there are organisations that may help you. The Courage Foundation is an international organisation dedicated to the protection of journalistic sources. You can find more details at <a href="https://www.couragefound.org">https://www.couragefound.org</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="submit" class="submit_banner">
+	<div class="container">
+		<div class="page-header">
+			<h1>Submit documents to WikiLeaks</h1>
+			<a class="remove-button" href="page_16384107.html#"><span class="glyphicon glyphicon-remove-circle"></span></a>
+		</div>
+		<p>WikiLeaks publishes documents of political or historical importance that are censored or otherwise suppressed. We specialise in strategic global publishing and large archives.</p>
+		<p>The following is the address of our secure site where you can anonymously upload your documents to WikiLeaks editors. You can only access this submissions system through Tor. (See our <a href="page_16384107.html#submit_help_tor">Tor tab</a> for more information.) We also advise you to read our <a href="page_16384107.html#submit_help_tips">tips for sources</a> before submitting.</p>
+
+		<div class="alert alert-info">
+			<div class="onion-url">wlupld3ptjvsgwqw.onion</div>
+			<div>
+				Copy this address into your Tor browser. Advanced users, if they wish, can also add a further layer of encryption to their submission using <a href="page_16384107.html#submit_wlkey">our public PGP key</a>.
+			</div>
+		</div>
+
+		<p>If you cannot use Tor, or your submission is very large, or you have specific requirements, WikiLeaks provides several alternative methods. <a href="page_16384107.html#submit_help_contact">Contact us</a> to discuss how to proceed.</p>
+	</div>
+</div>
+<div id="submit_help_buttons" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_16384107.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_16384107.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_16384107.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_16384107.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+        <div id="main">
+            
+
+<link href="../../static/css/styles_topnav.css" rel="stylesheet">
+<link href="../../static/css/styles_sidenav.css" rel="stylesheet">
+<div class="top-navigation">
+  <nav class="navbar">
+      <a href="page_16384107.html#menu" class="mobile-only hot-dog nav-element">
+      </a>
+    <div class="nav-logo">
+      <a href="https://wikileaks.org">
+        <h1>WikiLeaks</h1>
+      </a>
+    </div>
+    <div class="action-buttons">
+      <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+      <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+      <a class="button-face submit-link" href="page_16384107.html#submit">Submit</a>
+    </div>
+    <form class="global-search" method="get" action="https://search.wikileaks.org/">
+      <input type="text" name="q" placeholder="Search">
+      <button class="btn-search" type="submit"></button>
+    </form>
+    <div class="main-nav">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            </li>
+          
+            <li>
+              <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            </li>
+          
+            <li>
+              <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            </li>
+          
+            <li>
+              <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </nav>
+</div><nav id="menu" class="side-nav rub">
+  <div class="menu-wrapper">
+    <a class="close-btn nav-element" href="page_16384107.html#"></a>
+    
+      <ul class="first-level">
+        
+          <li>
+            <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            
+          </li>
+        
+          <li>
+            <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            
+          </li>
+        
+          <li>
+            <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            
+          </li>
+        
+          <li>
+            <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            
+          </li>
+        
+      </ul>
+    
+    <aside class="friends mobile-only">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a href="https://www.torproject.org/" target="_blank">Tor Project</a>
+            </li>
+          
+            <li>
+              <a href="https://tails.boum.org/" target="_blank">Tails</a>
+            </li>
+          
+            <li>
+              <a href="https://www.couragefound.org/" target="_blank">Courage</a>
+            </li>
+          
+            <li>
+              <a href="https://www.bitcoin.org/" target="_blank">Bitcoin</a>
+            </li>
+          
+        </ul>
+      
+    </aside>
+    <aside class="social mobile-only">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/wikileaks" class="nav-element" target="_blank" alt="Facebook">
+            <img class="img-responsive" src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" class="nav-element" target="_blank" alt="Twitter">
+            <img class="img-responsive" src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</nav>
+
+            <div class="container-fluid row-fluid">
+                <div class="col-xs-12 col-sm-12 col-md-10 container-text">
+                    <div class="leak-header">
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<div class="title-area">
+    <h1 class="leak-title">Vault7: CIA Hacking Tools Revealed</h1>
+    <img src="../logo.png">
+</div>
+
+</body></html>
+
+                        <ul class="leak-navigation">
+                            <a href="../index.html"><li>Releases</li></a>
+                            <a href="index.html"><li class="active">Documents</li></a>
+                       </ul>
+                    </div>
+                    <p>Navigation:  » <a href="page_15728683.html">Latest version</a></p>
+<hr>
+                    <div id="uniquer">
+                        <p>Owner: <a class="user" href="user_524297.html"><span class="user">User #524297</span></a></p>
+<h2>Firmware Reverse Engineering</h2>
+<h2></h2>
+<p><i>('toc' missing)</i></p>
+<p> </p>
+<hr>
+<h2>Firmware Images</h2>
+<p><a href="files/a1470-timecapsule-20150225.bin.pdf">a1470-timecapsule-20150225.bin</a> [ md5 = <span style="line-height: 1.4285715;">2b0d2c5657daa8b65ac1141c912beaa3 ]</span></p>
+<p><span style="line-height: 1.4285715;"> </span><span style="line-height: 1.4285715;"> <br></span></p>
+<hr>
+<h2><span style="line-height: 1.4285715;">Firmware Image Parsing</span></h2>
+<p><span style="line-height: 1.4285715;">The binwalk command ( <span class="external">http://binwalk.org</span> ) is usually helpful when parsing a known binary file, however, we found that binwalk does not do well against the Apple Airport firmware.  Binwalk did identify a few locations to examine further by hand.<br></span></p>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ binwalk -Bv a1470-timecapsule-20150225.bin 
+
+Scan Time:     2015-03-24 15:21:11
+Target File:   /home/<span class="user">User #71383</span>/tmp/a1470-timecapsule-20150225.bin
+MD5 Checksum:  2b0d2c5657daa8b65ac1141c912beaa3
+Signatures:    328
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+74424         0x122B8         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/siutils.c
+79068         0x134DC         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/aiutils.c
+93208         0x16C18         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/load.c
+93340         0x16C9C         Unix path: /SourceCache/J28/AirPortFW-77300.1/Embedded/External/cfebrcm/iproc/CFE/src/shared/hndchipc.c
+147460        0x24004         LZMA compressed data, properties: 0x5D, dictionary size: 65536 bytes, uncompressed size: 610436 bytes
+1072251       0x105C7B        Copyright string: "Copyright 1995-2005 <span class="user">User #71419</span> "
+1072536       0x105D98        CRC32 polynomial table, little endian
+1076632       0x106D98        CRC32 polynomial table, big endian
+1081700       0x108164        gzip compressed data, maximum compression, has original file name: "netbsd.j28_release.image.bin", from Unix, last modified: 2014-04-14 22:11:40
+8214656       0x7D5880        Minix filesystem, V1, little endian, -20629 zones
+15752315      0xF05C7B        Copyright string: "Copyright 1995-2005 <span class="user">User #71419</span> "
+15752600      0xF05D98        CRC32 polynomial table, little endian
+15756696      0xF06D98        CRC32 polynomial table, big endian
+15761764      0xF08164        gzip compressed data, maximum compression, has original file name: "netbsd.j28_release.image.bin", from Unix, last modified: 2014-04-14 22:11:40
+22894720      0x15D5880       Minix filesystem, V1, little endian, -20629 zones
+30584320      0x1D2AE00       OpenSSH RSA1 private key, version "1.1"
+30591488      0x1D2CA00       <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> private key
+30595072      0x1D2D800       OpenSSH <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> public key
+30598144      0x1D2E400       <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> private key
+30602240      0x1D2F400       OpenSSH <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> public key
+
+</div></code></pre></div>
+<p><span style="line-height: 1.4285715;"><br></span></p>
+<p>We examined the Airport firmware at offset 0x1D2AE00 ( OpenSSH RSA1 private key, version "1.1" ), and determined the five keys found by binwalk to be listed sequentially in the firmware.  Where the last key ( OpenSSH <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> public key ) ended was an/a issue/guess.</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./openssh_rsa1_private_key ibs=1 skip=30584320 count=7168
+7168+0 records in
+14+0 records out
+7168 bytes (7.2 kB) copied, 0.00173387 s, 4.1 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ ssh-keygen -e -f openssh_rsa1_private_key
+version 1 keys are not supported </div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./pem_dsa_private_key ibs=1 skip=30591488 count=3584
+3584+0 records in
+7+0 records out
+3584 bytes (3.6 kB) copied, 0.000970766 s, 3.7 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ openssl dsa -inform <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> -text -in pem_dsa_private_key
+read <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> key
+Private-Key: (1024 bit)
+priv:
+    00:96:17:5f:40:3c:2e:0a:50:e1:58:5f:89:eb:25:
+    61:42:11:04:25:78
+pub: 
+    31:4b:4e:ca:45:e7:60:54:a8:a2:64:fc:32:cf:fb:
+    fd:3e:98:66:ef:7f:9a:a7:a7:2a:d1:99:2e:97:5e:
+    cf:2a:64:3a:fb:01:c8:fe:b3:1b:bf:ba:e8:4d:f0:
+    03:dc:ce:52:28:de:8e:a7:b4:9a:a5:33:93:52:09:
+    f5:06:57:a6:fa:32:74:7a:69:be:9b:20:5e:51:88:
+    2a:13:81:85:77:f7:fc:f1:ee:1e:db:bb:ca:3a:07:
+    50:75:29:92:07:4d:e1:87:0a:55:2d:c4:8c:8a:83:
+    fd:63:bf:d0:6b:e1:a6:eb:a7:64:2c:66:c0:8f:fe:
+    c0:a9:c0:d3:72:24:95:91
+P:   
+    00:e5:9c:e6:b0:cc:d7:a8:20:af:e5:85:04:43:d2:
+    d2:32:74:03:67:b4:86:3a:96:3c:3a:5b:28:27:c6:
+    c9:b4:dd:da:a8:12:93:4a:be:bf:bc:da:df:6e:55:
+    93:a4:cf:74:91:c1:ed:64:a1:9d:69:ff:d5:1d:d0:
+    f4:60:3f:98:15:1a:fa:54:43:1f:37:49:b4:0c:a8:
+    ef:8b:cc:27:fe:66:90:78:3d:80:74:25:a3:f7:fa:
+    0a:65:d6:70:27:5a:f0:34:13:34:ef:0a:7d:d0:40:
+    3a:cb:6b:ac:87:0d:a4:01:cd:24:8e:6c:32:07:86:
+    82:d0:6f:38:7e:ea:82:64:a7
+Q:   
+    00:ff:bb:d1:e9:a8:b4:da:a9:03:23:84:86:fa:cc:
+    f2:bc:1d:89:7b:37
+G:   
+    00:92:4c:d6:64:1c:4d:c2:a6:f1:20:1e:55:77:27:
+    e6:32:3a:c1:ef:d1:58:49:8f:d5:1e:4b:18:fa:ad:
+    5f:87:da:ec:83:69:04:5e:60:64:3b:36:09:c2:11:
+    33:be:2c:56:1b:52:14:46:27:eb:67:f8:31:3a:85:
+    c3:6f:7e:cd:f7:0d:b8:6b:7b:6a:d1:1a:96:44:45:
+    df:3a:89:fd:f1:4b:d6:9c:67:0c:98:cc:95:9c:87:
+    b5:52:3b:3b:f0:54:ae:be:ab:71:14:10:c5:83:c9:
+    23:bb:55:db:32:56:0e:48:1c:3c:36:5a:d8:09:42:
+    05:62:f4:2c:99:0d:c1:44:a0
+writing <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> key
+-----BEGIN <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----
+MIIBvAIBAAKBgQDlnOawzNeoIK/lhQRD0tIydANntIY6ljw6Wygnxsm03dqoEpNK
+vr+82t9uVZOkz3SRwe1koZ1p/9Ud0PRgP5gVGvpUQx83SbQMqO+LzCf+ZpB4PYB0
+JaP3+gpl1nAnWvA0EzTvCn3QQDrLa6yHDaQBzSSObDIHhoLQbzh+6oJkpwIVAP+7
+0emotNqpAyOEhvrM8rwdiXs3AoGBAJJM1mQcTcKm8SAeVXcn5jI6we/RWEmP1R5L
+GPqtX4fa7INpBF5gZDs2CcIRM74sVhtSFEYn62f4MTqFw29+zfcNuGt7atEalkRF
+3zqJ/fFL1pxnDJjMlZyHtVI7O/BUrr6rcRQQxYPJI7tV2zJWDkgcPDZa2AlCBWL0
+LJkNwUSgAoGAMUtOykXnYFSoomT8Ms/7/T6YZu9/mqenKtGZLpdezypkOvsByP6z
+G7+66E3wA9zOUijejqe0mqUzk1IJ9QZXpvoydHppvpsgXlGIKhOBhXf3/PHuHtu7
+yjoHUHUpkgdN4YcKVS3EjIqD/WO/0GvhpuunZCxmwI/+wKnA03IklZECFQCWF19A
+PC4KUOFYX4nrJWFCEQQleA==
+-----END <span class="glossary">DSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./openssh_dsa_public_key ibs=1 skip=30595072 count=3072
+3072+0 records in
+6+0 records out
+3072 bytes (3.1 kB) copied, 0.000795556 s, 3.9 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ ssh-keygen -e -f openssh_dsa_public_key
+---- BEGIN SSH2 PUBLIC KEY ----
+Comment: "1024-bit DSA, converted by <span class="user">User #71383</span>@andromeda from OpenSSH"
+AAAAB3NzaC1kc3MAAACBAOWc5rDM16ggr+WFBEPS0jJ0A2e0hjqWPDpbKCfGybTd2qgSk0
+q+v7za325Vk6TPdJHB7WShnWn/1R3Q9GA/mBUa+lRDHzdJtAyo74vMJ/5mkHg9gHQlo/f6
+CmXWcCda8DQTNO8KfdBAOstrrIcNpAHNJI5sMgeGgtBvOH7qgmSnAAAAFQD/u9HpqLTaqQ
+MjhIb6zPK8HYl7NwAAAIEAkkzWZBxNwqbxIB5VdyfmMjrB79FYSY/VHksY+q1fh9rsg2kE
+XmBkOzYJwhEzvixWG1IURifrZ/gxOoXDb37N9w24a3tq0RqWREXfOon98UvWnGcMmMyVnI
+e1Ujs78FSuvqtxFBDFg8kju1XbMlYOSBw8NlrYCUIFYvQsmQ3BRKAAAACAMUtOykXnYFSo
+omT8Ms/7/T6YZu9/mqenKtGZLpdezypkOvsByP6zG7+66E3wA9zOUijejqe0mqUzk1IJ9Q
+ZXpvoydHppvpsgXlGIKhOBhXf3/PHuHtu7yjoHUHUpkgdN4YcKVS3EjIqD/WO/0Gvhpuun
+ZCxmwI/+wKnA03IklZE=
+---- END SSH2 PUBLIC KEY ----</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./pem_rsa_private_key ibs=1 skip=30598144 count=4096
+4096+0 records in
+8+0 records out
+4096 bytes (4.1 kB) copied, 0.00101769 s, 4.0 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ openssl rsa -inform <span class="glossary">PEM<span class="glossary-tt">Privacy Enhanced Mail</span></span> -text -in pem_rsa_private_key
+Private-Key: (2048 bit)
+modulus:
+    00:e5:9f:ce:d6:ee:d6:85:83:ac:70:15:18:0f:b3:
+    74:c4:75:4e:bb:7e:1c:51:6d:49:87:8c:46:cc:a5:
+    df:b7:60:af:ec:2a:2f:6c:41:28:47:74:72:80:36:
+    0c:ca:ce:8e:fd:d1:d4:28:4e:62:60:30:d8:8c:e5:
+    ba:b6:79:e4:c8:19:cb:89:c7:9f:71:4e:17:07:fc:
+    29:4c:16:48:15:7e:c4:dc:e7:18:9c:6e:b9:a5:b2:
+    3a:75:95:d8:cd:8f:2a:8e:8f:e7:9c:e4:94:fc:93:
+    9e:a4:71:ad:d6:37:a5:e0:c4:6e:fd:12:93:e2:f6:
+    82:1c:8d:7a:8b:b9:ca:1b:db:98:64:45:e1:d0:94:
+    ed:cb:a9:51:e4:c2:cd:be:a0:78:01:76:1e:be:a3:
+    bb:2e:0a:99:0d:5b:81:6b:c8:40:c1:1a:90:56:35:
+    a1:ed:e8:b6:fb:69:c5:33:46:a0:c7:9e:9e:f0:01:
+    95:e8:a9:81:23:03:4d:1f:42:a1:eb:2e:b7:03:4b:
+    97:21:d6:70:41:96:cc:22:0f:60:9f:2f:58:e2:42:
+    b7:2c:fb:24:9f:e1:42:c4:88:16:e0:35:f6:a7:e2:
+    c8:00:14:1c:c6:8c:ff:02:06:ba:69:1c:3b:b4:75:
+    d4:d0:f3:56:58:b8:f7:1c:60:f3:54:03:66:c7:7e:
+    03:b5
+publicExponent: 65537 (0x10001)
+privateExponent:
+    6c:64:3b:67:09:e7:09:af:56:3e:b2:36:61:72:fc:
+    b3:a0:0c:42:45:0d:69:02:85:ab:0e:74:7d:35:ef:
+    9c:c8:6f:42:b3:c7:1e:fa:c2:e0:b7:ff:34:b6:4e:
+    e3:8d:0d:c2:92:c1:eb:24:d5:1b:42:f3:75:cf:1b:
+    8b:f7:8e:1f:46:cd:e5:83:ed:a7:b6:8c:f8:9f:f7:
+    7e:8b:26:0b:bf:83:7e:23:38:62:df:81:92:cd:c6:
+    fa:aa:79:64:cf:27:ef:93:ce:69:29:1d:8a:fc:c3:
+    ee:2c:1b:3a:fb:99:b9:b8:00:0c:46:30:b8:fa:54:
+    00:d6:67:fa:7d:01:02:94:89:0a:51:62:07:d6:8a:
+    0d:0a:01:13:1a:88:61:d4:6c:3d:fd:a0:72:f3:54:
+    9a:b2:13:5f:5a:95:ff:a7:e3:8b:31:01:8c:ef:a6:
+    f6:d7:37:68:1c:53:3d:ac:35:47:14:6e:18:8c:5c:
+    2b:7c:5b:49:76:26:20:d9:41:73:b8:e2:a1:43:6e:
+    89:03:bc:b3:a9:b2:59:72:f2:54:03:c4:0e:d5:c8:
+    b5:76:50:76:39:5e:f2:4d:04:5c:21:5c:c5:77:b2:
+    e7:3e:f9:96:8b:d1:f4:84:ad:6a:4e:dc:8b:c5:e4:
+    94:4e:ac:7f:a0:e7:47:c6:39:19:ac:f8:5d:f2:a1:
+    21
+prime1:
+    00:fc:c0:3f:70:9c:d7:89:03:4c:fe:32:b9:87:e5:
+    2e:1c:4d:10:5e:8c:01:92:c1:1d:64:91:0d:3e:79:
+    fc:f7:fb:b1:24:b0:9c:d8:cd:18:98:90:2a:ea:a1:
+    82:cb:ad:a6:05:b7:8b:32:48:77:35:15:50:fa:32:
+    54:1c:d9:a2:20:1d:40:bc:df:c5:6c:7e:57:4f:29:
+    f1:14:ac:02:09:e7:4d:61:1e:1b:5a:56:6e:62:be:
+    20:f4:c2:e4:0d:f2:96:94:f1:b8:57:e4:76:7c:76:
+    75:3e:0d:15:eb:25:22:56:e1:57:fe:9b:a3:55:7e:
+    7b:10:87:49:e1:07:1e:99:cf
+prime2:
+    00:e8:93:74:6e:be:18:78:8c:15:81:dc:92:e0:53:
+    ae:38:55:51:2c:d4:43:f5:11:d8:3c:38:22:a8:25:
+    c7:8c:ee:d0:eb:7f:96:5e:c1:5d:ab:e5:7c:fd:2d:
+    13:d8:62:61:8c:ff:93:47:b0:ad:1c:46:38:73:70:
+    47:ac:7b:b7:6f:6c:c7:21:63:36:e6:92:ab:69:9c:
+    c8:77:fb:77:c8:c4:db:52:a7:ac:b3:36:1a:52:42:
+    04:70:38:f1:d7:f8:0e:c2:fc:77:f6:c0:cf:67:dd:
+    01:d0:2d:b6:f2:ed:f9:41:bd:aa:08:60:9f:78:a1:
+    f4:f8:fa:5a:70:ce:c7:9f:3b
+exponent1:
+    00:ea:22:95:22:16:c8:bb:0d:a9:b7:18:fa:31:5f:
+    26:55:e5:35:b2:bf:f3:7d:25:13:bb:63:7b:67:52:
+    cd:fa:52:d8:08:6a:eb:01:13:0d:23:d6:f9:4a:9d:
+    0f:72:ea:8b:8f:64:35:b8:00:d5:1d:01:80:20:25:
+    9b:31:96:91:cf:3a:0a:0c:6d:26:8f:98:81:fc:bd:
+    97:ac:54:a3:16:d5:84:22:e1:26:e9:8a:83:7b:49:
+    31:72:4b:4f:c3:73:e3:f6:59:ed:30:ce:5c:cc:73:
+    57:ac:81:a6:ba:4b:8e:01:f9:81:f0:43:f1:0c:73:
+    bc:40:d5:72:a4:d8:59:8a:95
+exponent2:
+    55:4e:30:78:a6:15:07:b2:29:f9:55:d4:31:9f:bf:
+    d9:3d:c1:e6:75:7c:ef:98:b9:fd:6c:81:99:b7:31:
+    b8:49:a8:2b:98:c2:a8:c2:b7:fe:e2:cf:b3:75:23:
+    40:4c:e5:86:f7:ff:27:5e:70:40:5c:a9:3b:fe:44:
+    eb:c8:fd:01:4b:9e:c6:6a:43:aa:d2:c5:38:99:9f:
+    16:13:10:5e:7d:86:0c:8d:1f:d5:23:d5:07:b2:db:
+    39:e6:49:1e:74:07:c6:11:20:57:4b:65:47:ad:52:
+    8a:ef:19:99:85:1b:d5:b7:21:74:ad:2c:10:ed:26:
+    93:64:10:64:2c:14:20:1d
+coefficient:
+    51:f8:15:70:fd:36:b0:84:a5:11:66:ac:e1:53:41:
+    33:fa:6b:ef:cb:59:60:e6:1a:cb:5c:cc:5a:1e:ed:
+    f2:cd:1b:84:2e:7a:c1:6d:31:e4:a0:f6:99:d7:80:
+    d5:21:89:9a:85:f7:7d:4b:1a:48:21:8c:a4:4e:f4:
+    fe:35:60:0e:b7:87:39:c1:22:fb:1d:ef:69:26:10:
+    bd:a6:3f:d3:d9:72:ac:e2:50:54:f2:08:98:7e:1c:
+    aa:35:fc:05:0e:d4:d4:a8:48:e6:15:b3:56:40:3a:
+    20:45:1e:85:9d:f0:e7:89:08:1e:9e:62:dc:3f:76:
+    7b:a6:d6:11:a6:15:40:80
+writing <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> key
+-----BEGIN <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----
+MIIEowIBAAKCAQEA5Z/O1u7WhYOscBUYD7N0xHVOu34cUW1Jh4xGzKXft2Cv7Cov
+bEEoR3RygDYMys6O/dHUKE5iYDDYjOW6tnnkyBnLicefcU4XB/wpTBZIFX7E3OcY
+nG65pbI6dZXYzY8qjo/nnOSU/JOepHGt1jel4MRu/RKT4vaCHI16i7nKG9uYZEXh
+0JTty6lR5MLNvqB4AXYevqO7LgqZDVuBa8hAwRqQVjWh7ei2+2nFM0agx56e8AGV
+6KmBIwNNH0Kh6y63A0uXIdZwQZbMIg9gny9Y4kK3LPskn+FCxIgW4DX2p+LIABQc
+xoz/Aga6aRw7tHXU0PNWWLj3HGDzVANmx34DtQIDAQABAoIBAGxkO2cJ5wmvVj6y
+NmFy/LOgDEJFDWkChasOdH0175zIb0Kzxx76wuC3/zS2TuONDcKSwesk1RtC83XP
+G4v3jh9GzeWD7ae2jPif936LJgu/g34jOGLfgZLNxvqqeWTPJ++TzmkpHYr8w+4s
+Gzr7mbm4AAxGMLj6VADWZ/p9AQKUiQpRYgfWig0KARMaiGHUbD39oHLzVJqyE19a
+lf+n44sxAYzvpvbXN2gcUz2sNUcUbhiMXCt8W0l2JiDZQXO44qFDbokDvLOpslly
+8lQDxA7VyLV2UHY5XvJNBFwhXMV3suc++ZaL0fSErWpO3IvF5JROrH+g50fGORms
++F3yoSECgYEA/MA/cJzXiQNM/jK5h+UuHE0QXowBksEdZJENPnn89/uxJLCc2M0Y
+mJAq6qGCy62mBbeLMkh3NRVQ+jJUHNmiIB1AvN/FbH5XTynxFKwCCedNYR4bWlZu
+Yr4g9MLkDfKWlPG4V+R2fHZ1Pg0V6yUiVuFX/pujVX57EIdJ4Qcemc8CgYEA6JN0
+br4YeIwVgdyS4FOuOFVRLNRD9RHYPDgiqCXHjO7Q63+WXsFdq+V8/S0T2GJhjP+T
+R7CtHEY4c3BHrHu3b2zHIWM25pKraZzId/t3yMTbUqesszYaUkIEcDjx1/gOwvx3
+9sDPZ90B0C228u35Qb2qCGCfeKH0+PpacM7HnzsCgYEA6iKVIhbIuw2ptxj6MV8m
+VeU1sr/zfSUTu2N7Z1LN+lLYCGrrARMNI9b5Sp0PcuqLj2Q1uADVHQGAICWbMZaR
+zzoKDG0mj5iB/L2XrFSjFtWEIuEm6YqDe0kxcktPw3Pj9lntMM5czHNXrIGmukuO
+AfmB8EPxDHO8QNVypNhZipUCgYBVTjB4phUHsin5VdQxn7/ZPcHmdXzvmLn9bIGZ
+tzG4SagrmMKowrf+4s+zdSNATOWG9/8nXnBAXKk7/kTryP0BS57GakOq0sU4mZ8W
+ExBefYYMjR/VI9UHsts55kkedAfGESBXS2VHrVKK7xmZhRvVtyF0rSwQ7SaTZBBk
+LBQgHQKBgFH4FXD9NrCEpRFmrOFTQTP6a+/LWWDmGstczFoe7fLNG4QuesFtMeSg
+9pnXgNUhiZqF931LGkghjKRO9P41YA63hznBIvsd72kmEL2mP9PZcqziUFTyCJh+
+HKo1/AUO1NSoSOYVs1ZAOiBFHoWd8OeJCB6eYtw/dnum1hGmFUCA
+-----END <span class="glossary">RSA<span class="glossary-tt">Encryption algorithm</span></span> PRIVATE KEY-----</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./openssh_rsa_public_key ibs=1 skip=30602240 count=3071
+3071+0 records in
+5+1 records out
+3071 bytes (3.1 kB) copied, 0.000776856 s, 4.0 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ ssh-keygen -e -f openssh_rsa_public_key
+---- BEGIN SSH2 PUBLIC KEY ----
+Comment: "2048-bit RSA, converted by <span class="user">User #71383</span>@andromeda from OpenSSH"
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDln87W7taFg6xwFRgPs3TEdU67fhxRbUmHjEbMpd
++3YK/sKi9sQShHdHKANgzKzo790dQoTmJgMNiM5bq2eeTIGcuJx59xThcH/ClMFkgVfsTc
+5xicbrmlsjp1ldjNjyqOj+ec5JT8k56kca3WN6XgxG79EpPi9oIcjXqLucob25hkReHQlO
+3LqVHkws2+oHgBdh6+o7suCpkNW4FryEDBGpBWNaHt6Lb7acUzRqDHnp7wAZXoqYEjA00f
+QqHrLrcDS5ch1nBBlswiD2CfL1jiQrcs+ySf4ULEiBbgNfan4sgAFBzGjP8CBrppHDu0dd
+TQ81ZYuPccYPNUA2bHfgO1
+---- END SSH2 PUBLIC KEY ----</div></code></pre></div>
+<p> </p>
+<p>Now we want to look by hand at the "netbsd.j28_release.image.bin" at offsets 0x108164 and 0xf08164.  We confirmed with NetBSD source code ( src/sys/arch/evbarm/stand/gzboot/gzboot.c ) there is a gzboot (gzip header) at these offsets.  Further review of the NetBSD source code ( src/sys/arch/evbarm/stand/gzboot/srtbegin.S ) indicated that the bytes starting at offsets 0x100000 and 0xf00000 are the beginning of the NetBSD gzboot loader.  To confirm our suspensions we copied the first 48 bytes at 0x100000 into the Online Disassembler ( <span class="external">http://www.onlinedisassembler.com</span> ) - the disassembly closely matched the assembly code in srtbegin.S.  Further disassembly of the gzboot loader via Ghidra is needed.  This review by hand further confirmed that the compressed NetBSD kernel begins at the offsets 0x108164 and 0xf08164.</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./gzboot-0x100000 ibs=1 skip=1048576 count=33124
+33124+0 records in
+64+1 records out
+33124 bytes (33 kB) copied, 0.011309 s, 2.9 MB/s
+<span class="user">User #71383</span>@andromeda:~/tmp$ dd if=a1470-timecapsule-20150225.bin of=./gzboot-0xf00000 ibs=1 skip=15728640 count=33124
+33124+0 records in
+64+1 records out
+33124 bytes (33 kB) copied, 0.0119577 s, 2.8 MB/s</div></code></pre></div>
+<p> </p>
+<p><span style="line-height: 1.4285715;"> </span></p>
+<hr>
+<h2><span style="line-height: 1.4285715;">Previous Attempts</span></h2>
+<p>Interesting points of </p>
+<table><tbody>
+<tr>
+<th>Offset</th>
+<th>Data</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td colspan="1">0x0000 - 0x003f</td>
+<td colspan="1">unknown, but repetitive data</td>
+<td colspan="1">inital bootstrap code?</td>
+</tr>
+<tr>
+<td colspan="1">0x03E0</td>
+<td colspan="1">"ZSIB"</td>
+<td colspan="1">Some kind of section header</td>
+</tr>
+<tr>
+<td colspan="1">0x0400</td>
+<td colspan="1">"FLSH"</td>
+<td colspan="1">
+<p><span>16 bytes of data, followed by what looks like null-terminated strings for <span class="glossary">NVRAM<span class="glossary-tt">Non-volatile Random Access Memory</span></span> variables.</span></p>
+<p><span>Seems data is repeated at offset 0x80000.</span></p>
+</td>
+</tr>
+<tr>
+<td colspan="1">0x1400</td>
+<td colspan="1">"AMZL"</td>
+<td colspan="1">AMZL == LZMA in reverse?</td>
+</tr>
+<tr>
+<td colspan="1">0x8230</td>
+<td colspan="1">"SHMOO VEPKID"</td>
+<td colspan="1">wtf?</td>
+</tr>
+<tr>
+<td colspan="1">0xB0008</td>
+<td colspan="1"><p>"C86439500FNF55QAX"</p></td>
+<td colspan="1">serial #? repeated later in variable as "mlbserial"</td>
+</tr>
+<tr>
+<td colspan="1">0xB0050</td>
+<td colspan="1">"141004141004p" 0x700a 0x07d4</td>
+<td colspan="1">unknown data</td>
+</tr>
+<tr>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+</tr>
+<tr>
+<td colspan="1">0x108164</td>
+<td colspan="1">gzip compressed data</td>
+<td colspan="1">filename included: "netbsd.j28_release.image.bin", file repeated again at offset 0xF08164</td>
+</tr>
+<tr>
+<td colspan="1"><span>0xF08164</span></td>
+<td colspan="1"><span>gzip compressed data</span></td>
+<td colspan="1"><span>filename included: "netbsd.j28_release.image.bin" (repeated)</span></td>
+</tr>
+</tbody></table>
+<p> </p>
+<p>My attempt at parsing the firmware for the Time Capsule -<span style="text-align: center;line-height: 1.4285715;"> </span></p>
+<table><tbody>
+<tr>
+<th>Start Offset</th>
+<th>End Offset</th>
+<th>Length (bytes)</th>
+<th colspan="1">Interesting Bytes</th>
+<th>Notes</th>
+</tr>
+<tr>
+<td><strong>0x00000000</strong></td>
+<td>0x000003DF</td>
+<td>992</td>
+<td colspan="1">0xff 0x04 0x00 0xea ... 0x78 0x56 0x34 0x12</td>
+<td>strange/unknown header with several repeating values</td>
+</tr>
+<tr>
+<td>0x000003E0</td>
+<td>0x000003FF</td>
+<td>32</td>
+<td colspan="1"> </td>
+<td>
+<span style="color: rgb(0,0,255);"><strong>ZSIB</strong></span> – what is ZSIB</td>
+</tr>
+<tr>
+<td>0x00000400</td>
+<td>0x000013FF</td>
+<td>4096</td>
+<td colspan="1">0xb9 0xb3 0xac 0xb7 at the end of the section</td>
+<td>
+<span style="color: rgb(0,0,255);"><strong>FLSH</strong></span> – I believe this is NVRAM</td>
+</tr>
+<tr>
+<td colspan="1">0x00001400</td>
+<td colspan="1">0x0001FFFF</td>
+<td colspan="1">125,952</td>
+<td colspan="1"> </td>
+<td colspan="1">
+<span style="color: rgb(0,0,255);"><strong>AMZL</strong></span> – I believe this is Broadcom/Apple <span class="glossary">CFE<span class="glossary-tt">Common Firmware Environment</span></span> Bootloader</td>
+</tr>
+<tr>
+<td colspan="1">0x00020000</td>
+<td colspan="1">0x00023FFF</td>
+<td colspan="1">16,384</td>
+<td colspan="1"> </td>
+<td colspan="1">a simple pattern exists for what reason I don't know</td>
+</tr>
+<tr>
+<td colspan="1">0x00024000</td>
+<td colspan="1">0x0004F87F</td>
+<td colspan="1">178,304</td>
+<td colspan="1"> </td>
+<td colspan="1">binary, compressed, and/or encrypted information</td>
+</tr>
+<tr>
+<td colspan="1">0x0004F880</td>
+<td colspan="1">0x0007FFFF</td>
+<td colspan="1">198,528</td>
+<td colspan="1"> </td>
+<td colspan="1">all 0xff – uninitialized flash memory</td>
+</tr>
+<tr>
+<td colspan="1">0x00080000</td>
+<td colspan="1">0x0008026F</td>
+<td colspan="1">624</td>
+<td colspan="1"> </td>
+<td colspan="1">
+<span style="color: rgb(0,0,255);"><strong>FLSH</strong></span> – an almost complete copy of previous FLSH</td>
+</tr>
+<tr>
+<td colspan="1">0x00080270</td>
+<td colspan="1">0x0009FFFF</td>
+<td colspan="1">130,448</td>
+<td colspan="1"> </td>
+<td colspan="1">all 0xff – uninitialized flash memory</td>
+</tr>
+<tr>
+<td colspan="1">0x000A0000</td>
+<td colspan="1">0x000A7FFF</td>
+<td colspan="1">32,768</td>
+<td colspan="1">mlbserial=C86439500FNF55QAX.apple-sn=C86NH3UGF9H5</td>
+<td colspan="1">NULL terminated strings – transceiver settings</td>
+</tr>
+<tr>
+<td colspan="1">0x000A8000</td>
+<td colspan="1">0x000FFFFF</td>
+<td colspan="1">360,448</td>
+<td colspan="1"> </td>
+<td colspan="1">all 0xff – uninitialized flash memory with two exceptions (see above)</td>
+</tr>
+<tr>
+<td colspan="1">0x00100000</td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1"> </td>
+<td colspan="1">gzipped NetBSD for Broadcom BCM5301x</td>
+</tr>
+</tbody></table>
+<p>-- that is what I have so far.</p>
+<p> </p>
+<p> </p>
+<p> </p>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="../../highlighter/mootools-core-and-more.js"></script>
+            <script type="text/javascript" src="../../highlighter/efatmarker.min.js"></script>
+            <div id="efm-button">
+            <div id="efm-menu">
+                <h3 style="margin:0 0 2px 0">e-Highlighter</h3>
+                <a id="efm-permalink" class="efm-need-highlight" href="page_16384107.html" style="margin-bottom:0;padding-bottom:0;"></a>
+                <p style="margin-top:0;padding-top:0" class="efm-need-highlight">Click to send permalink to address bar, or right-click to copy permalink.</p>
+                <p style="margin:0.5em 0;padding:0;border-top:1px dotted #ccc;height:1px"></p>
+                <a id="efm-unhighlightall" class="efm-need-highlight">Un-highlight all</a>
+                <a id="efm-unhighlight">Un-highlight selection<span>u</span></a>
+                <a id="efm-highlight">Highlight selection<span>h</span></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+
+            (function(){
+            window.addEvent('domready', function(){
+
+                var markerButton = $('efm-button');
+                if ( markerButton ) {
+                    eMarker = new EFatMarker($('uniquer'));
+                    eMarker.tokenToSpans(); // apply whatever token is there
+                    // need to act on mousedown or else selection disappear
+                    markerButton.addEvent('mousedown', function(){
+                        eMarker.interpretSelection(true);
+                        return false;
+                    });
+                    $('efm-unhighlightall').addEvent('mousedown', function(){
+                        eMarker.unhighlightAll(true);
+                        return false;
+                        });
+                    $('efm-unhighlight').addEvent('mousedown', function(){
+                        eMarker.unhighlightSelection(true);
+                        return false;
+                        });
+                    $('efm-highlight').addEvent('mousedown', function(){
+                        eMarker.highlightSelection(true);
+                        return false;
+                        });
+                    $('efm-permalink').addEvent('mousedown', function(){
+                        window.location.href = this.href;
+                        return false;
+                        });
+                    // if Mootools Keyboard is available, use it
+                    if (Keyboard) {
+                        var keyboard = new Keyboard({
+                            defaultEventType: 'keyup',
+                            events: {
+                                'h': function(){
+                                    eMarker.highlightSelection(true);
+                                    },
+                                'u': function(){
+                                    eMarker.unhighlightSelection(true);
+                                    }
+                                }
+                            });
+                        keyboard.activate();
+                        }
+                    eMarker.syncDOM();
+                    // auto scroll to first highlight, if any
+                    if (eMarker.hasSpans()) {
+                        var scroll = new Fx.Scroll(window,{offset:{'x':0,'y':-100}}),
+                            highlights = $$('#uniquer .efm-hi');
+                        if (highlights.length > 0) {
+                            scroll.toElement(highlights[0]);
+                            }
+                        }
+                    }
+                });
+            })();
+            </script>
+            
+
+<link href="../../static/css/styles_footer.css" rel="stylesheet">
+<footer id="page-footer" class="footer-recommendations">
+  <div class="footer-wrapper">
+    <div class="recommendation-container">
+      <a href="page_16384107.html#" class="top">Top</a>
+      
+        <ul class="recommendation-links">
+          
+            <li class="recommendation">
+              <a href="https://www.torproject.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton401.png?1461924517" width="300" height="180" /></div>
+                <p>
+<p>Tor is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://tails.boum.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton405.png?1461924517" width="446" height="223" /></div>
+                <p>
+<p>Tails is a live operating system, that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.couragefound.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton404.png?1461924517" width="357" height="50" /></div>
+                <p>
+<p>The Courage Foundation is an international organisation that supports those who risk life or liberty to make significant contributions to the historical record.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.bitcoin.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton403.png?1461924517" width="300" height="64" /></div>
+                <p>
+<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
+</p>
+              </a>
+            </li>
+          
+        </ul>
+      
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/wikileaks" target="_blank" alt="Facebook">
+            <img src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" target="_blank" alt="Twitter">
+            <img src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+        <script src="../../bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        </script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

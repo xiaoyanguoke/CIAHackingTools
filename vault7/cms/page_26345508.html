@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="http://localhost:6081/IMG/favicon.ico">
+        <title>Python Coding Conventions</title>
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/cerulean.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/new-gen.css" rel="stylesheet">
+        <link href="../../css/leak-styles.css" rel="stylesheet">
+        <link href="../../highlighter/efatmarker.css" rel="stylesheet">
+        <style>
+          #efm-button {margin:0 0 4px 0;padding:0 0 0 30px;position:fixed;height:48px;width:52px;bottom:0;right:0;background:transparent '/highlighter/kedit-2.png' no-repeat bottom right;cursor:pointer;opacity:0.4;z-index:99999999999}
+          #efm-button:hover {opacity:1}
+          #efm-button #efm-menu {margin:0 0 52px 0;border:1px outset gray;padding:0;display:none;background:#eee;position:fixed;bottom:0;right:0;width:20em;opacity:1;cursor:auto}
+          #efm-button:hover #efm-menu {display:block;font-size:smaller;color:#999}
+          #efm-button #efm-menu p {margin:0;padding:0 3px}
+          #efm-button #efm-menu a {margin:1px;padding:3px 3px;display:block;font:12px sans-serif;white-space:nowrap;opacity:inherit;cursor:pointer}
+          #efm-button #efm-menu a:hover {color:black;background-color:white;opacity:1}
+          #efm-button #efm-menu a > span {color:gray;position:absolute;right:4px}
+          .efm-hi {background-color:#ff8;font-weight:normal;}
+        </style>
+        <link href="../../bootstrap/css/submit.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="submit_wlkey" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_26345508.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_26345508.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_26345508.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_26345508.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+		<p>This key's fingerprint is A04C 5E09 ED02 B328 03EB  6116 93ED 732E 9231 8DBA</p>
+		<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQQNBFUoCGgBIADFLp+QonWyK8L6SPsNrnhwgfCxCk6OUHRIHReAsgAUXegpfg0b
+rsoHbeI5W9s5to/MUGwULHj59M6AvT+DS5rmrThgrND8Dt0dO+XW88bmTXHsFg9K
+jgf1wUpTLq73iWnSBo1m1Z14BmvkROG6M7+vQneCXBFOyFZxWdUSQ15vdzjr4yPR
+oMZjxCIFxe+QL+pNpkXd/St2b6UxiKB9HT9CXaezXrjbRgIzCeV6a5TFfcnhncpO
+ve59rGK3/az7cmjd6cOFo1Iw0J63TGBxDmDTZ0H3ecQvwDnzQSbgepiqbx4VoNmH
+OxpInVNv3AAluIJqN7RbPeWrkohh3EQ1j+lnYGMhBktX0gAyyYSrkAEKmaP6Kk4j
+/ZNkniw5iqMBY+v/yKW4LCmtLfe32kYs5OdreUpSv5zWvgL9sZ+4962YNKtnaBK3
+1hztlJ+xwhqalOCeUYgc0Clbkw+sgqFVnmw5lP4/fQNGxqCO7Tdy6pswmBZlOkmH
+XXfti6hasVCjT1MhemI7KwOmz/KzZqRlzgg5ibCzftt2GBcV3a1+i357YB5/3wXE
+j0vkd+SzFioqdq5Ppr+//IK3WX0jzWS3N5Lxw31q8fqfWZyKJPFbAvHlJ5ez7wKA
+1iS9krDfnysv0BUHf8elizydmsrPWN944Flw1tOFjW46j4uAxSbRBp284wiFmV8N
+TeQjBI8Ku8NtRDleriV3djATCg2SSNsDhNxSlOnPTM5U1bmh+Ehk8eHE3hgn9lRp
+2kkpwafD9pXaqNWJMpD4Amk60L3N+yUrbFWERwncrk3DpGmdzge/tl/UBldPoOeK
+p3shjXMdpSIqlwlB47Xdml3Cd8HkUz8r05xqJ4DutzT00ouP49W4jqjWU9bTuM48
+LRhrOpjvp5uPu0aIyt4BZgpce5QGLwXONTRX+bsTyEFEN3EO6XLeLFJb2jhddj7O
+DmluDPN9aj639E4vjGZ90Vpz4HpN7JULSzsnk+ZkEf2XnliRody3SwqyREjrEBui
+9ktbd0hAeahKuwia0zHyo5+1BjXt3UHiM5fQN93GB0hkXaKUarZ99d7XciTzFtye
+/MWToGTYJq9bM/qWAGO1RmYgNr+gSF/fQBzHeSbRN5tbJKz6oG4NuGCRJGB2aeXW
+TIp/VdouS5I9jFLapzaQUvtdmpaeslIos7gY6TZxWO06Q7AaINgr+SBUvvrff/Nl
+l2PRPYYye35MDs0b+mI5IXpjUuBC+s59gI6YlPqOHXkKFNbI3VxuYB0VJJIrGqIu
+Fv2CXwy5HvR3eIOZ2jLAfsHmTEJhriPJ1sUG0qlfNOQGMIGw9jSiy/iQde1u3ZoF
+so7sXlmBLck9zRMEWRJoI/mgCDEpWqLX7hTTABEBAAG0x1dpa2lMZWFrcyBFZGl0
+b3JpYWwgT2ZmaWNlIEhpZ2ggU2VjdXJpdHkgQ29tbXVuaWNhdGlvbiBLZXkgKFlv
+dSBjYW4gY29udGFjdCBXaWtpTGVha3MgYXQgaHR0cDovL3dsY2hhdGMzcGp3cGxp
+NXIub25pb24gYW5kIGh0dHBzOi8vd2lraWxlYWtzLm9yZy90YWxrKSA8Y29udGFj
+dC11cy11c2luZy1vdXItY2hhdC1zeXN0ZW1Ad2lraWxlYWtzLm9yZz6JBD0EEwEK
+ACcCGwMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AFAlb6cdIFCQOznOoACgkQk+1z
+LpIxjbrlqh/7B2yBrryWhQMGFj+xr9TIj32vgUIMohq94XYqAjOnYdEGhb5u5B5p
+BNowcqdFB1SOEvX7MhxGAqYocMT7zz2AkG3kpf9f7gOAG7qA1sRiB+R7mZtUr9Kv
+fQSsRFPb6RNzqqB9I9wPNGhBh1YWusUPluLINwbjTMnHXeL96HgdLT+fIBa8ROmn
+0fjJVoWYHG8QtsKiZ+lo2m/J4HyuJanAYPgL6isSu/1bBSwhEIehlQIfXZuS3j35
+12SsO1Zj2BBdgUIrADdMAMLneTs7oc1/PwxWYQ4OTdkay2deg1g/N6YqM2N7rn1W
+7A6tmuH7dfMlhcqw8bf5veyag3RpKHGcm7utDB6k/bMBDMnKazUnM2VQoi1mutHj
+kTCWn/vF1RVz3XbcPH94gbKxcuBi8cjXmSWNZxEBsbirj/CNmsM32Ikm+WIhBvi3
+1mWvcArC3JSUon8RRXype4ESpwEQZd6zsrbhgH4UqF56pcFT2ubnqKu4wtgOECsw
+K0dHyNEiOM1lL919wWDXH9tuQXWTzGsUznktw0cJbBVY1dGxVtGZJDPqEGatvmiR
+o+UmLKWyxTScBm5o3zRm3iyU10d4gka0dxsSQMl1BRD3G6b+NvnBEsV/+KCjxqLU
+vhDNup1AsJ1OhyqPydj5uyiWZCxlXWQPk4p5WWrGZdBDduxiZ2FTj17hu8S4a5A4
+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
+J3x7gtxUMkTadELqwY6hrU8=
+=BLTH
+-----END PGP PUBLIC KEY BLOCK-----
+		</pre>
+	</div>
+</div>
+
+<div id="submit_help_contact" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_26345508.html#submit_help_contact" class="btn-wl">How to contact WikiLeaks?</a>
+			<a href="page_26345508.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_26345508.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_26345508.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Contact</h3>
+		<p>If you need help using Tor you can contact WikiLeaks for assistance in setting it up using our simple webchat available at: <a href="https://wikileaks.org/talk">https://wikileaks.org/talk</a></p>
+		<p>If you can use Tor, but need to contact WikiLeaks for other reasons use our secured webchat available at <b>http://wlchatc3pjwpli5r.onion</b></p>
+		<p>We recommend contacting us over Tor if you can.</p>
+	</div>
+</div>
+
+<div id="submit_help_tor" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_26345508.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_26345508.html#submit_help_tor" class="btn-wl">What is Tor?</a>
+			<a href="page_26345508.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_26345508.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Tor</h3>
+		<p><a href="https://www.torproject.org">Tor</a> is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+		<p>In order to use the WikiLeaks public submission system as detailed above you can download the Tor Browser Bundle, which is a Firefox-like browser available for Windows, Mac OS X and GNU/Linux and pre-configured to connect using the anonymising system Tor.</p>
+		<h4>Tails</h4>
+		<p>If you are at high risk and you have the capacity to do so, you can also access the submission system through a secure operating system called <a href="https://tails.boum.org">Tails</a>. Tails is an operating system launched from a USB stick or a DVD that aim to leaves no traces when the computer is shut down after use and automatically routes your internet traffic through Tor. Tails will require you to have either a USB stick or a DVD at least 4GB big and a laptop or desktop computer.</p>
+	</div>
+</div>
+
+<div id="submit_help_tips" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_26345508.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_26345508.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_26345508.html#submit_help_tips" class="btn-wl">Tips for Sources</a>
+				<a href="page_26345508.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>Tips</h3>
+		<p>Our submission system works hard to preserve your anonymity, but we recommend you also take some of your own precautions. Please review these basic guidelines. </p>
+		<div>
+			<h4>1. Contact us if you have specific problems</h4>
+			<p>If you have a very large submission, or a submission with a complex format, or are a high-risk source, please <a href="page_26345508.html#submit_help_contact">contact us</a>. In our experience it is always possible to find a custom solution for even the most seemingly difficult situations.</p>
+		</div>
+		<div>
+			<h4>2. What computer to use</h4>
+			<p>If the computer you are uploading from could subsequently be audited in an investigation, consider using a computer that is not easily tied to you. Technical users can also use <a href="https://tails.boum.org">Tails</a> to help ensure you do not leave any records of your submission on the computer.</p>
+		</div>
+		<div>
+			<h4>3. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+	</div>
+</div>
+
+<div id="submit_help_after" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_26345508.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_26345508.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_26345508.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_26345508.html#submit_help_after" class="btn-wl">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>After</h3>
+
+		<div>
+			<h4>1. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+		<div>
+			<h4>2. Act normal</h4>
+			<p>If you are a high-risk source, avoid saying anything or doing anything after submitting which might promote suspicion. In particular, you should try to stick to your normal routine and behaviour.</p>
+		</div>
+
+		<div>
+			<h4>3. Remove traces of your submission</h4>
+			<p>If you are a high-risk source and the computer you prepared your submission on, or uploaded it from, could subsequently be audited in an investigation, we recommend that you format and dispose of the computer hard drive and any other storage media you used.</p>
+			<p>In particular, hard drives retain data after formatting which may be visible to a digital forensics team and flash media (USB sticks, memory cards and SSD drives) retain data even after a secure erasure. If you used flash media to store sensitive data, it is important to destroy the media.</p>
+			<p>If you do this and are a high-risk source you should make sure there are no traces of the clean-up, since such traces themselves may draw suspicion.</p>
+			<div>
+				<h4>4. If you face legal action</h4>
+				<p>If a legal action is brought against you as a result of your submission, there are organisations that may help you. The Courage Foundation is an international organisation dedicated to the protection of journalistic sources. You can find more details at <a href="https://www.couragefound.org">https://www.couragefound.org</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="submit" class="submit_banner">
+	<div class="container">
+		<div class="page-header">
+			<h1>Submit documents to WikiLeaks</h1>
+			<a class="remove-button" href="page_26345508.html#"><span class="glyphicon glyphicon-remove-circle"></span></a>
+		</div>
+		<p>WikiLeaks publishes documents of political or historical importance that are censored or otherwise suppressed. We specialise in strategic global publishing and large archives.</p>
+		<p>The following is the address of our secure site where you can anonymously upload your documents to WikiLeaks editors. You can only access this submissions system through Tor. (See our <a href="page_26345508.html#submit_help_tor">Tor tab</a> for more information.) We also advise you to read our <a href="page_26345508.html#submit_help_tips">tips for sources</a> before submitting.</p>
+
+		<div class="alert alert-info">
+			<div class="onion-url">wlupld3ptjvsgwqw.onion</div>
+			<div>
+				Copy this address into your Tor browser. Advanced users, if they wish, can also add a further layer of encryption to their submission using <a href="page_26345508.html#submit_wlkey">our public PGP key</a>.
+			</div>
+		</div>
+
+		<p>If you cannot use Tor, or your submission is very large, or you have specific requirements, WikiLeaks provides several alternative methods. <a href="page_26345508.html#submit_help_contact">Contact us</a> to discuss how to proceed.</p>
+	</div>
+</div>
+<div id="submit_help_buttons" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_26345508.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_26345508.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_26345508.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_26345508.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+        <div id="main">
+            
+
+<link href="../../static/css/styles_topnav.css" rel="stylesheet">
+<link href="../../static/css/styles_sidenav.css" rel="stylesheet">
+<div class="top-navigation">
+  <nav class="navbar">
+      <a href="page_26345508.html#menu" class="mobile-only hot-dog nav-element">
+      </a>
+    <div class="nav-logo">
+      <a href="https://wikileaks.org">
+        <h1>WikiLeaks</h1>
+      </a>
+    </div>
+    <div class="action-buttons">
+      <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+      <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+      <a class="button-face submit-link" href="page_26345508.html#submit">Submit</a>
+    </div>
+    <form class="global-search" method="get" action="https://search.wikileaks.org/">
+      <input type="text" name="q" placeholder="Search">
+      <button class="btn-search" type="submit"></button>
+    </form>
+    <div class="main-nav">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            </li>
+          
+            <li>
+              <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            </li>
+          
+            <li>
+              <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            </li>
+          
+            <li>
+              <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </nav>
+</div><nav id="menu" class="side-nav rub">
+  <div class="menu-wrapper">
+    <a class="close-btn nav-element" href="page_26345508.html#"></a>
+    
+      <ul class="first-level">
+        
+          <li>
+            <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            
+          </li>
+        
+          <li>
+            <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            
+          </li>
+        
+          <li>
+            <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            
+          </li>
+        
+          <li>
+            <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            
+          </li>
+        
+      </ul>
+    
+    <aside class="friends mobile-only">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a href="https://www.torproject.org/" target="_blank">Tor Project</a>
+            </li>
+          
+            <li>
+              <a href="https://tails.boum.org/" target="_blank">Tails</a>
+            </li>
+          
+            <li>
+              <a href="https://www.couragefound.org/" target="_blank">Courage</a>
+            </li>
+          
+            <li>
+              <a href="https://www.bitcoin.org/" target="_blank">Bitcoin</a>
+            </li>
+          
+        </ul>
+      
+    </aside>
+    <aside class="social mobile-only">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/wikileaks" class="nav-element" target="_blank" alt="Facebook">
+            <img class="img-responsive" src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" class="nav-element" target="_blank" alt="Twitter">
+            <img class="img-responsive" src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</nav>
+
+            <div class="container-fluid row-fluid">
+                <div class="col-xs-12 col-sm-12 col-md-10 container-text">
+                    <div class="leak-header">
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<div class="title-area">
+    <h1 class="leak-title">Vault7: CIA Hacking Tools Revealed</h1>
+    <img src="../logo.png">
+</div>
+
+</body></html>
+
+                        <ul class="leak-navigation">
+                            <a href="../index.html"><li>Releases</li></a>
+                            <a href="index.html"><li class="active">Documents</li></a>
+                       </ul>
+                    </div>
+                    <p>Navigation:  » <a href="index.html">Directory</a> » <a href="space_11763721.html">Android</a> » <a href="page_11629089.html">Android</a> » <a href="page_28049416.html">MDB Coding Convesions</a></p>
+<hr>
+                    <div id="uniquer">
+                        <p>Owner: <a class="user" href="user_26968069.html"><span class="user">User #26968069</span></a></p>
+<h2>Python Coding Conventions</h2>
+<h1><strong><p><i>('toc' missing)</i></p>
+<br></strong></h1>
+<h1><strong>Introduction</strong></h1>
+<p>This style guide is intended to help standardize the code generated by the various teams around the guidelines used throughout Google and the general development community.  Code of a consistent format leads to greater legibility.<br> When extending an existing project that does not already follow this guide, strive for consistency. Speak the local dialect. Aim for a uniformity in approach, and make the job of reading your code easier for the next person (it may be future you).<br> This guide is not intended to be a book to be thrown at others during code review. Instead, if there is a question about how something should be formatted, this guide will be the objective reference on what code "should" look like. Much of the text here is from the Google Python Style Guide. It has been adapted to suit our needs and preferences. This guide is not holy canon. When in doubt, do what makes the most sense for your particular project or use case.</p>
+<h1><strong>Language Rules</strong></h1>
+<h2><strong>Imports</strong></h2>
+<p>Use imports for packages and modules only.<br> The namespace management convention is simple. The source of each identifier is indicated in a consistent way; x.Obj says that object Obj is defined in module x.<br> Use import x for importing packages and modules.  Use from x import y where x is the package prefix and y is the module name with no prefix.  Use from x import y as z if two modules named y are to be imported or if y is an inconveniently long name.<br> Do not use relative names in imports. Even if the module is in the same package, use the full package name. This helps prevent unintentionally importing a package twice.</p>
+<h2><strong>Exceptions</strong></h2>
+<p>Exceptions are the preferred mechanism for reporting and handling error conditions.</p>
+<h3><strong>Definition</strong></h3>
+<p>Exceptions are a means of breaking out of the normal flow of control of a code block to handle errors or other exceptional conditions.</p>
+<h3><strong>Pros</strong></h3>
+<p>The control flow of normal operation code is not cluttered by error-handling code. It also allows the control flow to skip multiple frames when a certain condition occurs, e.g., returning from N nested functions in one step instead of having to carry-through error codes.</p>
+<h3><strong>Cons</strong></h3>
+<p>May cause the control flow to be confusing. Easy to miss error cases when making library calls.</p>
+<h3><strong>Decision</strong></h3>
+<p>Exceptions must follow certain conditions:</p>
+<ul>
+<li>Raise exceptions like this: raise MyException('Error message') or raise MyException. Do not use the two-argument form (raise MyException, 'Error message') or deprecated string-based exceptions (raise 'Error message').</li>
+<li>
+<span style="color: rgb(68,68,68);">Derive exceptions from</span> Exception <span style="color: rgb(68,68,68);">rather than </span>BaseException</li>
+<li>Modules or packages should define their own domain-specific base exception class, which should inherit from the built-in Exception class. The base exception for a module should be called Error.<br><br>
+</li>
+</ul>
+<div class="code"><pre><code><div class="plain-text-body">class Error(Exception):
+ pass</div></code></pre></div>
+<ul>
+<li>Never use catch-all except: statements, or catch Exception or StandardError, unless you are re-raising the exception or in the outermost block in your thread (and printing an error message). Python is very tolerant in this regard andexcept: will really catch everything including misspelled names, sys.exit() calls, Ctrl+C interrupts, unittest failures and all kinds of other exceptions that you simply don't want to catch.</li>
+<li>Minimize the amount of code in a try/except block. The larger the body of the try, the more likely that an exception will be raised by a line of code that you didn't expect to raise an exception. In those cases, the try/except block hides a real error.</li>
+<li>Use the finally clause to execute code whether or not an exception is raised in the try block. This is often useful for cleanup, i.e., closing a file.</li>
+<li>Exceptions are for handling "exceptional" (uncommon) conditions, and not for typical control flow manipulation.</li>
+<li><span style="color: rgb(68,68,68);">Use exception chaining appropriately. In Python 3, "raise X from Y" should be used to indicate explicit replacement without losing the original traceback.</span></li>
+<li>When capturing an exception, use as rather than a comma. For example:</li>
+</ul>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">try:
+ raise Error
+ except Error as error:
+ pass</div></code></pre></div>
+<h2><strong>Global Variables</strong></h2>
+<p>Avoid global variables.</p>
+<h3><strong>Definition</strong></h3>
+<p>Variables that are declared at the module level.</p>
+<h3><strong>Pros</strong></h3>
+<p>Occasionally useful.</p>
+<h3><strong>Cons</strong></h3>
+<p>Has the potential to change module behavior during the import, because assignments to module-level variables are done when the module is imported.</p>
+<h3><strong>Decision</strong></h3>
+<p>Avoid global variables in favor of class variables. Some exceptions are:</p>
+<ul>
+<li>Default options for scripts.</li>
+<li>Module-level constants. For example: PI = 3.14159. Constants should be named using all caps with underscores; see Naming below.</li>
+<li>It is sometimes useful for globals to cache values needed or returned by functions.</li>
+<li>If needed, globals should be made internal to the module and accessed through public module level functions; see Naming below.</li>
+</ul>
+<h2><strong>Nested/Local/Inner Classes and Functions</strong></h2>
+<p>Nested/local/inner classes and functions are fine.<br> A class can be defined inside of a method, function, or class. A function can be defined inside a method or function. Nested functions have read-only access to variables defined in enclosing scopes.</p>
+<h2><strong>List Comprehensions</strong></h2>
+<p>Okay to use for simple cases.<br> List comprehensions and generator expressions provide a concise and efficient way to create lists and iterators without resorting to the use of map(), filter(), or lambda.</p>
+<h3><strong>Pros</strong></h3>
+<p>Simple list comprehensions can be clearer and simpler than other list creation techniques. Generator expressions can be very efficient, since they avoid the creation of a list entirely.</p>
+<h3><strong>Cons</strong></h3>
+<p>Complicated list comprehensions or generator expressions can be hard to read.</p>
+<h3><strong>Decision</strong></h3>
+<p>Okay to use for simple cases. Each portion must fit on one line: mapping expression, for clause, filter expression. Multiple for clauses or filter expressions are not permitted. Use loops instead when things get more complicated.</p>
+<h2><strong>Default Iterators and Operators</strong></h2>
+<p>Use default iterators and operators for types that support them, like lists, dictionaries, and files.</p>
+<h3><strong>Definition</strong></h3>
+<p>Container types, like dictionaries and lists, define default iterators and membership test operators ("in" and "not in").</p>
+<h3><strong>Pros</strong></h3>
+<p>The default iterators and operators are simple and efficient. They express the operation directly, without extra method calls. A function that uses default operators is generic. It can be used with any type that supports the operation.</p>
+<h3><strong>Cons</strong></h3>
+<p>You can't tell the type of objects by reading the method names (e.g. has_key() means a dictionary). This is also an advantage.</p>
+<h3><strong>Decision</strong></h3>
+<p>Use default iterators and operators for types that support them, like lists, dictionaries, and files. The built-in types define iterator methods, too. Prefer these methods to methods that return lists, except that you should not mutate a container while iterating over it.<br>  </p>
+<div class="code"><pre><code><div class="plain-text-body">#Yes
+ for key in adict: ...
+ if key not in adict: ...
+ if obj in alist: ...
+ for line in afile: ...
+ for k, v in dict.iteritems(): ...
+  
+#No
+ for key in adict.keys(): ...
+ if not adict.has_key(key): ...
+ for line in afile.readlines(): ...
+
+</div></code></pre></div>
+<p> </p>
+<h2><strong>Generators</strong></h2>
+<p>Use generators as needed.<br> Use "Yields:" rather than "Returns:" in the doc string for generator functions.</p>
+<h2><strong>Lambda Functions</strong></h2>
+<p>Okay to use them for one-liners. If the code inside the lambda function is any longer than 60–80 chars, it's probably better to define it as a regular (nested) function.<br> For common operations like multiplication, use the functions from the operator module instead of lambda functions. For example, prefer operator.mul to lambda x, y: x * y.</p>
+<h2><strong>Conditional Expressions</strong></h2>
+<p>Conditional expressions are mechanisms that provide a shorter syntax for if statements. For example: x = 1 if cond else 2.<br> Okay to use for one-liners. In other cases prefer to use a complete if statement.</p>
+<h2><strong>Default Argument Values</strong></h2>
+<p>Okay in most cases.<br> You can specify values for variables at the end of a function's parameter list, e.g., def foo(a, b=0):. If foo is called with only one argument, b is set to 0. If it is called with two arguments, b has the value of the second argument.<br> Do not use mutable objects as default values in the function or method definition.</p>
+<div class="code"><pre><code><div class="plain-text-body">#Yes
+ def foo(a, b=None):
+ if b is None:
+ b = []
+
+#No, no and no
+ def foo(a, b=[]):
+ ...
+ def foo(a, b=time.time()): # The time the module was loaded???
+ ...
+ def foo(a, b=FLAGS.my_thing): # sys.argv has not yet been parsed...
+ ...
+
+</div></code></pre></div>
+<h2><strong>Properties</strong></h2>
+<p>Use properties for accessing or setting data where you would normally have used simple, lightweight accessor or setter methods.<br> Use properties in new code to access or set data where you would normally have used simple, lightweight accessor or setter methods. Read-only properties should be created with the @property decorator.<br> Inheritance with properties can be non-obvious if the property itself is not overridden. Thus one must make sure that accessor methods are called indirectly to ensure methods overridden in subclasses are called by the property (using the Template Method DP).</p>
+<h2><strong>True/False Evaluations</strong></h2>
+<p>Python evaluates certain values as false when in a boolean context. A quick "rule of thumb" is that all "empty" values are considered false so 0, None, [], {}, '' all evaluate as false in a boolean context.<br> Avoid the "implicit" false. Most of the team comes from a C background, and this is a jarring pattern.</p>
+<p> </p>
+<ul>
+<li>Never use == or != to compare singletons like None. Use is or is not.</li>
+<li>Beware of writing if x: when you really mean if x is not None:—e.g., when testing whether a variable or argument that defaults to None was set to some other value. The other value might be a value that's false in a boolean context!</li>
+<li>Never compare a boolean variable to False using ==. Use if not x: instead. If you need to distinguish False from None then chain the expressions, such as if not x and x is not None:.</li>
+<li>For sequences (strings, lists, tuples), avoiding using the fact that empty sequences are false, so if not len(seq): or if len(seq): is preferable to if seq: or if not seq:.</li>
+<li>
+<p>Use is not operator rather than not ... is . While both expressions are functionally identical, the former is more readable and preferred.</p>
+<div class="code"><pre><code><div class="plain-text-body">#Yes
+ if foo is not None: 
+
+#No
+ if not foo is None:
+
+</div></code></pre></div>
+</li>
+</ul>
+<h3><strong>String Comparison</strong></h3>
+<p>Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.</p>
+<div class="code"><pre><code><div class="plain-text-body">if foo.startswith('bar'): # Yes
+ if foo[:3] == 'bar': # No</div></code></pre></div>
+<h3><strong>Object Type Comparison</strong></h3>
+<p>Object type comparisons should always use isinstance() instead of comparing types directly.</p>
+<div class="code"><pre><code><div class="plain-text-body">if isinstance(obj, int): # Yes
+ if type(obj) is type(1): # No</div></code></pre></div>
+<h2><strong>Lexical Scoping</strong></h2>
+<p>A nested Python function can refer to variables defined in enclosing functions, but can not assign to them. Variable bindings are resolved using lexical scoping, that is, based on the static program text. Any assignment to a name in a block will cause Python to treat all references to that name as a local variable, even if the use precedes the assignment. If a global declaration occurs, the name is treated as a global variable.<br> An example of the use of this feature is:</p>
+<div class="code"><pre><code><div class="plain-text-body">def get_adder(summand1):
+ """Returns a function that adds numbers to a given number."""
+ def adder(summand2):
+ return summand1 + summand2 
+ return adder</div></code></pre></div>
+<h2><strong>Function and Method Decorators</strong></h2>
+<p>Decorators for Functions and Methods (a.k.a "the @ notation"). The most common decorators are @classmethod and @staticmethod, for converting ordinary methods to class or static methods.</p>
+<h3><strong>Pros</strong></h3>
+<p>Elegantly specifies some transformation on a method; the transformation might eliminate some repetitive code, enforce invariants, etc.</p>
+<h3><strong>Cons</strong></h3>
+<p>Decorators can perform arbitrary operations on a function's arguments or return values, resulting in surprising implicit behavior. Additionally, decorators execute at import time. Failures in decorator code are pretty much impossible to recover from.</p>
+<h3><strong>Decision</strong></h3>
+<p>Use decorators judiciously when there is a clear advantage. Decorators should follow the same import and naming guidelines as functions. Decorator pydoc should clearly state that the function is a decorator. Write unit tests for decorators.<br> Avoid external dependencies in the decorator itself (e.g. don't rely on files, sockets, database connections, etc.), since they might not be available when the decorator runs (at import time, perhaps from pydoc or other tools). A decorator that is called with valid parameters should (as much as possible) be guaranteed to succeed in all cases.</p>
+<h2><strong>Threading</strong></h2>
+<p>Do not rely on the atomicity of built-in types.<br> While Python's built-in data types such as dictionaries appear to have atomic operations, there are corner cases where they aren't atomic (e.g. if _<em>hash</em>_ or _<em>eq</em>_ are implemented as Python methods) and their atomicity should not be relied upon. Neither should you rely on atomic variable assignment (since this in turn depends on dictionaries).<br> Use the Queue module's Queue data type as the preferred way to communicate data between threads. Otherwise, use the threading module and its locking primitives. Learn about the proper use of condition variables so you can use threading.Condition instead of using lower-level locks.</p>
+<h2><strong>Best Practices</strong></h2>
+<h2><strong>Power Features</strong></h2>
+<p>Avoid these features.<br> Python is an extremely flexible language and gives you many fancy features such as metaclasses, access to bytecode, on-the-fly compilation, dynamic inheritance, object reparenting, import hacks, reflection, modification of system internals, etc.<br> It's very tempting to use these "cool" features when they're not absolutely necessary. It's harder to read, understand, and debug code that's using unusual features underneath. It doesn't seem that way at first (to the original author), but when revisiting the code, it tends to be more difficult than code that is longer but is straightforward.</p>
+<h1><strong>Style Rules</strong></h1>
+<h2><strong>Semicolons</strong></h2>
+<p>Do not terminate your lines with semi-colons and do not use semi-colons to put two commands on the same line.</p>
+<h2><strong>Line Length</strong></h2>
+<p>Each line of text in your code should be at most 100 characters long.</p>
+<h3><strong>Exceptions</strong></h3>
+<ul>
+<li>If a comment line contains an example command or a literal <span class="glossary">URL<span class="glossary-tt">Uniform Resource Locator</span></span> longer than 100 characters, that line may be longer than 100 characters for ease of cut and paste</li>
+<li>A raw-string literal may have content that exceeds 100 characters. Except for test code, such literals should appear near top of a file.</li>
+<li>An import statement with a long path may exceed 100 columns.</li>
+</ul>
+<p>Do not use backslash line continuation.<br> Make use of Python's implicit line joining inside parentheses, brackets and braces. If necessary, you can add an extra pair of parentheses around an expression.<br><br></p>
+<div class="code"><pre><code><div class="plain-text-body">if (width == 0 and height == 0 and
+ color == 'red' and emphasis == 'strong'):</div></code></pre></div>
+<p><br> When a literal string won't fit on a single line, use parentheses for implicit line joining.<br><br></p>
+<div class="code"><pre><code><div class="plain-text-body">x = ('This will build a very long long '
+ 'long long long long long long string')</div></code></pre></div>
+<p><br> Within comments, put long URLs on their own line if necessary.</p>
+<div class="code"><pre><code><div class="plain-text-body">Yes: # See details at http://www.example.com/us/developer/documentation/api/content/v2.0/csv_file_name_extension_full_specification.html 
+ 
+No: # See details at
+http://www.example.com/us/developer/documentation/api/content/\
+v2.0/csv_file_name_extension_full_specification.html
+
+</div></code></pre></div>
+<p>Make note of the indentation of the elements in the line continuation examples above; see the indentation section for explanation.</p>
+<h3><strong>Parentheses</strong></h3>
+<p>Use parentheses sparingly.<br> Do not use them in return statements or conditional statements unless using parentheses for implied line continuation. (See above.) It is however fine to use parentheses around tuples.</p>
+<p> </p>
+<div class="code"><pre><code><div class="plain-text-body">Yes: if foo:
+ 		bar()
+ 	 while x:
+ 		x = bar()
+ 	 if x and y:
+ 		bar()
+ 	 if not x:
+ 		bar()
+ 	 return foo
+ 	 for (x, y) in dict.items(): ...
+</div></code></pre></div>
+<p> </p>
+<p><strong><br></strong></p>
+<div class="code"><pre><code><div class="plain-text-body"> No: if (x):
+		bar()
+ 	 if not(x):
+ 		bar()
+ 	 return (foo)</div></code></pre></div>
+<h3><strong>Indentation</strong></h3>
+<p>Indent your code blocks with <em>4 spaces.</em><br> Never use tabs or mix tabs and spaces. In cases of implied line continuation, you should align wrapped elements either vertically, as per the examples in the line length section; or using a hanging indent of 4 spaces, in which case there should be no argument on the first line.</p>
+<div class="code"><pre><code><div class="plain-text-body">#Aligned with opening delimiter
+foo = long_function_name(var_one, var_two,
+						 var_three, var_four)
+
+#Aligned with opening delimiter in a dictionary
+foo = {
+	long_dictionary_key: value1 +
+ 						 value2,
+ 	...
+ }
+
+#4-space hanging indent in a dictionary
+foo = {
+	long_dictionary_key:
+ 		long_dictionary_value,
+ 	...
+ }
+
+</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">#space hanging indent forbidden
+foo = long_function_name(
+ 	var_one
+ 	var_two)
+
+#No hanging indent in a dictionary
+foo = {
+ 	long_dictionary_key:
+ 		long_dictionary_value,
+ 		...
+ }
+
+</div></code></pre></div>
+<h3><strong>Blank Lines</strong></h3>
+<p>Two blank lines between top-level definitions, one blank line between method definitions.<br> Two blank lines between top-level definitions, be they function or class definitions. One blank line between method definitions and between the class line and the first method. Use single blank lines as you judge appropriate within functions or methods.</p>
+<h3><strong>Whitespace</strong></h3>
+<p>Follow standard typographic rules for the use of spaces around punctuation.<br> No whitespace inside parentheses, brackets or braces.</p>
+<div class="code"><pre><code><div class="plain-text-body">spam(ham[1], {eggs: 2}, []) # OK
+spam( ham[ 1 ], { eggs: 2 }, [ ] ) # Bad</div></code></pre></div>
+<p> </p>
+<p>No whitespace before a comma, semicolon, or colon. Do use whitespace after a comma, semicolon, or colon except at the end of the line.</p>
+<div class="code"><pre><code><div class="plain-text-body">#Yes
+ if x == 4:
+ print x, y
+ x, y = y, x
+#No
+ if x == 4 :
+ print x , y
+ x , y = y , x</div></code></pre></div>
+<p> </p>
+<p>No whitespace before the open paren/bracket that starts an argument list, indexing or slicing.</p>
+<div class="code"><pre><code><div class="plain-text-body">spam(1) # OK
+spam (1) # Bad
+dict['key'] = list[index] # OK
+dict ['key'] = list [index] # Bad</div></code></pre></div>
+<p><br> Surround binary operators with a single space on either side for assignment (=), comparisons (==, &lt;, &gt;, !=, &lt;&gt;, &lt;=, &gt;=, in, not in, is, is not), and Booleans (and, or, not). Use your better judgment for the insertion of spaces around arithmetic operators but always be consistent about whitespace on either side of a binary operator.</p>
+<div class="code"><pre><code><div class="plain-text-body">x == 1 # OK
+x&lt;1 # Bad</div></code></pre></div>
+<p><br> Don't use spaces around the '=' sign when used to indicate a keyword argument or a default parameter value.</p>
+<div class="code"><pre><code><div class="plain-text-body">def complex(real, imag=0.0): return magic(r=real, i=imag): # OK
+def complex(real, imag = 0.0): return magic(r = real, i = imag) # Bad</div></code></pre></div>
+<h2><strong>Shebang Line</strong></h2>
+<p>Most .py files do not need to start with a #! line. Start the main file of a program with <strong>#!/usr/bin/env python</strong> with an optional single digit 2 or 3 suffix.<br> This line is used by the kernel to find the Python interpreter, but is ignored by Python when importing modules. It is only necessary on a file that will be executed directly.</p>
+<h2><strong>Comments</strong></h2>
+<p>Be sure to use the right style for module, function, method and in-line comments.</p>
+<h3><strong>Doc Strings</strong></h3>
+<p>Python has a unique commenting style using doc strings. A doc string is a string that is the first statement in a package, module, class or function. These strings can be extracted automatically through the _<em>doc</em>_ member of the object and are used by pydoc. (Try running pydoc on your module to see how it looks.) We always use the three double-quote """ format for doc strings (per <span class="external"><span style="text-decoration: underline;">PEP 257</span></span>). A doc string should be organized as a summary line (one physical line) terminated by a period, question mark, or exclamation point, followed by a blank line, followed by the rest of the doc string starting at the same cursor position as the first quote of the first line. There are more formatting guidelines for doc strings below.</p>
+<h3><strong>Modules</strong></h3>
+<p>Comments at the module-level are not mandatory.</p>
+<h3><strong>Functions and Methods</strong></h3>
+<p>As used in this section "function" applies to methods, function, and generators.<br> A function should have a docstring, unless it meets all of the following criteria:</p>
+<ul>
+<li>not externally visible</li>
+<li>very short</li>
+<li>obvious</li>
+</ul>
+<h3><strong>Classes</strong></h3>
+<p>Classes should have a doc string below the class definition describing the class. If your class has public attributes, they should be documented here.</p>
+<h3><strong>Block and Inline Comments</strong></h3>
+<p>The final place to have comments is in tricky parts of the code. If you're going to have to explain it at the next code review, you should comment it now. Complicated operations get a few lines of comments before the operations commence. Non-obvious ones get comments at the end of the line.</p>
+<div class="code"><pre><code><div class="plain-text-body">#We use a weighted dictionary search to find out where i is in
+#the array. We extrapolate position based on the largest num
+#in the array and the array size and then do binary search to
+#get the exact number. 
+
+if i &amp; (i-1) == 0: 		# true iff i is a power of 2</div></code></pre></div>
+<p> </p>
+<p>To improve legibility, these comments should be at least 2 spaces away from the code.<br> On the other hand, never describe the code. Assume the person reading the code knows Python (though not what you're trying to do) better than you do.</p>
+<div class="code"><pre><code><div class="plain-text-body"># BAD COMMENT: Now go through the b array and make sure whenever i occurs
+# the next element is i+1</div></code></pre></div>
+<h2><strong>Classes</strong></h2>
+<p>In Python 2.x code, if a class inherits from no other base classes, explicitly inherit from object. This also applies to nested classes.<br> Inheriting from object is needed to make properties work properly, and it will protect your code from one particular potential incompatibility with Python 3.x. It also defines special methods that implement the default semantics of objects including _<em>new</em><em>, __init</em><em>, __delattr</em><em>, __getattribute</em><em>, __setattr</em><em>, __hash</em><em>, __repr</em><em>, and __str</em>_.</p>
+<h2><strong>Strings</strong></h2>
+<p>Use the format method or the % operator for formatting strings, even when the parameters are all strings. Use your best judgement to decide between + and % (or format) though.</p>
+<div class="code"><pre><code><div class="plain-text-body">#Yes
+x = a + b
+x = '%s, %s!' % (imperative, expletive)
+x = '{}, {}!'.format(imperative, expletive)
+x = 'name: %s; score: %d' % (name, n)
+x = 'name: {}; score: {}'.format(name, n)
+
+#No
+x = '%s%s' % (a, b) # use + in this case
+x = '{}{}'.format(a, b) # use + in this case
+x = imperative + ', ' + expletive + '!'
+x = 'name: ' + name + '; score: ' + str(n)
+
+</div></code></pre></div>
+<p><br> Avoid using the + and += operators to accumulate a string within a loop. Since strings are immutable, this creates unnecessary temporary objects and results in quadratic rather than linear running time. Instead, add each substring to a list and ''.join the list after the loop terminates (or, write each substring to a io.BytesIO buffer).</p>
+<div class="code"><pre><code><div class="plain-text-body">#Yes
+items = ['&lt;table&gt;']
+for last_name, first_name in employee_list:
+	items.append('&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;' % (last_name, first_name))
+	items.append('&lt;/table&gt;')
+employee_table = ''.join(items)
+
+#No
+employee_table = '&lt;table&gt;'
+for last_name, first_name in employee_list:
+	employee_table += '&lt;tr&gt;&lt;td&gt;%s, %s&lt;/td&gt;&lt;/tr&gt;' % (last_name, first_name)
+employee_table += '&lt;/table&gt;'</div></code></pre></div>
+<p><br> Be consistent with your choice of string quote character within a file. Pick ' or " and stick with it. It is okay to use the other quote character on a string to avoid the need to \ escape within the string.<br> Prefer """ for multi-line strings rather than '''. Note that it is often cleaner to use implicit line joining since multi-line strings do not flow with the indentation of the rest of the program.</p>
+<h2><strong>Files and Sockets</strong></h2>
+<p>Explicitly close files and sockets when done with them.<br> Leaving files, sockets or other file-like objects open unnecessarily has many downsides, including:</p>
+<p> </p>
+<ul>
+<li> They may consume limited system resources, such as file descriptors. Code that deals with many such objects may exhaust those resources unnecessarily if they're not returned to the system promptly after use.</li>
+<li>Holding files open may prevent other actions being performed on them, such as moves or deletion.</li>
+<li>Files and sockets that are shared throughout a program may inadvertently be read from or written to after logically being closed. If they are actually closed, attempts to read or write from them will throw exceptions, making the problem known sooner.</li>
+</ul>
+<p>Furthermore, while files and sockets are automatically closed when the file object is destructed, tying the life-time of the file object to the state of the file is poor practice, for several reasons:</p>
+<ul>
+<li>There are no guarantees as to when the runtime will actually run the file's destructor. Different Python implementations use different memory management techniques, such as delayed Garbage Collection, which may increase the object's lifetime arbitrarily and indefinitely.</li>
+<li>Unexpected references to the file may keep it around longer than intended (e.g. in tracebacks of exceptions, inside globals, etc).</li>
+</ul>
+<p>The preferred way to manage files is using the "with" statement:</p>
+<div class="code"><pre><code><div class="plain-text-body">with open("hello.txt") as hello_file:
+	for line in hello_file:
+ 		print line</div></code></pre></div>
+<p><br> For file-like objects that do not support the "with" statement, use contextlib.closing():</p>
+<div class="code"><pre><code><div class="plain-text-body">import contextlib 
+with contextlib.closing(urllib.urlopen("http://www.python.org/")) as front_page:
+	for line in front_page:
+ 		print line</div></code></pre></div>
+<h2><strong>TODO Comments</strong></h2>
+<p>Use TODO comments for code that is temporary, a short-term solution, or good-enough but not perfect.<br> TODOs should include the string TODO in all caps. The main purpose is to have a consistent TODO that can be searched to find out how to get more details upon request. If code is being reviewed with TODO, expect to answer why it is still present. Most commonly, this is used to denote where some out-of-scope addition or enhancement will be added.<br> If your TODO is of the form "At a future date do something" this probably belongs in a ticket.</p>
+<h2><strong>Imports Formatting</strong></h2>
+<p>Imports should be on separate lines.</p>
+<div class="code"><pre><code><div class="plain-text-body">#Yes
+import os
+import sys
+  
+#No
+import os, sys
+
+</div></code></pre></div>
+<p><br> Imports are always put at the top of the file, just after any module comments and doc strings and before module globals and constants. Imports should be grouped with the order being most generic to least generic:</p>
+<ul>
+<li>standard library imports</li>
+<li>third-party imports</li>
+<li>application-specific imports</li>
+</ul>
+<p>Within each grouping, imports should be sorted lexicographically, ignoring case, according to each module's full package path.</p>
+<div class="code"><pre><code><div class="plain-text-body">import foo
+from foo import bar
+from foo.bar import baz
+from foo.bar import Quux
+from Foob import ar</div></code></pre></div>
+<h2><strong>Statements</strong></h2>
+<p>Generally only one statement per line.</p>
+<h2><strong>Access Control</strong></h2>
+<p>If an accessor function would be trivial you should use public variables instead of accessor functions to avoid the extra cost of function calls in Python. When more functionality is added you can use property to keep the syntax consistent.<br> On the other hand, if access is more complex, or the cost of accessing the variable is significant, you should use function calls (following the Naming guidelines) such as get_foo() and set_foo(). If the past behavior allowed access through a property, do not bind the new accessor functions to the property. Any code still attempting to access the variable by the old method should break visibly so they are made aware of the change in complexity.</p>
+<h2><strong>Naming</strong></h2>
+<p>module_name, package_name, ClassName, method_name, ExceptionName, function_name, GLOBAL_CONSTANT_NAME, global_var_name, instance_var_name, function_parameter_name, local_var_name.</p>
+<h3><strong>Names to Avoid</strong></h3>
+<ul>
+<li>single character names except for counters or iterators</li>
+<li>dashes (-) in any package/module name</li>
+<li>_<em>double_leading_and_trailing_underscore</em>_ names (reserved by Python)</li>
+</ul>
+<h3><strong>Naming Convention</strong></h3>
+<ul>
+<li>"Internal" means internal to a module or protected or private within a class.</li>
+<li>Prepending a single underscore (<em>) has some support for protecting module variables and functions (not included with import * from). Prepending a double underscore (</em>_) to an instance variable or method effectively serves to make the variable or method private to its class (using name mangling).</li>
+<li>Place related classes and top-level functions together in a module. Unlike Java, there is no need to limit yourself to one class per module.</li>
+<li>Use CapWords for class names, but lower_with_under.py for module names. Although there are many existing modules named CapWords.py, this is now discouraged because it's confusing when the module happens to be named after a class. ("wait – did I write import StringIO or from StringIO import StringIO?")</li>
+<li>Always use self for the first argument to instance methods.</li>
+<li>Always use cls for the first argument to class methods.</li>
+<li>If a function argument's name clashes with a reserved keyword, it is generally better to prepend a single trailing underscore rather than use an abbreviation or spelling corruption. Thus _class is better than clss . (Perhaps better is to avoid such clashes by using a synonym.)</li>
+</ul>
+<h3><strong>Main</strong></h3>
+<p>Even a file meant to be used as a script should be importable and a mere import should not have the side effect of executing the script's main functionality. The main functionality should be in a main() function.<br> In Python, pydoc as well as unit tests require modules to be importable. Your code should always check if _<em>name</em>_ == '_<em>main</em>_' before executing your main program so that the main program is not executed when the module is imported.</p>
+<div class="code"><pre><code><div class="plain-text-body">def main():
+	... 
+if _name_ == '_main_':
+	main()</div></code></pre></div>
+<p><br> All code at the top level will be executed when the module is imported. Be careful not to call functions, create objects, or perform other operations that should not be executed when the file is being pydoced.</p>
+<h1><strong>Parting Words</strong></h1>
+<p>Use common sense and BE CONSISTENT.<br> If you are editing code, take a few minutes to look at the code around you and determine its style. If their comments have little boxes of stars around them, make your comments have little boxes of stars around them too.<br> The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you are saying, rather than on how you are saying it. We present global style rules here so people know the vocabulary. But local style is also important. If code you add to a file looks drastically different from the existing code around it, the discontinuity throws readers out of their rhythm when they go to read it. Try to avoid this.</p>
+<p> </p>
+<hr>
+<h3>Previous versions:</h3>
+<p>| <a href="page_26607621.html">1</a> <span class="pg-tag"></span>
+| <a href="page_26607623.html">2</a> <span class="pg-tag"></span>
+| <a href="page_26607625.html">3</a> <span class="pg-tag"></span>
+| <a href="page_26607627.html">4</a> <span class="pg-tag"></span>
+| <a href="page_26607631.html">5</a> <span class="pg-tag"></span>
+| <a href="page_26607633.html">6</a> <span class="pg-tag"></span>
+| <a href="page_26607634.html">7</a> <span class="pg-tag"></span>
+| <a href="page_26607639.html">8</a> <span class="pg-tag"></span>
+| <a href="page_26607640.html">9</a> <span class="pg-tag"></span>
+| <a href="page_26607641.html">10</a> <span class="pg-tag"></span>
+| <a href="page_26607643.html">11</a> <span class="pg-tag"></span>
+|</p>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="../../highlighter/mootools-core-and-more.js"></script>
+            <script type="text/javascript" src="../../highlighter/efatmarker.min.js"></script>
+            <div id="efm-button">
+            <div id="efm-menu">
+                <h3 style="margin:0 0 2px 0">e-Highlighter</h3>
+                <a id="efm-permalink" class="efm-need-highlight" href="page_26345508.html" style="margin-bottom:0;padding-bottom:0;"></a>
+                <p style="margin-top:0;padding-top:0" class="efm-need-highlight">Click to send permalink to address bar, or right-click to copy permalink.</p>
+                <p style="margin:0.5em 0;padding:0;border-top:1px dotted #ccc;height:1px"></p>
+                <a id="efm-unhighlightall" class="efm-need-highlight">Un-highlight all</a>
+                <a id="efm-unhighlight">Un-highlight selection<span>u</span></a>
+                <a id="efm-highlight">Highlight selection<span>h</span></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+
+            (function(){
+            window.addEvent('domready', function(){
+
+                var markerButton = $('efm-button');
+                if ( markerButton ) {
+                    eMarker = new EFatMarker($('uniquer'));
+                    eMarker.tokenToSpans(); // apply whatever token is there
+                    // need to act on mousedown or else selection disappear
+                    markerButton.addEvent('mousedown', function(){
+                        eMarker.interpretSelection(true);
+                        return false;
+                    });
+                    $('efm-unhighlightall').addEvent('mousedown', function(){
+                        eMarker.unhighlightAll(true);
+                        return false;
+                        });
+                    $('efm-unhighlight').addEvent('mousedown', function(){
+                        eMarker.unhighlightSelection(true);
+                        return false;
+                        });
+                    $('efm-highlight').addEvent('mousedown', function(){
+                        eMarker.highlightSelection(true);
+                        return false;
+                        });
+                    $('efm-permalink').addEvent('mousedown', function(){
+                        window.location.href = this.href;
+                        return false;
+                        });
+                    // if Mootools Keyboard is available, use it
+                    if (Keyboard) {
+                        var keyboard = new Keyboard({
+                            defaultEventType: 'keyup',
+                            events: {
+                                'h': function(){
+                                    eMarker.highlightSelection(true);
+                                    },
+                                'u': function(){
+                                    eMarker.unhighlightSelection(true);
+                                    }
+                                }
+                            });
+                        keyboard.activate();
+                        }
+                    eMarker.syncDOM();
+                    // auto scroll to first highlight, if any
+                    if (eMarker.hasSpans()) {
+                        var scroll = new Fx.Scroll(window,{offset:{'x':0,'y':-100}}),
+                            highlights = $$('#uniquer .efm-hi');
+                        if (highlights.length > 0) {
+                            scroll.toElement(highlights[0]);
+                            }
+                        }
+                    }
+                });
+            })();
+            </script>
+            
+
+<link href="../../static/css/styles_footer.css" rel="stylesheet">
+<footer id="page-footer" class="footer-recommendations">
+  <div class="footer-wrapper">
+    <div class="recommendation-container">
+      <a href="page_26345508.html#" class="top">Top</a>
+      
+        <ul class="recommendation-links">
+          
+            <li class="recommendation">
+              <a href="https://www.torproject.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton401.png?1461924517" width="300" height="180" /></div>
+                <p>
+<p>Tor is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://tails.boum.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton405.png?1461924517" width="446" height="223" /></div>
+                <p>
+<p>Tails is a live operating system, that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.couragefound.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton404.png?1461924517" width="357" height="50" /></div>
+                <p>
+<p>The Courage Foundation is an international organisation that supports those who risk life or liberty to make significant contributions to the historical record.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.bitcoin.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton403.png?1461924517" width="300" height="64" /></div>
+                <p>
+<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
+</p>
+              </a>
+            </li>
+          
+        </ul>
+      
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/wikileaks" target="_blank" alt="Facebook">
+            <img src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" target="_blank" alt="Twitter">
+            <img src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+        <script src="../../bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        </script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

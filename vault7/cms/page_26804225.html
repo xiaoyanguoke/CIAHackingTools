@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="http://localhost:6081/IMG/favicon.ico">
+        <title>C Coding Conventions</title>
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/cerulean.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/new-gen.css" rel="stylesheet">
+        <link href="../../css/leak-styles.css" rel="stylesheet">
+        <link href="../../highlighter/efatmarker.css" rel="stylesheet">
+        <style>
+          #efm-button {margin:0 0 4px 0;padding:0 0 0 30px;position:fixed;height:48px;width:52px;bottom:0;right:0;background:transparent '/highlighter/kedit-2.png' no-repeat bottom right;cursor:pointer;opacity:0.4;z-index:99999999999}
+          #efm-button:hover {opacity:1}
+          #efm-button #efm-menu {margin:0 0 52px 0;border:1px outset gray;padding:0;display:none;background:#eee;position:fixed;bottom:0;right:0;width:20em;opacity:1;cursor:auto}
+          #efm-button:hover #efm-menu {display:block;font-size:smaller;color:#999}
+          #efm-button #efm-menu p {margin:0;padding:0 3px}
+          #efm-button #efm-menu a {margin:1px;padding:3px 3px;display:block;font:12px sans-serif;white-space:nowrap;opacity:inherit;cursor:pointer}
+          #efm-button #efm-menu a:hover {color:black;background-color:white;opacity:1}
+          #efm-button #efm-menu a > span {color:gray;position:absolute;right:4px}
+          .efm-hi {background-color:#ff8;font-weight:normal;}
+        </style>
+        <link href="../../bootstrap/css/submit.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="submit_wlkey" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_26804225.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_26804225.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_26804225.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_26804225.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+		<p>This key's fingerprint is A04C 5E09 ED02 B328 03EB  6116 93ED 732E 9231 8DBA</p>
+		<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQQNBFUoCGgBIADFLp+QonWyK8L6SPsNrnhwgfCxCk6OUHRIHReAsgAUXegpfg0b
+rsoHbeI5W9s5to/MUGwULHj59M6AvT+DS5rmrThgrND8Dt0dO+XW88bmTXHsFg9K
+jgf1wUpTLq73iWnSBo1m1Z14BmvkROG6M7+vQneCXBFOyFZxWdUSQ15vdzjr4yPR
+oMZjxCIFxe+QL+pNpkXd/St2b6UxiKB9HT9CXaezXrjbRgIzCeV6a5TFfcnhncpO
+ve59rGK3/az7cmjd6cOFo1Iw0J63TGBxDmDTZ0H3ecQvwDnzQSbgepiqbx4VoNmH
+OxpInVNv3AAluIJqN7RbPeWrkohh3EQ1j+lnYGMhBktX0gAyyYSrkAEKmaP6Kk4j
+/ZNkniw5iqMBY+v/yKW4LCmtLfe32kYs5OdreUpSv5zWvgL9sZ+4962YNKtnaBK3
+1hztlJ+xwhqalOCeUYgc0Clbkw+sgqFVnmw5lP4/fQNGxqCO7Tdy6pswmBZlOkmH
+XXfti6hasVCjT1MhemI7KwOmz/KzZqRlzgg5ibCzftt2GBcV3a1+i357YB5/3wXE
+j0vkd+SzFioqdq5Ppr+//IK3WX0jzWS3N5Lxw31q8fqfWZyKJPFbAvHlJ5ez7wKA
+1iS9krDfnysv0BUHf8elizydmsrPWN944Flw1tOFjW46j4uAxSbRBp284wiFmV8N
+TeQjBI8Ku8NtRDleriV3djATCg2SSNsDhNxSlOnPTM5U1bmh+Ehk8eHE3hgn9lRp
+2kkpwafD9pXaqNWJMpD4Amk60L3N+yUrbFWERwncrk3DpGmdzge/tl/UBldPoOeK
+p3shjXMdpSIqlwlB47Xdml3Cd8HkUz8r05xqJ4DutzT00ouP49W4jqjWU9bTuM48
+LRhrOpjvp5uPu0aIyt4BZgpce5QGLwXONTRX+bsTyEFEN3EO6XLeLFJb2jhddj7O
+DmluDPN9aj639E4vjGZ90Vpz4HpN7JULSzsnk+ZkEf2XnliRody3SwqyREjrEBui
+9ktbd0hAeahKuwia0zHyo5+1BjXt3UHiM5fQN93GB0hkXaKUarZ99d7XciTzFtye
+/MWToGTYJq9bM/qWAGO1RmYgNr+gSF/fQBzHeSbRN5tbJKz6oG4NuGCRJGB2aeXW
+TIp/VdouS5I9jFLapzaQUvtdmpaeslIos7gY6TZxWO06Q7AaINgr+SBUvvrff/Nl
+l2PRPYYye35MDs0b+mI5IXpjUuBC+s59gI6YlPqOHXkKFNbI3VxuYB0VJJIrGqIu
+Fv2CXwy5HvR3eIOZ2jLAfsHmTEJhriPJ1sUG0qlfNOQGMIGw9jSiy/iQde1u3ZoF
+so7sXlmBLck9zRMEWRJoI/mgCDEpWqLX7hTTABEBAAG0x1dpa2lMZWFrcyBFZGl0
+b3JpYWwgT2ZmaWNlIEhpZ2ggU2VjdXJpdHkgQ29tbXVuaWNhdGlvbiBLZXkgKFlv
+dSBjYW4gY29udGFjdCBXaWtpTGVha3MgYXQgaHR0cDovL3dsY2hhdGMzcGp3cGxp
+NXIub25pb24gYW5kIGh0dHBzOi8vd2lraWxlYWtzLm9yZy90YWxrKSA8Y29udGFj
+dC11cy11c2luZy1vdXItY2hhdC1zeXN0ZW1Ad2lraWxlYWtzLm9yZz6JBD0EEwEK
+ACcCGwMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AFAlb6cdIFCQOznOoACgkQk+1z
+LpIxjbrlqh/7B2yBrryWhQMGFj+xr9TIj32vgUIMohq94XYqAjOnYdEGhb5u5B5p
+BNowcqdFB1SOEvX7MhxGAqYocMT7zz2AkG3kpf9f7gOAG7qA1sRiB+R7mZtUr9Kv
+fQSsRFPb6RNzqqB9I9wPNGhBh1YWusUPluLINwbjTMnHXeL96HgdLT+fIBa8ROmn
+0fjJVoWYHG8QtsKiZ+lo2m/J4HyuJanAYPgL6isSu/1bBSwhEIehlQIfXZuS3j35
+12SsO1Zj2BBdgUIrADdMAMLneTs7oc1/PwxWYQ4OTdkay2deg1g/N6YqM2N7rn1W
+7A6tmuH7dfMlhcqw8bf5veyag3RpKHGcm7utDB6k/bMBDMnKazUnM2VQoi1mutHj
+kTCWn/vF1RVz3XbcPH94gbKxcuBi8cjXmSWNZxEBsbirj/CNmsM32Ikm+WIhBvi3
+1mWvcArC3JSUon8RRXype4ESpwEQZd6zsrbhgH4UqF56pcFT2ubnqKu4wtgOECsw
+K0dHyNEiOM1lL919wWDXH9tuQXWTzGsUznktw0cJbBVY1dGxVtGZJDPqEGatvmiR
+o+UmLKWyxTScBm5o3zRm3iyU10d4gka0dxsSQMl1BRD3G6b+NvnBEsV/+KCjxqLU
+vhDNup1AsJ1OhyqPydj5uyiWZCxlXWQPk4p5WWrGZdBDduxiZ2FTj17hu8S4a5A4
+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
+J3x7gtxUMkTadELqwY6hrU8=
+=BLTH
+-----END PGP PUBLIC KEY BLOCK-----
+		</pre>
+	</div>
+</div>
+
+<div id="submit_help_contact" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_26804225.html#submit_help_contact" class="btn-wl">How to contact WikiLeaks?</a>
+			<a href="page_26804225.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_26804225.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_26804225.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Contact</h3>
+		<p>If you need help using Tor you can contact WikiLeaks for assistance in setting it up using our simple webchat available at: <a href="https://wikileaks.org/talk">https://wikileaks.org/talk</a></p>
+		<p>If you can use Tor, but need to contact WikiLeaks for other reasons use our secured webchat available at <b>http://wlchatc3pjwpli5r.onion</b></p>
+		<p>We recommend contacting us over Tor if you can.</p>
+	</div>
+</div>
+
+<div id="submit_help_tor" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_26804225.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_26804225.html#submit_help_tor" class="btn-wl">What is Tor?</a>
+			<a href="page_26804225.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_26804225.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Tor</h3>
+		<p><a href="https://www.torproject.org">Tor</a> is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+		<p>In order to use the WikiLeaks public submission system as detailed above you can download the Tor Browser Bundle, which is a Firefox-like browser available for Windows, Mac OS X and GNU/Linux and pre-configured to connect using the anonymising system Tor.</p>
+		<h4>Tails</h4>
+		<p>If you are at high risk and you have the capacity to do so, you can also access the submission system through a secure operating system called <a href="https://tails.boum.org">Tails</a>. Tails is an operating system launched from a USB stick or a DVD that aim to leaves no traces when the computer is shut down after use and automatically routes your internet traffic through Tor. Tails will require you to have either a USB stick or a DVD at least 4GB big and a laptop or desktop computer.</p>
+	</div>
+</div>
+
+<div id="submit_help_tips" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_26804225.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_26804225.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_26804225.html#submit_help_tips" class="btn-wl">Tips for Sources</a>
+				<a href="page_26804225.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>Tips</h3>
+		<p>Our submission system works hard to preserve your anonymity, but we recommend you also take some of your own precautions. Please review these basic guidelines. </p>
+		<div>
+			<h4>1. Contact us if you have specific problems</h4>
+			<p>If you have a very large submission, or a submission with a complex format, or are a high-risk source, please <a href="page_26804225.html#submit_help_contact">contact us</a>. In our experience it is always possible to find a custom solution for even the most seemingly difficult situations.</p>
+		</div>
+		<div>
+			<h4>2. What computer to use</h4>
+			<p>If the computer you are uploading from could subsequently be audited in an investigation, consider using a computer that is not easily tied to you. Technical users can also use <a href="https://tails.boum.org">Tails</a> to help ensure you do not leave any records of your submission on the computer.</p>
+		</div>
+		<div>
+			<h4>3. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+	</div>
+</div>
+
+<div id="submit_help_after" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_26804225.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_26804225.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_26804225.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_26804225.html#submit_help_after" class="btn-wl">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>After</h3>
+
+		<div>
+			<h4>1. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+		<div>
+			<h4>2. Act normal</h4>
+			<p>If you are a high-risk source, avoid saying anything or doing anything after submitting which might promote suspicion. In particular, you should try to stick to your normal routine and behaviour.</p>
+		</div>
+
+		<div>
+			<h4>3. Remove traces of your submission</h4>
+			<p>If you are a high-risk source and the computer you prepared your submission on, or uploaded it from, could subsequently be audited in an investigation, we recommend that you format and dispose of the computer hard drive and any other storage media you used.</p>
+			<p>In particular, hard drives retain data after formatting which may be visible to a digital forensics team and flash media (USB sticks, memory cards and SSD drives) retain data even after a secure erasure. If you used flash media to store sensitive data, it is important to destroy the media.</p>
+			<p>If you do this and are a high-risk source you should make sure there are no traces of the clean-up, since such traces themselves may draw suspicion.</p>
+			<div>
+				<h4>4. If you face legal action</h4>
+				<p>If a legal action is brought against you as a result of your submission, there are organisations that may help you. The Courage Foundation is an international organisation dedicated to the protection of journalistic sources. You can find more details at <a href="https://www.couragefound.org">https://www.couragefound.org</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="submit" class="submit_banner">
+	<div class="container">
+		<div class="page-header">
+			<h1>Submit documents to WikiLeaks</h1>
+			<a class="remove-button" href="page_26804225.html#"><span class="glyphicon glyphicon-remove-circle"></span></a>
+		</div>
+		<p>WikiLeaks publishes documents of political or historical importance that are censored or otherwise suppressed. We specialise in strategic global publishing and large archives.</p>
+		<p>The following is the address of our secure site where you can anonymously upload your documents to WikiLeaks editors. You can only access this submissions system through Tor. (See our <a href="page_26804225.html#submit_help_tor">Tor tab</a> for more information.) We also advise you to read our <a href="page_26804225.html#submit_help_tips">tips for sources</a> before submitting.</p>
+
+		<div class="alert alert-info">
+			<div class="onion-url">wlupld3ptjvsgwqw.onion</div>
+			<div>
+				Copy this address into your Tor browser. Advanced users, if they wish, can also add a further layer of encryption to their submission using <a href="page_26804225.html#submit_wlkey">our public PGP key</a>.
+			</div>
+		</div>
+
+		<p>If you cannot use Tor, or your submission is very large, or you have specific requirements, WikiLeaks provides several alternative methods. <a href="page_26804225.html#submit_help_contact">Contact us</a> to discuss how to proceed.</p>
+	</div>
+</div>
+<div id="submit_help_buttons" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_26804225.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_26804225.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_26804225.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_26804225.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+        <div id="main">
+            
+
+<link href="../../static/css/styles_topnav.css" rel="stylesheet">
+<link href="../../static/css/styles_sidenav.css" rel="stylesheet">
+<div class="top-navigation">
+  <nav class="navbar">
+      <a href="page_26804225.html#menu" class="mobile-only hot-dog nav-element">
+      </a>
+    <div class="nav-logo">
+      <a href="https://wikileaks.org">
+        <h1>WikiLeaks</h1>
+      </a>
+    </div>
+    <div class="action-buttons">
+      <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+      <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+      <a class="button-face submit-link" href="page_26804225.html#submit">Submit</a>
+    </div>
+    <form class="global-search" method="get" action="https://search.wikileaks.org/">
+      <input type="text" name="q" placeholder="Search">
+      <button class="btn-search" type="submit"></button>
+    </form>
+    <div class="main-nav">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            </li>
+          
+            <li>
+              <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            </li>
+          
+            <li>
+              <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            </li>
+          
+            <li>
+              <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </nav>
+</div><nav id="menu" class="side-nav rub">
+  <div class="menu-wrapper">
+    <a class="close-btn nav-element" href="page_26804225.html#"></a>
+    
+      <ul class="first-level">
+        
+          <li>
+            <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            
+          </li>
+        
+          <li>
+            <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            
+          </li>
+        
+          <li>
+            <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            
+          </li>
+        
+          <li>
+            <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            
+          </li>
+        
+      </ul>
+    
+    <aside class="friends mobile-only">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a href="https://www.torproject.org/" target="_blank">Tor Project</a>
+            </li>
+          
+            <li>
+              <a href="https://tails.boum.org/" target="_blank">Tails</a>
+            </li>
+          
+            <li>
+              <a href="https://www.couragefound.org/" target="_blank">Courage</a>
+            </li>
+          
+            <li>
+              <a href="https://www.bitcoin.org/" target="_blank">Bitcoin</a>
+            </li>
+          
+        </ul>
+      
+    </aside>
+    <aside class="social mobile-only">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/wikileaks" class="nav-element" target="_blank" alt="Facebook">
+            <img class="img-responsive" src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" class="nav-element" target="_blank" alt="Twitter">
+            <img class="img-responsive" src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</nav>
+
+            <div class="container-fluid row-fluid">
+                <div class="col-xs-12 col-sm-12 col-md-10 container-text">
+                    <div class="leak-header">
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<div class="title-area">
+    <h1 class="leak-title">Vault7: CIA Hacking Tools Revealed</h1>
+    <img src="../logo.png">
+</div>
+
+</body></html>
+
+                        <ul class="leak-navigation">
+                            <a href="../index.html"><li>Releases</li></a>
+                            <a href="index.html"><li class="active">Documents</li></a>
+                       </ul>
+                    </div>
+                    <p>Navigation:  » <a href="page_26607644.html">Latest version</a></p>
+<hr>
+                    <div id="uniquer">
+                        <p>Owner: <a class="user" href="user_26968069.html"><span class="user">User #26968069</span></a></p>
+<h2>C Coding Conventions</h2>
+<h1><strong><p><i>('toc' missing)</i></p>
+<br></strong></h1>
+<h1><strong>Introduction</strong></h1>
+<p>This style guide is intended to help standardize the code generated by the various teams around the guidelines used throughout Google and the general development community.  Code of a consistent format leads to greater legibility.<br> When extending an existing project that does not already follow this guide, strive for consistency. Speak the local dialect. Aim for a uniformity in approach, and make the job of reading your code easier for the next person (it may be future you).<br> This guide is not intended to be a book to be thrown at others during code review. Instead, if there is a question about how something should be formatted, this guide will be the objective reference on what code "should" look like. Much of the text here is from the Google C++ Style Guide. It has been adapted to suit our needs and preferences. This guide is not holy canon. When in doubt, do what makes the most sense for your particular project or use case.</p>
+<h1><strong>Header Files</strong></h1>
+<p>In general, every .c file should have an associated .h file. There are some common exceptions, such as unit tests and small .c files containing just a main() function.<br> Correct use of header files can make a huge difference to the readability, size and performance of your code.<br> The following rules will guide you through the various pitfalls of using header files.</p>
+<h2><strong>Self-contained Headers</strong></h2>
+<p>Header files should be self-contained and end in .h. Files that are meant for textual inclusion, but are not headers, should end in .inc. Separate -inl.h headers are disallowed.<br> All header files should be self-contained. In other words, users and refactoring tools should not have to adhere to special conditions in order to include the header. Specifically, a header should have header guards, should include all other headers it needs, and should not require any particular symbols to be defined.<br> There are rare cases where a file is not meant to be self-contained, but instead is meant to be textually included at a specific point in the code. Examples are files that need to be included multiple times or platform-specific extensions that essentially are part of other headers. Such files should use the file extension .inc.<br> If a template or inline function is declared in a .h file, define it in that same file. The definitions of these constructs must be included into every .c file that uses them, or the program may fail to link in some build configurations. Do not move these definitions to separate -inl.h files.</p>
+<h2><strong>The #define Guard</strong></h2>
+<p>All header files should have #define guards to prevent multiple inclusion. The format of the symbol name should be _<em>{</em>}&lt;FILE&gt;{_}_H.<br> To guarantee uniqueness, they should be based on the full path in a project's source tree. For example, the file foo/src/bar/baz.h in project foo should have the following guard:</p>
+<div class="code"><pre><code><div class="plain-text-body">#ifndef __BAZ_H
+#define __BAZ_H
+...
+#endif // __BAZ_H</div></code></pre></div>
+<h2><strong>Forward Declarations</strong></h2>
+<p>You should #include files for their function declarations rather than attempting to avoid an include by copy-pasting a forward declaration.</p>
+<h3><strong>Definition</strong></h3>
+<p>A "forward declaration" is a declaration of a class, function, or template without an associated definition. When using a function declared in a header file, always #include that header.</p>
+<h3><strong>Pros</strong></h3>
+<ul>
+<li>Avoids conflicts when code is refactored or prototypes are changed.</li>
+<li>It can be difficult to determine whether a forward declaration or a full #include is needed for a given piece of code, particularly when implicit conversion operations are involved. In extreme cases, replacing an #include with a forward declaration can silently change the meaning of code.</li>
+</ul>
+<h3><strong>Cons</strong></h3>
+<ul>
+<li>Unnecessary #includes force the compiler to open more files and process more input.</li>
+<li>They can also force your code to be recompiled more often, due to changes in the header.</li>
+</ul>
+<p>Please see Names and Order of Includes for rules about when to #include a header.</p>
+<h2><strong>Inline Functions</strong></h2>
+<p>Define functions inline only when they are small, say, 10 lines or less.</p>
+<h3><strong>Definition</strong></h3>
+<p>You can declare functions in a way that allows the compiler to expand them inline rather than calling them through the usual function call mechanism.</p>
+<h3><strong>Pros</strong></h3>
+<p>Inlining a function can generate more efficient object code, as long as the inlined function is small. Feel free to inline accessors and mutators, and other short, performance-critical functions.</p>
+<h3><strong>Cons</strong></h3>
+<p>Overuse of inlining can actually make programs slower. Depending on a function's size, inlining it can cause the code size to increase or decrease. Inlining a very small accessor function will usually decrease code size while inlining a very large function can dramatically increase code size. On modern processors smaller code usually runs faster due to better use of the instruction cache.</p>
+<h3><strong>Decision</strong></h3>
+<p>A decent rule of thumb is to not inline a function if it is more than 10 lines long.<br> Another useful rule of thumb: it's typically not cost effective to inline functions with loops or switch statements (unless, in the common case, the loop or switch statement is never executed).<br> It is important to know that functions are not always inlined even if they are declared as such; for example, virtual and recursive functions are not normally inlined. Usually recursive functions should not be inline.</p>
+<h2><strong>Function Parameter Ordering</strong></h2>
+<p>When defining a function, parameter order is: inputs, then outputs.<br> Parameters to C/C++ functions are either input to the function, output from the function, or both. Input parameters are usually values or const references, while output and input/output parameters will be non-const pointers. When ordering function parameters, put all input-only parameters before any output parameters. In particular, do not add new parameters to the end of the function just because they are new; place new input-only parameters before the output parameters.<br> This is not a hard-and-fast rule. Parameters that are both input and output (often classes/structs) muddy the waters, and, as always, consistency with related functions may require you to bend the rule.</p>
+<h2><strong>Names and Order of Includes</strong></h2>
+<p>Use standard order for readability and to avoid hidden dependencies: Related header, C library, C++ library, other libraries' .h, your project's .h.<br> All of a project's header files should be listed as descendants of the project's source directory without use of <span class="glossary">UNIX<span class="glossary-tt">Operating system</span></span> directory shortcuts . (the current directory) or .. (the parent directory). For example, awesome-project/src/base/logging.h should be included as:</p>
+<div class="code"><pre><code><div class="plain-text-body">#include "base/logging.h"</div></code></pre></div>
+<p><br> In dir/foo.c or dir/foo_test.c, whose main purpose is to implement or test the stuff in dir2/foo2.h, order your includes as follows:</p>
+<ol>
+<li>dir2/foo2.h.</li>
+<li>C system files.</li>
+<li>Other libraries' .h files.</li>
+<li>Your project's .h files.</li>
+</ol>
+<p>With the preferred ordering, if dir2/foo2.h omits any necessary includes, the build of dir/foo.c or dir/foo_test.c will break. Thus, this rule ensures that build breaks show up first for the people working on these files, not for innocent people in other packages.<br> dir/foo.c and dir2/foo2.h are usually in the same directory (e.g. base/basictypes_test.c and base/basictypes.h), but may sometimes be in different directories too.<br> Within each section the includes should be ordered alphabetically. Note that older code might not conform to this rule and should be fixed when convenient.<br> You should include all the headers that define the symbols you rely upon (except in cases of forward declaration). If you rely on symbols from bar.h, don't count on the fact that you included foo.h which (currently) includes bar.h: include bar.h yourself, unless foo.h explicitly demonstrates its intent to provide you the symbols of bar.h. However, any includes present in the related header do not need to be included again in the related cc (i.e., foo.c can rely on foo.h's includes).<br> For example, the includes in awesome-project/src/foo/internal/fooserver.c might look like this:</p>
+<div class="code"><pre><code><div class="plain-text-body">#include "foo/server/fooserver.h" 
+#include &lt;sys/types.h&gt;
+#include &lt;unistd.h&gt; 
+ 
+#include "base/basictypes.h"
+#include "base/commandlineflags.h"
+#include "foo/server/bar.h"</div></code></pre></div>
+<h3><strong>Exception</strong></h3>
+<p>Sometimes, system-specific code needs conditional includes. Such code can put conditional includes after other includes. Of course, keep your system-specific code small and localized. Example:</p>
+<div class="code"><pre><code><div class="plain-text-body">#include "foo/public/fooserver.h" 
+ 
+#include "base/port.h" // For LANG_CXX11. 
+ 
+#ifdef LANG_CXX11
+#include &lt;initializer_list&gt;
+#endif // LANG_CXX11</div></code></pre></div>
+<p> </p>
+<h1><strong>Scoping</strong></h1>
+<h2><strong>Local Variables</strong></h2>
+<p>Declare a function's variables at the function scope, and initialize variables in the declaration.<br> In particular, initialization should be used instead of declaration and assignment, e.g.:</p>
+<div class="code"><pre><code><div class="plain-text-body">int i;
+i = MAGIC_CONSTANT; 	// Bad – initialization separate from declaration.
+int j = 0; 				// Good – declaration has initialization.
+char *v = NULL; 		// Good – v starts initialized.</div></code></pre></div>
+<h2><strong>Static and Global Variables</strong></h2>
+<p>Avoid global variables whenever possible. When globals are necessary, give preference to a single structure with multiple members in lieu of many individual variables.<br> Have a clear, single point of initialization and destruction.<br> Do not rely on program exit to implicitly free memory or otherwise clean up after global or static variables.</p>
+<h1><strong>Miscellaneous</strong></h1>
+<h2><strong>Integer Types</strong></h2>
+<p>When declaring a variable, use a precise-width type (e.g. int16_t). If your variable represents a value that could ever be greater than or equal to 2^31 (2GiB), use a 64-bit type such as int64_t. Keep in mind that even if your value won't ever be too large for an int, it may be used in intermediate calculations which may require a larger type. When in doubt, choose a larger type.</p>
+<h3><strong>Definition</strong></h3>
+<p>C does not specify the sizes of its integer types. Typically people assume that short is 16 bits, int is 32 bits, long is 32 bits and long long is 64 bits.</p>
+<h3><strong>Pros</strong></h3>
+<ul>
+<li>Uniformity of declaration.</li>
+<li>Clarity of intent and expected data size</li>
+</ul>
+<h3><strong>Cons</strong></h3>
+<ul><li>The sizes of integral types in C can vary based on compiler and architecture.</li></ul>
+<h3><strong>Decision</strong></h3>
+<p>&lt;stdint.h&gt; defines types like int16_t, uint32_t, int64_t, etc. You should always use those in preference to short, unsigned long long and the like, when you need a guarantee on the size of an integer. Of the C integer types, only int should be used. When appropriate, you are welcome to use standard types like size_t and ptrdiff_t. If your platform defines unsigned types with a prefix "u_" create a typedef for each type with just "u" (no underscore).<br> We use int very often, for integers we know are not going to be too big, e.g., loop counters. You may use plain old int for such things. You should assume that an int is at least 32 bits, but don't assume that it has more than 32 bits. If you need a 64-bit integer type, use int64_t or uint64_t.<br> For integers we know can be "big", use int64_t.<br> You should use unsigned integer types such as uint32_t, when the value should never be negative.<br> If your code is a container that returns a size, be sure to use a type that will accommodate any possible usage of your container. When in doubt, use a larger type rather than a smaller type.<br> Use care when converting integer types. Integer conversions and promotions can cause non-intuitive behavior.</p>
+<h2><strong>64-bit Portability</strong></h2>
+<p>Code should be 64-bit and 32-bit friendly. Bear in mind problems of printing, comparisons, and structure alignment.</p>
+<ul>
+<li>printf() specifiers for some types are not cleanly portable between 32-bit and 64-bit systems. C99 defines some portable format specifiers. Unfortunately, MSVC 7.1 does not understand some of these specifiers and the standard is missing a few.</li>
+<li>Remember that sizeof(void *) != sizeof(int)</li>
+<li>Use the LL or ULL suffixes as needed to create 64-bit constants</li>
+<li>If you really need different code on 32-bit and 64-bit systems, use #ifdef _LP64 to choose between the code variants. (But please avoid this if possible, and keep any such changes localized</li>
+</ul>
+<h2><strong>Preprocessor Macros</strong></h2>
+<p>Be very cautious with macros. Prefer inline functions, enums, and const variables to macros.<br> Macros mean that the code you see is not the same as the code the compiler sees. This can introduce unexpected behavior, especially since macros have global scope.<br> Instead of using a macro to inline performance-critical code, use an inline function. Do not use a macro to "abbreviate" a long variable name. Instead of using a macro to conditionally compile code ... well, don't do that at all (except, of course, for the #define guards to prevent double inclusion of header files). It makes testing much more difficult.<br> Macros can do things these other techniques cannot, and you do see them in the codebase, especially in the lower-level libraries. And some of their special features (like stringifying, concatenation, and so forth) are not available through the language proper. But before using a macro, consider carefully whether there's a non-macro way to achieve the same result.<br> The following usage pattern will avoid many problems with macros; if you use macros, follow it whenever possible:</p>
+<ul>
+<li>Be cautious when defining macros in a .h file.</li>
+<li>#define macros in a more local scope, when practical. For highly localized macros, #undef them right after.</li>
+<li>Do not just #undef an existing macro before replacing it with your own; instead, pick a name that's likely to be unique.</li>
+<li>Avoid using ## to generate function/member/variable names.</li>
+</ul>
+<h2><strong>0 and NULL</strong></h2>
+<p>Use 0 for integers, 0.0 for reals, NULL for pointers, and '\0' for chars.</p>
+<h2><strong>sizeof</strong></h2>
+<p>Prefer sizeof(<em>varname</em>) to sizeof(<em>type</em>).<br> Use sizeof(<em>varname</em>) when you take the size of a particular variable. sizeof(<em>varname</em>) will update appropriately if someone changes the variable type either now or later. You may use sizeof(<em>type</em>) for code unrelated to any particular variable, such as code that manages an external or internal data format where a variable of an appropriate type is not convenient.</p>
+<h1><strong>Naming</strong></h1>
+<p>The most important consistency rules are those that govern naming. The style of a name immediately informs us what sort of thing the named entity is: a type, a variable, a function, a constant, a macro, etc., without requiring us to search for the declaration of that entity. The pattern-matching engine in our brains relies a great deal on these naming rules.<br> Naming rules are pretty arbitrary, but we feel that consistency is more important than individual preferences in this area, so regardless of whether you find them sensible or not, the rules are the rules.</p>
+<h2><strong>General Naming Rules</strong></h2>
+<p>Function names, variable names, and filenames should be descriptive; eschew abbreviation.<br> Give as descriptive a name as possible, within reason. Do not worry about saving horizontal space as it is far more important to make your code immediately understandable by a new reader. Do not use abbreviations that are ambiguous or unfamiliar to readers outside your project, and do not abbreviate by deleting letters within a word. The exception to this rule is loop iterator variables. In those cases, <em>i</em>,<em> iter</em> and the like are acceptable.<br><br></p>
+<div class="code"><pre><code><div class="plain-text-body">int price_count_reader; 	// No abbreviation.
+int num_errors; 			// "num" is a widespread convention.
+int num_dns_connections; 	// Most people know what "DNS" stands for.</div></code></pre></div>
+<div class="code"><pre><code><div class="plain-text-body">int n; 					// Meaningless.
+int nerr; 				// Ambiguous abbreviation.
+int n_comp_conns; 		// Ambiguous abbreviation.
+int wgc_connections; 	// Only you know what this abbreviation stands for.
+int pc_reader; 			// Lots of things can be abbreviated "pc".
+int cstmr_id; 			// Deletes internal letters. </div></code></pre></div>
+<h3><strong>File Names</strong></h3>
+<p>Filenames should be all lowercase with words separated by underscores (_). Follow the convention that your project uses.<br> C files should end in .c and header files should end in .h. Files that rely on being textually included at specific points should end in .inc (see also the section on self-contained headers).<br> Do not use filenames that already exist in /usr/include, such as db.h.<br> In general, make your filenames very specific. For example, use http_server_logs.h rather than logs.h. A very common case is to have a pair of files called, e.g., foo_bar.h and foo_bar.c, defining a class called FooBar.<br> Inline functions must be in a .h file. If your inline functions are very short, they should go directly into your .h file.</p>
+<h2><strong>Type Names</strong></h2>
+<p>Type names are all lowercase, and end with a "_t" suffix. Structures should include a typedef to remove the need to include the struct keyword throughout the code. This typedef is typically done as part of the structure definition, e.g.:</p>
+<div class="code"><pre><code><div class="plain-text-body">typedef struct _foo {
+ char *name;
+ } foo_t;</div></code></pre></div>
+<h2><strong>Variable Names</strong></h2>
+<p>The names of variables and data members are all lowercase, with underscores between words. For instance: a_local_variable, a_struct_data_member.<br> For variables of pointer types, prefix the name with "p_". Additionally, use "pp_" for pointer-to-pointer types. If you need three layers of indirection, consider restructuring your code.<br> For variables with an ambiguous unit type (e.g. time, distance), include the unit of measure as the final word in the variable name, e.g.</p>
+<div class="code"><pre><code><div class="plain-text-body">uint32_t delay_seconds; // OK - Includes unit of measure
+size_t *p_length; 		// OK - Uses p_ for pointer type
+uint32_t distance; 		// Bad - No unit of measure. Is this meters, feet, or furlongs?</div></code></pre></div>
+<h3><strong>Common Variable Names</strong></h3>
+<p>For example:</p>
+<div class="code"><pre><code><div class="plain-text-body">char *table_name; 	// OK - uses underscore.
+char *tablename; 	// OK - all lowercase.
+char *tableName; 	// Bad - mixed case.</div></code></pre></div>
+<h3><strong>Struct Data Members</strong></h3>
+<p>Data members of structs, both static and non-static, are named like ordinary nonmember variables. Avoid repeating the data type in struct member names.</p>
+<div class="code"><pre><code><div class="plain-text-body">typedef struct _table {
+	size_t row_length; 	// OK - uses underscore, all lowercase
+ 	char *table_name; 	// Bad - repeats data type in member name
+} table_t;</div></code></pre></div>
+<h3><strong>Global Variables</strong></h3>
+<p>Global variables should be rare, but if you use one, prefix it with g_ to easily distinguish it from local variables.</p>
+<h2><strong>Constant Names</strong></h2>
+<p>Constants defined with preprocessor macros should be all uppercase, separated by underscores. Additionally, consider prefixing the name of defined values with the subsystem or module for which the constant is relevant, e.g.:</p>
+<div class="code"><pre><code><div class="plain-text-body"> #define FOO_MAX_VALUE 32</div></code></pre></div>
+<h2><strong>Function Names</strong></h2>
+<p>Functions follow rules similar to variable names. They are all lowercase, and separated by underscores. When defining non-static, non-utility functions, include the subsystem or module as a prefix to the function name to avoid conflicts with common function names, e.g.:</p>
+<div class="code"><pre><code><div class="plain-text-body">int foo_measure_string(char *);</div></code></pre></div>
+<h2><strong>Enumeration Names</strong></h2>
+<p>Enumeration types should follow the general rules for types. Type names are all lowercase, separated by underscores. They should also include an in-band typedef. Values within an enum should be named according to the rules for macros: all uppercase and separated by underscores.</p>
+<div class="code"><pre><code><div class="plain-text-body">typedef enum _foo_error {
+	OK = 0,
+	OUT_OF_MEMORY = 1,
+	MALFORMED_INPUT = 2,
+} foo_error_t;</div></code></pre></div>
+<h2><strong>Macro Names</strong></h2>
+<p>Macros should be named with all capitals and underscores, e.g.:</p>
+<div class="code"><pre><code><div class="plain-text-body">#define ROUND ...
+#define PI_ROUNDED 3.0</div></code></pre></div>
+<h1><strong>Comments</strong></h1>
+<p>Though a pain to write, comments are absolutely vital to keeping our code readable. The following rules describe what you should comment and where. But remember: while comments are very important, the best code is self-documenting. Giving sensible names to types and variables is much better than using obscure names that you must then explain through comments.<br> When writing your comments, write for your audience: the next contributor who will need to understand your code. Be generous — the next one may be you!</p>
+<h2><strong>Comment Style</strong></h2>
+<p>Use either the // or /* */ syntax, as long as you are consistent.<br> You can use either the // or the /* */ syntax; however, // is much more common. Be consistent with how you comment and what style you use where</p>
+<h2><strong>File Comments</strong></h2>
+<p>Every file should have a comment at the top describing its contents.<br> Generally a .h file will describe the classes that are declared in the file with an overview of what they are for and how they are used. A .c file should contain more information about implementation details or discussions of tricky algorithms. If you feel the implementation details or a discussion of the algorithms would be useful for someone reading the .h, feel free to put it there instead, but mention in the .c that the documentation is in the .h file.<br> Do not duplicate comments in both the .h and the .cc. Duplicated comments diverge.</p>
+<h2><strong>Function Comments</strong></h2>
+<p>Declaration comments describe use of the function; comments at the definition of a function describe operation.</p>
+<h3><strong>Function Declaration</strong></h3>
+<p>Every function declaration should have comments immediately preceding it that describe what the function does and how to use it. These comments should be descriptive ("Opens the file") rather than imperative ("Open the file"); the comment describes the function, it does not tell the function what to do. In general, these comments do not describe how the function performs its task. Instead, that should be left to comments in the function definition.<br> Types of things to mention in comments at the function declaration:</p>
+<ul>
+<li>What the inputs and outputs are.</li>
+<li>If the function allocates memory that the caller must free.</li>
+<li>Whether any of the arguments can be a null pointer.</li>
+<li>If there are any performance implications of how a function is used.</li>
+<li>If the function is re-entrant. What are its synchronization assumptions?</li>
+</ul>
+<p>Do not be unnecessarily verbose or state the completely obvious.</p>
+<h3><strong>Function Definitions</strong></h3>
+<p>If there is anything tricky about how a function does its job, the function definition should have an explanatory comment. For example, in the definition comment you might describe any coding tricks you use, give an overview of the steps you go through, or explain why you chose to implement the function in the way you did rather than using a viable alternative. For instance, you might mention why it must acquire a lock for the first half of the function but why it is not needed for the second half.<br> Note you should not just repeat the comments given with the function declaration, in the .h file or wherever. It's okay to recapitulate briefly what the function does, but the focus of the comments should be on how it does it.</p>
+<h2><strong>Variable Comments</strong></h2>
+<p>In general the actual name of the variable should be descriptive enough to give a good idea of what the variable is used for. In certain cases, more comments are required.</p>
+<h3><strong>Struct Members</strong></h3>
+<p>Each member should have a comment describing what it is used for. If the variable can take sentinel values with special meanings, such as a null pointer or -1, document this.</p>
+<h3><strong>Global Variables</strong></h3>
+<p>As with data members, all global variables should have a comment describing what they are and what they are used for</p>
+<h2><strong>Implementation Comments</strong></h2>
+<p>In your implementation you should have comments in tricky, non-obvious, interesting, or important parts of your code.</p>
+<h3><strong>Explanatory Comments</strong></h3>
+<p>Tricky or complicated code blocks should have comments before them.</p>
+<div class="code"><pre><code><div class="plain-text-body">// Divide result by two, taking into account that x
+// contains the carry from the add.
+for (int i = 0; i &lt; result-&gt;size(); i++) {
+	x = (x &lt;&lt; 8) + (*result)[i];
+ 	(*result)[i] = x &gt;&gt; 1;
+ 	x &amp;= 1;
+}</div></code></pre></div>
+<h3><strong>Line Comments</strong></h3>
+<p>Also, lines that are non-obvious should get a comment at the end of the line. These end-of-line comments should be separated from the code by at least 1 space. Example:</p>
+<div class="code"><pre><code><div class="plain-text-body">// If we have enough memory, mmap the data portion too.
+mmap_budget = MAX(0, mmap_budget - index-&gt;length);
+if (mmap_budget &gt;= data_size &amp;&amp; !mmap_data(mmap_chunk_bytes, mlock))
+	return; // Error already logged.</div></code></pre></div>
+<p><br> If you have several comments on subsequent lines, it can often be more readable to line them up.</p>
+<h3><strong>Function Parameters</strong></h3>
+<p>When you pass in a null pointer, or literal integer values to functions, you should consider adding a comment about what they are, or make your code self-documenting by using constants. For example, compare:</p>
+<div class="code"><pre><code><div class="plain-text-body">uint32_t status = calculate_something(interesting_value,
+									  10,
+									  0,
+						 			  NULL); // What are these arguments??</div></code></pre></div>
+<p><br> versus:</p>
+<div class="code"><pre><code><div class="plain-text-body">uint32_t status = calculate_something(interesting_value,
+ 									  10, // Default base value.
+									  0, // Not the first time we're calling this.
+									  NULL); // No callback.</div></code></pre></div>
+<p> </p>
+<p>Note that you should never describe the code itself. Assume that the person reading the code knows C better than you do, even though he or she does not know what you are trying to do:</p>
+<div class="code"><pre><code><div class="plain-text-body">// Now go through the b array and make sure that if i occurs,
+// the next element is i+1.
+... 	// Geez. What a useless comment.</div></code></pre></div>
+<h2><strong>Punctuation, Spelling and Grammar</strong></h2>
+<p>Pay attention to punctuation, spelling, and grammar; it is easier to read well-written comments than badly written ones.<br> Comments should be as readable as narrative text, with proper capitalization and punctuation. In many cases, complete sentences are more readable than sentence fragments. Shorter comments, such as comments at the end of a line of code, can sometimes be less formal, but you should be consistent with your style.<br> Although it can be frustrating to have a code reviewer point out that you are using a comma when you should be using a semicolon, it is very important that source code maintain a high level of clarity and readability. Proper punctuation, spelling, and grammar help with that goal.</p>
+<h2><strong>TODO Comments</strong></h2>
+<p>Use TODO comments for code that is temporary, a short-term solution, or good-enough but not perfect.<br> TODOs should include the string TODO in all caps. The main purpose is to have a consistent TODO that can be searched to find out how to get more details upon request. If code is being reviewed with TODO, expect to answer why it is still present. Most commonly, this is used to denote where some out-of-scope addition or enhancement will be added.<br> If your TODO is of the form "At a future date do something" this probably belongs in a ticket.</p>
+<h1><strong>Formatting</strong></h1>
+<p>Coding style and formatting are pretty arbitrary, but a project is much easier to follow if everyone uses the same style. Individuals may not agree with every aspect of the formatting rules, and some of the rules may take some getting used to, but it is important that all project contributors follow the style rules so that they can all read and understand everyone's code easily.</p>
+<h2><strong>Line Length</strong></h2>
+<p>Each line of text in your code should be at most 100 characters long.</p>
+<h3><strong>Exceptions</strong></h3>
+<ul>
+<li>If a comment line contains an example command or a literal <span class="glossary">URL<span class="glossary-tt">Uniform Resource Locator</span></span> longer than 100 characters, that line may be longer than 100 characters for ease of cut and paste</li>
+<li>A raw-string literal may have content that exceeds 100 characters. Except for test code, such literals should appear near top of a file.</li>
+<li>An #include statement with a long path may exceed 100 columns.</li>
+</ul>
+<h2><strong>Line Endings</strong></h2>
+<p>Use Unix line endings. Windows is tolerant of this approach, while Linux systems are less tolerant. You should configure your editor to save files with Unix line endings.</p>
+<h2><strong>Spaces vs. Tabs</strong></h2>
+<p>Use only spaces, and indent 4 spaces at a time.<br> We use spaces for indentation. Do not use tabs in your code. You should set your editor to emit spaces when you hit the tab key.</p>
+<h2><strong>Function Declarations and Definitions</strong></h2>
+<p>Return type on the line previous to the function name, parameters on the same line if they fit. Placing the function name at the margin makes searching for its definition in an unfamiliar code base much simpler. Wrap parameter lists which do not fit on a single line as you would wrap arguments in a function call.</p>
+<div class="code"><pre><code><div class="plain-text-body">uint32_t
+function_name(char *name) {
+...
+}</div></code></pre></div>
+<p><br> If you have too much text to fit on one line:</p>
+<div class="code"><pre><code><div class="plain-text-body">uint32_t
+really_long_function_name(char *name,
+size_t length,
+uint32_t value) {
+...
+}</div></code></pre></div>
+<p><br> Some points to note:</p>
+<ul>
+<li>The open parenthesis is always on the same line as the function name.</li>
+<li>There is never a space between the function name and the open parenthesis.</li>
+<li>There is never a space between the parentheses and the parameters.</li>
+<li>The open curly brace is always at the end of the same line as the last parameter.</li>
+<li>The close curly brace is either on the last line by itself or (if other style rules permit) on the same line as the open curly brace.</li>
+<li>There should be a space between the close parenthesis and the open curly brace.</li>
+<li>All parameters should be named, with identical names in the declaration and implementation.</li>
+<li>All parameters should be aligned if possible.</li>
+</ul>
+<p>If some parameters are unused, comment out the variable name in the function definition or use the UNUSED_PARAMETER macro.</p>
+<h2><strong>Function Calls</strong></h2>
+<p>Either write the call all on a single line, wrap the arguments at the parenthesis, or start the arguments on a new line indented by four spaces and continue at that 4 space indent. In the absence of other considerations, use the minimum number of lines, including placing multiple arguments on each line where appropriate.<br> Function calls have the following format:</p>
+<div class="code"><pre><code><div class="plain-text-body">uint32_t status = do_something(argument1, argument2, argument3);</div></code></pre></div>
+<p><br> If the arguments do not all fit on one line, they should be broken up onto multiple lines, with each subsequent line aligned with the first argument. If you wrap any arguments, wrap all arguments, with one argument per line. Do not add spaces after the open paren or before the close paren:</p>
+<div class="code"><pre><code><div class="plain-text-body">uint32_t status = do_something(averyveryveryverylongargument1,
+							   argument2,
+							   argument3);</div></code></pre></div>
+<p> </p>
+<p>Arguments may optionally all be placed on subsequent lines with a four space indent:</p>
+<div class="code"><pre><code><div class="plain-text-body">if (...) {
+ 	...
+ 	...
+ 	if (...) {
+ 		DoSomething(
+ 		argument1, // 4 space indent
+ 		argument2,
+ 		argument3, 
+ 		argument4);
+	}
+}</div></code></pre></div>
+<p><br> Sometimes arguments form a structure that is important for readability. In those cases, feel free to format the arguments according to that structure:</p>
+<div class="code"><pre><code><div class="plain-text-body">// Transform the widget by a 3x3 matrix.
+widget_ransform(x1, x2, x3,
+ 				y1, y2, y3,
+				z1, z2, z3);</div></code></pre></div>
+<p> </p>
+<h2><strong>Conditionals</strong></h2>
+<p>Prefer no spaces inside parentheses. The if and else keywords belong on separate lines.<br> Include a space between the if and opening parenthesis. Do not include spaces between the conditional statement and parentheses.<br> if (condition) { // no spaces inside parentheses<br> ... // 4 space indent.<br> } else if (...) { // The else goes on the same line as the closing brace.<br> ...<br> } else {<br> ...<br> }<br> If statements should always include curly braces, even if there is only a single statement within the conditional.</p>
+<h2><strong>Loops and Switch Statements</strong></h2>
+<p>Annotate non-trivial fall-through between cases.<br> Braces should be included on loops, even for single-statement loops. Empty loop bodies should use {} or continue, but not a single semicolon.<br> switch (var) {<br> case 0: // 0 space indent<br> ... // 4 space indent<br> break;<br> case 1:<br> ...<br> break;<br> default:<br> assert(0);<br> }</p>
+<h2><strong>Pointer and Reference Expressions</strong></h2>
+<p>No spaces around period or arrow. Pointer operators do not have trailing spaces.<br> The following are examples of correctly-formatted pointer and reference expressions:<br> x = *p;<br> p = &amp;x;<br> x = r.y;<br> x = r-&gt;y;<br> Note that:</p>
+<ul>
+<li>There are no spaces around the period or arrow when accessing a member.</li>
+<li>Pointer operators have no space after the * or &amp;.</li>
+</ul>
+<p>When declaring a pointer variable or argument, you should place the asterisk adjacent to the variable name:<br> char *c;</p>
+<h2><strong>Boolean Expressions</strong></h2>
+<p>When you have a boolean expression that is longer than the standard line length, be consistent in how you break up the lines.<br> In this example, the logical AND operator is always at the end of the lines:<br> if (this_one_thing &gt; this_other_thing &amp;&amp;<br> a_third_thing == a_fourth_thing &amp;&amp;<br> yet_another &amp;&amp; last_one) {<br> ...<br> }<br> Note that when the code wraps in this example, both of the &amp;&amp; logical AND operators are at the end of the line. Wrapping all operators at the beginning of the line is also allowed. Feel free to insert extra parentheses judiciously because they can be very helpful in increasing readability when used appropriately.</p>
+<h2><strong>Return Values</strong></h2>
+<p>Do not needlessly surround the return expression with parentheses.<br> Use parentheses in return expr; only where you would use them in x = expr;.<br> Favor performing any operation prior to the return itself. This aids in debugging at the potential expense of an additional local variable.<br> <strong>Good Examples</strong> <br> return result; // No parentheses in the simple case.<br> // Parentheses OK to make a complex expression more readable.<br> return (some_long_condition &amp;&amp;<br> another_condition);<br> <strong>Bad Examples</strong> <br> return (value); // You wouldn't write var = (value);<br> return(result); // return is not a function!</p>
+<h2><strong>Preprocessor Directives</strong></h2>
+<p>The hash mark that starts a preprocessor directive should always be at the beginning of the line.<br> Even when preprocessor directives are within the body of indented code, the directives should start at the beginning of the line.<br> Optionally, include an end-of-line comment at an endif noting the #if condition.<br> // Good - directives at beginning of line<br> if (lopsided_score) {<br> #if DISASTER_PENDING // Correct – Starts at beginning of line<br> drop_everything();</p>
+<ol>
+<li>if NOTIFY // OK – Spaces after #<br> notify_client();</li>
+<li>endif<br> #endif // DISASTER_PENDING<br> back_to_normal();<br> }<br> <strong>Bad Example</strong> <br>  // Bad - indented directives<br> if (lopsided_score) {<br> #if DISASTER_PENDING // Wrong! The "#if" should be at beginning of line<br> DropEverything();<br> #endif // Wrong! Do not indent "#endif"<br> BackToNormal();<br> }<h2><strong>Horizontal Whitespace</strong></h2>Use of horizontal whitespace depends on location. Never put trailing whitespace at the end of a line.<h3><strong>Loops and Conditionals</strong></h3>if (b) { // Space after the keyword in conditions and loops.<br> } else { // Spaces around else.<br> } <br class="atl-forced-newline"> while (test) {} // There is usually no space inside parentheses. <br class="atl-forced-newline"> <br class="atl-forced-newline"> // For loops always have a space after the semicolon.<br> for (i = 0; i &lt; 5; ++i) {<br> for ( ; i &lt; 5; ++i) {<br> ... <br class="atl-forced-newline"> <br class="atl-forced-newline"> switch <div class="emoticon-information"></div> {<br> case 1: // No space before colon in a switch case.<br> ...<br> case 2: break; // Use a space after a colon if there's code after it.<h3><strong>Operators</strong></h3>// Assignment operators always have spaces around them.<br> x = 0; <br class="atl-forced-newline"> // Other binary operators usually have spaces around them, but it's<br> // OK to remove spaces around factors. Parentheses should have no<br> // internal padding.<br> v = w * x + y / z;<br> v = w*x + y/z;<br> v = w * (x + z); <br class="atl-forced-newline"> <br class="atl-forced-newline"> // No spaces separating unary operators and their arguments.<br> x = -5;<br> ++x;<br> if (x &amp;&amp; !y)<br> ...<h3><strong>Casts</strong></h3>// No spaces inside parentheses.<br> y = (char *)x;<br> // Optional space after parentheses, but before value<br> y = (char *) x;<h2><strong>Vertical Whitespace</strong></h2>Minimize use of vertical whitespace.<br> This is more a principle than a rule: don't use blank lines when you don't have to. In particular, don't put more than one or two blank lines between functions, resist starting functions with a blank line, don't end functions with a blank line, and be discriminating with your use of blank lines inside functions.<br> The basic principle is: The more code that fits on one screen, the easier it is to follow and understand the control flow of the program. Of course, readability can suffer from code being too dense as well as too spread out, so use your judgement. But in general, minimize use of vertical whitespace.<br> Some rules of thumb to help when blank lines may be useful:</li>
+</ol>
+<ul>
+<li>Blank lines at the beginning or end of a function very rarely help readability.</li>
+<li>Blank lines inside a chain of if-else blocks may well help readability.</li>
+</ul>
+<h1><strong>Best Practices</strong></h1>
+<h2><strong>Return Values</strong></h2>
+<p>Aggressively check the return value from all functions with meaningful return values, especially memory allocation. Validate no errors have occurred, and gracefully recover or terminate when they do.<br> Consider including an error message at the point of function return when an error is detected. This can double as documentation, and greatly helps track down an error chain, e.g.:<br> fp = fopen("/path/to/file", "rb");<br> if (fp == NULL) {<br> DBGERR("Failed to open /path/to/file for reading: %d\n", errno);<br> status = errno;<br> goto ErrorExit;<br> }<br> ...<br> ErrorExit:<br> return status;<br> Use platform error numbers when they are available. Define meaningful constants for your own error codes, and ensure their values do not overlap with platform definitions.<br> When an error causes a return (rather than retry or other recovery), propagate the original error code as far as possible.</p>
+<h2><strong>Error Handling</strong></h2>
+<p>Use a single point of exit for functions, and use a goto to reach it in error cases. An exception to this is early parameter value checks, prior to any local initialization, may return an error directly, e.g.:<br> int32_t<br> calculate_something(uint8_t *param_1, uint8_t *param_2) {<br> int32_t status = S_OK;<br> if (param_1 == NULL || param_2 == NULL) {<br> return ERR_INVALID_PARAMETER;<br> }<br> ...<br> return status;<br> }<br> Free resources and perform cleanup in the exit block. Avoid more than one goto label per function, and do not use goto for other control flow.<br> At function starts, initialize variables with sentinel values. Check those same sentinel values in error handling blocks to determine whether cleanup must be done, e.g.:<br> uint8_t *buf = NULL;<br> ...<br> buf = malloc(100);<br> ...<br> ErrorExit:<br> if (buf) {<br> free(buf);<br> }</p>
+<h2><strong>Strings in Programs</strong></h2>
+<p>Most C code written at OEC is intended for deployments in austere environments, and at risk of being reverse engineered. While meaningful error messages can greatly aid debugging and determining the root cause of issues, they should not be included in release builds of products for size and "opsec" reasons.<br> Wrap error reporting routines in preprocessor macros to ensure they are replaced with noop code in a release build. Use these macros exclusively to avoid accidentally including a stray print or error message.<br> Be cautious when implementing the macro to remove these routines. Consider the following:<br> #define DBGPRINT printf // Bad – Will still include any arguments!<br> #define DBGPRINT(fmt, ...) printf(fmt, ##_<em>VA_ARGS</em>_) // OK – Includes arguments in the macro definition<br>  <br> DBGPRINT("function_name: %s: %d\n", error_message(), errno); // In the first case, this will still include the string "function_name" and a call to error_message()</p>
+<h1><strong>Security Considerations</strong></h1>
+<h2><strong>Integer Overflow</strong></h2>
+<p>Integer overflows in C result from arithmetic on values whose results are beyond the finite storage available in variables. When overflown values are used (e.g. as pointers, offsets, or allocation sizes) security issues (and therefore also reliability issues) result.<br> It is very easy to get these checks wrong, and checks that rely on machine-specific overflow behavior such as wraparound are liable to be optimized out by the compiler (see: <span class="external"><span style="text-decoration: underline;">https://gcc.gnu.org/bugzilla/show_bug.cgi?id=30475</span></span>). This section outlines some templates that can be used to construct safe, effective checks.<br> When using a modern version of GCC, use the arithmetic overflow checking builtins (listed here: <span class="external"><span style="text-decoration: underline;">https://gcc.gnu.org/onlinedocs/gcc/Integer-Overflow-Builtins.html</span></span>). Since the toolchains in use at OEC do not always allow us to use the latest and greatest versions, we must know how to perform these checks safely on our own.</p>
+<h3><strong>Addition / Subtraction</strong></h3>
+<p>Consider the following code, that processes a length-value protocol with a 4-byte length, followed by content:<br> int32_t<br> process_buffer(uint8_t *buffer, size_t buffer_size) {<br> int32_t rc = 0;<br> size_t offset = 0;<br> uint32_t item_len = 0;<br>  <br> while (offset &lt; buffer_size) {<br> // Ensure there is sufficient space to read the next item's length<br> // If the amount we want to access (sizeof(uint32_t)) exceeds the amount remaining (size - offset) then error out<br> if (sizeof(uint32_t) &gt; buffer_size - offset) {<br> rc = ERR_INSUFFICIENT_DATA;<br> goto ErrorExit; <br> }<br>  <br> // Extract 4-byte length from buffer<br> item_len = *((uint32_t *) (buffer + offset));<br>  <br> // Ensure there is sufficient space to read the stated amount<br> // Be sure to include 4-byte length field in space calculations<br> if (item_len &gt; buffer_size - offset - sizeof(uint32_t)) {<br> rc = ERR_INSUFFICIENT_DATA;<br> goto ErrorExit; <br> }<br>  <br> rc = process_some_data(buffer + offset + sizeof(uint32_t),<br> buffer_size - offset - sizeof(uint32_t));<br> // ...<br>  <br> offset += sizeof(uint32_t) + item_len;<br> }<br>  <br> ErrorExit:<br> return rc;<br> }<br> The intuitive method of checking the result of addition is unsafe. The following examples demonstrate different methods for performing overflow checks. All examples in this block are checking for the <strong>error</strong> state.<br> if (offset + item_len &lt; offset) { // Bad – Relies on machine-specific overflow behavior and may be optimized out<br> if (offset + item_len &gt; buffer_size) { // Bad – offset + item_len may overflow, and pass this check<br>  <br> if (item_len &gt; buffer_size - offset) { // OK – We check if the amount we wish to access exceeds actual amount remaining<br> if (buffer_size - offset &lt; item_len) { // OK – We check if the amount remaining is less than desired amount</p>
+<h3><strong>Multiplication</strong></h3>
+<p>The only correct way to test for integer overflow is to divide the maximum allowable result by the multiplier and comparing the result to the multiplicand or vice-versa. If the result is smaller than the multiplicand, the product of those two values would cause an integer overflow. Since that's about as clear as mud, here's an example:<br> #define SIZE_MAX ((size_t)-1) // It's important that SIZE_MAX be the maximum possible stored value<br>  <br> // In the positive case<br> if (n &gt; 0 &amp;&amp; m &gt; 0 &amp;&amp; SIZE_MAX/n &gt;= m) {<br> size_t bytes = n * m;<br> ... // allocate "bytes" space<br> }<br>  <br> // Checking for error case */<br> if (n == 0 || m == 0 || SIZE_MAX/n &lt; m) {<br> // Set error condition<br> }<br> And a negative example:<br> size_t bytes = n * m;<br> if (bytes &lt; n || bytes &lt; m) { // Bad – Relies on machine-specific overflow behavior and may be optimized out<br> ... // allocate "bytes" space<br> }<br> Buffer Overflow<br>  </p>
+<h1><strong>Assembly</strong></h1>
+<h2><strong>Including Assembly in a C Project</strong></h2>
+<p>Do not directly embed inline assembly in C. Instead, create a separate module with a .s extension, define symbols and link in the assembled object.</p>
+<h2><strong>Best Practices</strong></h2>
+<p>Standards for quality should be consistently applied to assembly as they would in C. Unless each byte is significant (and they may be), continue to check return values, clean up resources and the like.<br> Nearly every line in assembly source should include a comment as to the intent. Apply the comment guidelines. Note meaning and motivation, not mechanics, unless you are employing some unintuitive trick or machine behavior.</p>
+<h1><strong>Parting Words</strong></h1>
+<p>Use common sense and BE CONSISTENT.<br> If you are editing code, take a few minutes to look at the code around you and determine its style. If their comments have little boxes of stars around them, make your comments have little boxes of stars around them too.<br> The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you are saying, rather than on how you are saying it. We present global style rules here so people know the vocabulary. But local style is also important. If code you add to a file looks drastically different from the existing code around it, the discontinuity throws readers out of their rhythm when they go to read it. Try to avoid this.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="../../highlighter/mootools-core-and-more.js"></script>
+            <script type="text/javascript" src="../../highlighter/efatmarker.min.js"></script>
+            <div id="efm-button">
+            <div id="efm-menu">
+                <h3 style="margin:0 0 2px 0">e-Highlighter</h3>
+                <a id="efm-permalink" class="efm-need-highlight" href="page_26804225.html" style="margin-bottom:0;padding-bottom:0;"></a>
+                <p style="margin-top:0;padding-top:0" class="efm-need-highlight">Click to send permalink to address bar, or right-click to copy permalink.</p>
+                <p style="margin:0.5em 0;padding:0;border-top:1px dotted #ccc;height:1px"></p>
+                <a id="efm-unhighlightall" class="efm-need-highlight">Un-highlight all</a>
+                <a id="efm-unhighlight">Un-highlight selection<span>u</span></a>
+                <a id="efm-highlight">Highlight selection<span>h</span></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+
+            (function(){
+            window.addEvent('domready', function(){
+
+                var markerButton = $('efm-button');
+                if ( markerButton ) {
+                    eMarker = new EFatMarker($('uniquer'));
+                    eMarker.tokenToSpans(); // apply whatever token is there
+                    // need to act on mousedown or else selection disappear
+                    markerButton.addEvent('mousedown', function(){
+                        eMarker.interpretSelection(true);
+                        return false;
+                    });
+                    $('efm-unhighlightall').addEvent('mousedown', function(){
+                        eMarker.unhighlightAll(true);
+                        return false;
+                        });
+                    $('efm-unhighlight').addEvent('mousedown', function(){
+                        eMarker.unhighlightSelection(true);
+                        return false;
+                        });
+                    $('efm-highlight').addEvent('mousedown', function(){
+                        eMarker.highlightSelection(true);
+                        return false;
+                        });
+                    $('efm-permalink').addEvent('mousedown', function(){
+                        window.location.href = this.href;
+                        return false;
+                        });
+                    // if Mootools Keyboard is available, use it
+                    if (Keyboard) {
+                        var keyboard = new Keyboard({
+                            defaultEventType: 'keyup',
+                            events: {
+                                'h': function(){
+                                    eMarker.highlightSelection(true);
+                                    },
+                                'u': function(){
+                                    eMarker.unhighlightSelection(true);
+                                    }
+                                }
+                            });
+                        keyboard.activate();
+                        }
+                    eMarker.syncDOM();
+                    // auto scroll to first highlight, if any
+                    if (eMarker.hasSpans()) {
+                        var scroll = new Fx.Scroll(window,{offset:{'x':0,'y':-100}}),
+                            highlights = $$('#uniquer .efm-hi');
+                        if (highlights.length > 0) {
+                            scroll.toElement(highlights[0]);
+                            }
+                        }
+                    }
+                });
+            })();
+            </script>
+            
+
+<link href="../../static/css/styles_footer.css" rel="stylesheet">
+<footer id="page-footer" class="footer-recommendations">
+  <div class="footer-wrapper">
+    <div class="recommendation-container">
+      <a href="page_26804225.html#" class="top">Top</a>
+      
+        <ul class="recommendation-links">
+          
+            <li class="recommendation">
+              <a href="https://www.torproject.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton401.png?1461924517" width="300" height="180" /></div>
+                <p>
+<p>Tor is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://tails.boum.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton405.png?1461924517" width="446" height="223" /></div>
+                <p>
+<p>Tails is a live operating system, that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.couragefound.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton404.png?1461924517" width="357" height="50" /></div>
+                <p>
+<p>The Courage Foundation is an international organisation that supports those who risk life or liberty to make significant contributions to the historical record.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.bitcoin.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton403.png?1461924517" width="300" height="64" /></div>
+                <p>
+<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
+</p>
+              </a>
+            </li>
+          
+        </ul>
+      
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/wikileaks" target="_blank" alt="Facebook">
+            <img src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" target="_blank" alt="Twitter">
+            <img src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+        <script src="../../bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        </script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

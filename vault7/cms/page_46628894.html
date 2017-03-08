@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="http://localhost:6081/IMG/favicon.ico">
+        <title>Write to protected directories by using filenames in rootless_whitelist</title>
+        <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/cerulean.min.css" rel="stylesheet">
+        <link href="../../bootstrap/css/new-gen.css" rel="stylesheet">
+        <link href="../../css/leak-styles.css" rel="stylesheet">
+        <link href="../../highlighter/efatmarker.css" rel="stylesheet">
+        <style>
+          #efm-button {margin:0 0 4px 0;padding:0 0 0 30px;position:fixed;height:48px;width:52px;bottom:0;right:0;background:transparent '/highlighter/kedit-2.png' no-repeat bottom right;cursor:pointer;opacity:0.4;z-index:99999999999}
+          #efm-button:hover {opacity:1}
+          #efm-button #efm-menu {margin:0 0 52px 0;border:1px outset gray;padding:0;display:none;background:#eee;position:fixed;bottom:0;right:0;width:20em;opacity:1;cursor:auto}
+          #efm-button:hover #efm-menu {display:block;font-size:smaller;color:#999}
+          #efm-button #efm-menu p {margin:0;padding:0 3px}
+          #efm-button #efm-menu a {margin:1px;padding:3px 3px;display:block;font:12px sans-serif;white-space:nowrap;opacity:inherit;cursor:pointer}
+          #efm-button #efm-menu a:hover {color:black;background-color:white;opacity:1}
+          #efm-button #efm-menu a > span {color:gray;position:absolute;right:4px}
+          .efm-hi {background-color:#ff8;font-weight:normal;}
+        </style>
+        <link href="../../bootstrap/css/submit.css" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="submit_wlkey" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_46628894.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_46628894.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_46628894.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_46628894.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+		<p>This key's fingerprint is A04C 5E09 ED02 B328 03EB  6116 93ED 732E 9231 8DBA</p>
+		<pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQQNBFUoCGgBIADFLp+QonWyK8L6SPsNrnhwgfCxCk6OUHRIHReAsgAUXegpfg0b
+rsoHbeI5W9s5to/MUGwULHj59M6AvT+DS5rmrThgrND8Dt0dO+XW88bmTXHsFg9K
+jgf1wUpTLq73iWnSBo1m1Z14BmvkROG6M7+vQneCXBFOyFZxWdUSQ15vdzjr4yPR
+oMZjxCIFxe+QL+pNpkXd/St2b6UxiKB9HT9CXaezXrjbRgIzCeV6a5TFfcnhncpO
+ve59rGK3/az7cmjd6cOFo1Iw0J63TGBxDmDTZ0H3ecQvwDnzQSbgepiqbx4VoNmH
+OxpInVNv3AAluIJqN7RbPeWrkohh3EQ1j+lnYGMhBktX0gAyyYSrkAEKmaP6Kk4j
+/ZNkniw5iqMBY+v/yKW4LCmtLfe32kYs5OdreUpSv5zWvgL9sZ+4962YNKtnaBK3
+1hztlJ+xwhqalOCeUYgc0Clbkw+sgqFVnmw5lP4/fQNGxqCO7Tdy6pswmBZlOkmH
+XXfti6hasVCjT1MhemI7KwOmz/KzZqRlzgg5ibCzftt2GBcV3a1+i357YB5/3wXE
+j0vkd+SzFioqdq5Ppr+//IK3WX0jzWS3N5Lxw31q8fqfWZyKJPFbAvHlJ5ez7wKA
+1iS9krDfnysv0BUHf8elizydmsrPWN944Flw1tOFjW46j4uAxSbRBp284wiFmV8N
+TeQjBI8Ku8NtRDleriV3djATCg2SSNsDhNxSlOnPTM5U1bmh+Ehk8eHE3hgn9lRp
+2kkpwafD9pXaqNWJMpD4Amk60L3N+yUrbFWERwncrk3DpGmdzge/tl/UBldPoOeK
+p3shjXMdpSIqlwlB47Xdml3Cd8HkUz8r05xqJ4DutzT00ouP49W4jqjWU9bTuM48
+LRhrOpjvp5uPu0aIyt4BZgpce5QGLwXONTRX+bsTyEFEN3EO6XLeLFJb2jhddj7O
+DmluDPN9aj639E4vjGZ90Vpz4HpN7JULSzsnk+ZkEf2XnliRody3SwqyREjrEBui
+9ktbd0hAeahKuwia0zHyo5+1BjXt3UHiM5fQN93GB0hkXaKUarZ99d7XciTzFtye
+/MWToGTYJq9bM/qWAGO1RmYgNr+gSF/fQBzHeSbRN5tbJKz6oG4NuGCRJGB2aeXW
+TIp/VdouS5I9jFLapzaQUvtdmpaeslIos7gY6TZxWO06Q7AaINgr+SBUvvrff/Nl
+l2PRPYYye35MDs0b+mI5IXpjUuBC+s59gI6YlPqOHXkKFNbI3VxuYB0VJJIrGqIu
+Fv2CXwy5HvR3eIOZ2jLAfsHmTEJhriPJ1sUG0qlfNOQGMIGw9jSiy/iQde1u3ZoF
+so7sXlmBLck9zRMEWRJoI/mgCDEpWqLX7hTTABEBAAG0x1dpa2lMZWFrcyBFZGl0
+b3JpYWwgT2ZmaWNlIEhpZ2ggU2VjdXJpdHkgQ29tbXVuaWNhdGlvbiBLZXkgKFlv
+dSBjYW4gY29udGFjdCBXaWtpTGVha3MgYXQgaHR0cDovL3dsY2hhdGMzcGp3cGxp
+NXIub25pb24gYW5kIGh0dHBzOi8vd2lraWxlYWtzLm9yZy90YWxrKSA8Y29udGFj
+dC11cy11c2luZy1vdXItY2hhdC1zeXN0ZW1Ad2lraWxlYWtzLm9yZz6JBD0EEwEK
+ACcCGwMFCwkIBwMFFQoJCAsFFgIDAQACHgECF4AFAlb6cdIFCQOznOoACgkQk+1z
+LpIxjbrlqh/7B2yBrryWhQMGFj+xr9TIj32vgUIMohq94XYqAjOnYdEGhb5u5B5p
+BNowcqdFB1SOEvX7MhxGAqYocMT7zz2AkG3kpf9f7gOAG7qA1sRiB+R7mZtUr9Kv
+fQSsRFPb6RNzqqB9I9wPNGhBh1YWusUPluLINwbjTMnHXeL96HgdLT+fIBa8ROmn
+0fjJVoWYHG8QtsKiZ+lo2m/J4HyuJanAYPgL6isSu/1bBSwhEIehlQIfXZuS3j35
+12SsO1Zj2BBdgUIrADdMAMLneTs7oc1/PwxWYQ4OTdkay2deg1g/N6YqM2N7rn1W
+7A6tmuH7dfMlhcqw8bf5veyag3RpKHGcm7utDB6k/bMBDMnKazUnM2VQoi1mutHj
+kTCWn/vF1RVz3XbcPH94gbKxcuBi8cjXmSWNZxEBsbirj/CNmsM32Ikm+WIhBvi3
+1mWvcArC3JSUon8RRXype4ESpwEQZd6zsrbhgH4UqF56pcFT2ubnqKu4wtgOECsw
+K0dHyNEiOM1lL919wWDXH9tuQXWTzGsUznktw0cJbBVY1dGxVtGZJDPqEGatvmiR
+o+UmLKWyxTScBm5o3zRm3iyU10d4gka0dxsSQMl1BRD3G6b+NvnBEsV/+KCjxqLU
+vhDNup1AsJ1OhyqPydj5uyiWZCxlXWQPk4p5WWrGZdBDduxiZ2FTj17hu8S4a5A4
+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
+J3x7gtxUMkTadELqwY6hrU8=
+=BLTH
+-----END PGP PUBLIC KEY BLOCK-----
+		</pre>
+	</div>
+</div>
+
+<div id="submit_help_contact" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_46628894.html#submit_help_contact" class="btn-wl">How to contact WikiLeaks?</a>
+			<a href="page_46628894.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+			<a href="page_46628894.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_46628894.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Contact</h3>
+		<p>If you need help using Tor you can contact WikiLeaks for assistance in setting it up using our simple webchat available at: <a href="https://wikileaks.org/talk">https://wikileaks.org/talk</a></p>
+		<p>If you can use Tor, but need to contact WikiLeaks for other reasons use our secured webchat available at <b>http://wlchatc3pjwpli5r.onion</b></p>
+		<p>We recommend contacting us over Tor if you can.</p>
+	</div>
+</div>
+
+<div id="submit_help_tor" class="submit_elem">
+	<div class="container">
+		<div class="text-center"><div class="submit_buttons btn-group" role="group">
+			<a href="page_46628894.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+			<a href="page_46628894.html#submit_help_tor" class="btn-wl">What is Tor?</a>
+			<a href="page_46628894.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+			<a href="page_46628894.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+		</div></div>
+
+		<h3>Tor</h3>
+		<p><a href="https://www.torproject.org">Tor</a> is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+		<p>In order to use the WikiLeaks public submission system as detailed above you can download the Tor Browser Bundle, which is a Firefox-like browser available for Windows, Mac OS X and GNU/Linux and pre-configured to connect using the anonymising system Tor.</p>
+		<h4>Tails</h4>
+		<p>If you are at high risk and you have the capacity to do so, you can also access the submission system through a secure operating system called <a href="https://tails.boum.org">Tails</a>. Tails is an operating system launched from a USB stick or a DVD that aim to leaves no traces when the computer is shut down after use and automatically routes your internet traffic through Tor. Tails will require you to have either a USB stick or a DVD at least 4GB big and a laptop or desktop computer.</p>
+	</div>
+</div>
+
+<div id="submit_help_tips" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_46628894.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_46628894.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_46628894.html#submit_help_tips" class="btn-wl">Tips for Sources</a>
+				<a href="page_46628894.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>Tips</h3>
+		<p>Our submission system works hard to preserve your anonymity, but we recommend you also take some of your own precautions. Please review these basic guidelines. </p>
+		<div>
+			<h4>1. Contact us if you have specific problems</h4>
+			<p>If you have a very large submission, or a submission with a complex format, or are a high-risk source, please <a href="page_46628894.html#submit_help_contact">contact us</a>. In our experience it is always possible to find a custom solution for even the most seemingly difficult situations.</p>
+		</div>
+		<div>
+			<h4>2. What computer to use</h4>
+			<p>If the computer you are uploading from could subsequently be audited in an investigation, consider using a computer that is not easily tied to you. Technical users can also use <a href="https://tails.boum.org">Tails</a> to help ensure you do not leave any records of your submission on the computer.</p>
+		</div>
+		<div>
+			<h4>3. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+	</div>
+</div>
+
+<div id="submit_help_after" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_46628894.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_46628894.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_46628894.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_46628894.html#submit_help_after" class="btn-wl">After Submitting</a>
+			</div>
+		</div>
+
+		<h3>After</h3>
+
+		<div>
+			<h4>1. Do not talk about your submission to others</h4>
+			<p>If you have any issues talk to WikiLeaks. We are the global experts in source protection – it is a complex field. Even those who mean well often do not have the experience or expertise to advise properly. This includes other media organisations.</p>
+		</div>
+
+		<div>
+			<h4>2. Act normal</h4>
+			<p>If you are a high-risk source, avoid saying anything or doing anything after submitting which might promote suspicion. In particular, you should try to stick to your normal routine and behaviour.</p>
+		</div>
+
+		<div>
+			<h4>3. Remove traces of your submission</h4>
+			<p>If you are a high-risk source and the computer you prepared your submission on, or uploaded it from, could subsequently be audited in an investigation, we recommend that you format and dispose of the computer hard drive and any other storage media you used.</p>
+			<p>In particular, hard drives retain data after formatting which may be visible to a digital forensics team and flash media (USB sticks, memory cards and SSD drives) retain data even after a secure erasure. If you used flash media to store sensitive data, it is important to destroy the media.</p>
+			<p>If you do this and are a high-risk source you should make sure there are no traces of the clean-up, since such traces themselves may draw suspicion.</p>
+			<div>
+				<h4>4. If you face legal action</h4>
+				<p>If a legal action is brought against you as a result of your submission, there are organisations that may help you. The Courage Foundation is an international organisation dedicated to the protection of journalistic sources. You can find more details at <a href="https://www.couragefound.org">https://www.couragefound.org</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="submit" class="submit_banner">
+	<div class="container">
+		<div class="page-header">
+			<h1>Submit documents to WikiLeaks</h1>
+			<a class="remove-button" href="page_46628894.html#"><span class="glyphicon glyphicon-remove-circle"></span></a>
+		</div>
+		<p>WikiLeaks publishes documents of political or historical importance that are censored or otherwise suppressed. We specialise in strategic global publishing and large archives.</p>
+		<p>The following is the address of our secure site where you can anonymously upload your documents to WikiLeaks editors. You can only access this submissions system through Tor. (See our <a href="page_46628894.html#submit_help_tor">Tor tab</a> for more information.) We also advise you to read our <a href="page_46628894.html#submit_help_tips">tips for sources</a> before submitting.</p>
+
+		<div class="alert alert-info">
+			<div class="onion-url">wlupld3ptjvsgwqw.onion</div>
+			<div>
+				Copy this address into your Tor browser. Advanced users, if they wish, can also add a further layer of encryption to their submission using <a href="page_46628894.html#submit_wlkey">our public PGP key</a>.
+			</div>
+		</div>
+
+		<p>If you cannot use Tor, or your submission is very large, or you have specific requirements, WikiLeaks provides several alternative methods. <a href="page_46628894.html#submit_help_contact">Contact us</a> to discuss how to proceed.</p>
+	</div>
+</div>
+<div id="submit_help_buttons" class="submit_elem">
+	<div class="container">
+		<div class="text-center">
+			<div class="submit_buttons btn-group" role="group">
+				<a href="page_46628894.html#submit_help_contact" class="btn-wl btn-wl-empty">How to contact WikiLeaks?</a>
+				<a href="page_46628894.html#submit_help_tor" class="btn-wl btn-wl-empty">What is Tor?</a>
+				<a href="page_46628894.html#submit_help_tips" class="btn-wl btn-wl-empty">Tips for Sources</a>
+				<a href="page_46628894.html#submit_help_after" class="btn-wl btn-wl-empty">After Submitting</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+        <div id="main">
+            
+
+<link href="../../static/css/styles_topnav.css" rel="stylesheet">
+<link href="../../static/css/styles_sidenav.css" rel="stylesheet">
+<div class="top-navigation">
+  <nav class="navbar">
+      <a href="page_46628894.html#menu" class="mobile-only hot-dog nav-element">
+      </a>
+    <div class="nav-logo">
+      <a href="https://wikileaks.org">
+        <h1>WikiLeaks</h1>
+      </a>
+    </div>
+    <div class="action-buttons">
+      <a class="button-face support-link" href="https://wikileaks.spreadshirt.com/" target="_blank">Shop</a>
+      <a class="button-face donate-link" href="https://shop.wikileaks.org/donate">Donate</a>
+      <a class="button-face submit-link" href="page_46628894.html#submit">Submit</a>
+    </div>
+    <form class="global-search" method="get" action="https://search.wikileaks.org/">
+      <input type="text" name="q" placeholder="Search">
+      <button class="btn-search" type="submit"></button>
+    </form>
+    <div class="main-nav">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            </li>
+          
+            <li>
+              <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            </li>
+          
+            <li>
+              <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            </li>
+          
+            <li>
+              <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+  </nav>
+</div><nav id="menu" class="side-nav rub">
+  <div class="menu-wrapper">
+    <a class="close-btn nav-element" href="page_46628894.html#"></a>
+    
+      <ul class="first-level">
+        
+          <li>
+            <a class=" leaks-menu-item" href="https://wikileaks.org/-Leaks-.html">Leaks</a>
+            
+          </li>
+        
+          <li>
+            <a class=" news-menu-item" href="https://wikileaks.org/-News-.html">News</a>
+            
+          </li>
+        
+          <li>
+            <a class=" about-menu-item" href="https://wikileaks.org/-About-66-.html">About</a>
+            
+          </li>
+        
+          <li>
+            <a class=" partners-menu-item" href="https://wikileaks.org/-Partners-.html">Partners</a>
+            
+          </li>
+        
+      </ul>
+    
+    <aside class="friends mobile-only">
+      
+        <ul class="first-level">
+          
+            <li>
+              <a href="https://www.torproject.org/" target="_blank">Tor Project</a>
+            </li>
+          
+            <li>
+              <a href="https://tails.boum.org/" target="_blank">Tails</a>
+            </li>
+          
+            <li>
+              <a href="https://www.couragefound.org/" target="_blank">Courage</a>
+            </li>
+          
+            <li>
+              <a href="https://www.bitcoin.org/" target="_blank">Bitcoin</a>
+            </li>
+          
+        </ul>
+      
+    </aside>
+    <aside class="social mobile-only">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/wikileaks" class="nav-element" target="_blank" alt="Facebook">
+            <img class="img-responsive" src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" class="nav-element" target="_blank" alt="Twitter">
+            <img class="img-responsive" src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</nav>
+
+            <div class="container-fluid row-fluid">
+                <div class="col-xs-12 col-sm-12 col-md-10 container-text">
+                    <div class="leak-header">
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body>
+<div class="title-area">
+    <h1 class="leak-title">Vault7: CIA Hacking Tools Revealed</h1>
+    <img src="../logo.png">
+</div>
+
+</body></html>
+
+                        <ul class="leak-navigation">
+                            <a href="../index.html"><li>Releases</li></a>
+                            <a href="index.html"><li class="active">Documents</li></a>
+                       </ul>
+                    </div>
+                    <p>Navigation:  » <a href="index.html">Directory</a> » <a href="space_9797636.html">Mac</a> » <a href="page_9535748.html">Mac Development</a></p>
+<hr>
+                    <div id="uniquer">
+                        <h2>Write to protected directories by using filenames in rootless_whitelist</h2>
+<p>These are the files in the rootless_whitelist for 10.11.2.</p>
+<p><a href="files/rootless_whitelist_10.11.2.txt.pdf">rootless_whitelist_10.11.2.txt</a></p>
+<p> </p>
+<h1>Method to find this list</h1>
+<p> This whitelist is checked when trying to write a file to a protected directory.  If the filename matches one in the whitelist file creation is allowed (with whatever privileges are required.....usually root).  See the function _rootless_whitelist_check in Sandbox.kext.</p>
+<p> </p>
+<p><img src="files/rootless_whitelist_check.png" height="250"></p>
+<p> </p>
+<p>In a kernel debugger I ran the following:</p>
+<p style="margin-left: 90.0px;">breakpoint set -n rootless_whitelist_check</p>
+<p> </p>
+<p>Then tried a file write on the target OS</p>
+<p style="margin-left: 90.0px;">sudo touch /System/Library/SystemConfiguration/test</p>
+<p> </p>
+<p>debugger broke on the rootless_whitelist_check function</p>
+<p style="margin-left: 90.0px;">* thread #1: tid = 0x0001, 0xffffff7fafaac947 Sandbox`rootless_whitelist_check, stop reason = breakpoint 7.1</p>
+<p style="margin-left: 90.0px;">    frame #0: 0xffffff7fafaac947 Sandbox`rootless_whitelist_check</p>
+<p style="margin-left: 90.0px;">Sandbox`rootless_whitelist_check:</p>
+<p style="margin-left: 90.0px;">-&gt;  0xffffff7fafaac947 &lt;+0&gt;: int3   </p>
+<p style="margin-left: 90.0px;">    0xffffff7fafaac948 &lt;+1&gt;: movq   %rsp, %rbp</p>
+<p style="margin-left: 90.0px;">    0xffffff7fafaac94b &lt;+4&gt;: pushq  %r15</p>
+<p style="margin-left: 90.0px;">    0xffffff7fafaac94d &lt;+6&gt;: pushq  %r14</p>
+<p> </p>
+<p>typed next until I got to the following</p>
+<p style="margin-left: 90.0px;">* thread #1: tid = 0x0001, 0xffffff7fafaac980 Sandbox`rootless_whitelist_check + 57, stop reason = instruction step over</p>
+<p style="margin-left: 90.0px;">    frame #0: 0xffffff7fafaac980 Sandbox`rootless_whitelist_check + 57</p>
+<p style="margin-left: 90.0px;">Sandbox`rootless_whitelist_check:</p>
+<p style="margin-left: 90.0px;">-&gt;  0xffffff7fafaac980 &lt;+57&gt;: movq   -0x8(%rbx), %rdi</p>
+<p style="margin-left: 90.0px;">    0xffffff7fafaac984 &lt;+61&gt;: movq   %r14, %rsi</p>
+<p style="margin-left: 90.0px;">    0xffffff7fafaac987 &lt;+64&gt;: movq   %r15, %rdx</p>
+<p style="margin-left: 90.0px;">    0xffffff7fafaac98a &lt;+67&gt;: callq  0xffffff802ec94a20        ; strncmp at subrs.c:198</p>
+<p> </p>
+<p>Value for the rootless_whitelist char** is in rbx</p>
+<p style="margin-left: 90.0px;"><span style="color: rgb(116,116,116);">(lldb) </span>register read</p>
+<p style="margin-left: 90.0px;">General Purpose Registers:</p>
+<p style="margin-left: 90.0px;">       rax = 0x00000000fffffff0</p>
+<p style="margin-left: 90.0px;">       rbx = 0xffffff803984b040</p>
+<p style="margin-left: 90.0px;">       rcx = 0xffffff803abe87f1</p>
+<p style="margin-left: 90.0px;">       rdx = 0x0000000000000043</p>
+<p style="margin-left: 90.0px;">       rdi = 0xffffff8098f1f03b</p>
+<p style="margin-left: 90.0px;">       rsi = 0xffffff803abe87e0</p>
+<p style="margin-left: 90.0px;">       rbp = 0xffffff9246d4b1d0</p>
+<p style="margin-left: 90.0px;">       rsp = 0xffffff9246d4b1b0</p>
+<p style="margin-left: 90.0px;">        r8 = 0x0000000000000189</p>
+<p style="margin-left: 90.0px;">        r9 = 0x0000000000000000</p>
+<p style="margin-left: 90.0px;">       r10 = 0xffffff80292a77b0  kernel.debug`zone_locks_grp</p>
+<p style="margin-left: 90.0px;">       r11 = 0x0000000000000000</p>
+<p style="margin-left: 90.0px;">       r12 = 0x0000000000000000</p>
+<p style="margin-left: 90.0px;">       r13 = 0xffffff803f06f110</p>
+<p style="margin-left: 90.0px;">       r14 = 0xffffff803abe87e0</p>
+<p style="margin-left: 90.0px;">       r15 = 0x000000000000001a</p>
+<p style="margin-left: 90.0px;">       rip = 0xffffff7fa96ac9b0  Sandbox`rootless_whitelist_check + 105</p>
+<p style="margin-left: 90.0px;">    rflags = 0x0000000000000392</p>
+<p style="margin-left: 90.0px;">        cs = 0x0000000000000008</p>
+<p style="margin-left: 90.0px;">        fs = 0x0000000000000000</p>
+<p style="margin-left: 90.0px;">        gs = 0x0000000000010000</p>
+<p> </p>
+<p>print out all the values in the char**</p>
+<p style="margin-left: 90.0px;"><span style="color: rgb(116,116,116);">(lldb) </span>p *(char* (*)[168])$rbx</p>
+<p style="margin-left: 90.0px;">(char *[168]) $1366 = {</p>
+<p style="margin-left: 90.0px;">  [0] = 0xffffff8098f1f09c "/System/Library/CoreServices/CoreTypes.bundle/Contents/Library/iLifeSlideshowTypes.bundle"</p>
+<p style="margin-left: 90.0px;">  [1] = 0xffffff8098f1f0f6 "/System/Library/CoreServices/SecurityAgentPlugins/CentrifyPAM.bundle"</p>
+<p style="margin-left: 90.0px;">  [2] = 0xffffff8098f1f13b "/System/Library/CoreServices/SecurityAgentPlugins/CentrifySmartCard.bundle"</p>
+<p style="margin-left: 90.0px;">  [3] = 0xffffff8098f1f186 "/System/Library/CyborgRAT.kext"</p>
+<p style="margin-left: 90.0px;">  [4] = 0xffffff8098f1f1a5 "/System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/AppleRTL815XComposite109.kext"</p>
+<p style="margin-left: 90.0px;">  [5] = 0xffffff8098f1f207 "/System/Library/Extensions/IONetworkingFamily.kext/Contents/PlugIns/AppleRTL815XEthernet109.kext"</p>
+<p style="margin-left: 90.0px;">  [6] = 0xffffff8098f1f268 "/System/Library/Filesystems/<span class="user">User #77711</span>"</p>
+<p style="margin-left: 90.0px;">  [7] = 0xffffff8098f1f289 "/System/Library/Filesystems/fusefs_txantfs.fs"</p>
+<p style="margin-left: 90.0px;">  [8] = 0xffffff8098f1f2b7 "/System/Library/Filesystems/ufsd_NTFS.fs"</p>
+<p style="margin-left: 90.0px;">  [9] = 0xffffff8098f1f2e0 "/System/Library/Fonts/encodings.dir"</p>
+<p style="margin-left: 90.0px;">  [10] = 0xffffff8098f1f304 "/System/Library/Fonts/fonts.dir"</p>
+<p style="margin-left: 90.0px;">  [11] = 0xffffff8098f1f324 "/System/Library/Fonts/fonts.list"</p>
+<p style="margin-left: 90.0px;">  [12] = 0xffffff8098f1f345 "/System/Library/Fonts/fonts.scale"</p>
+<p style="margin-left: 90.0px;">  [13] = 0xffffff8098f1f367 "/System/Library/HuaweiDataCardDriver.kext"</p>
+<p style="margin-left: 90.0px;">  [14] = 0xffffff8098f1f391 "/System/Library/LaunchAgents/com.paragon.NTFS.notify.plist"</p>
+<p style="margin-left: 90.0px;">  [15] = 0xffffff8098f1f3cc "/System/Library/LaunchDaemons/com.absolute.rpcnet.plist"</p>
+<p style="margin-left: 90.0px;">  [16] = 0xffffff8098f1f404 "/System/Library/LaunchDaemons/com.intel.haxm.plist"</p>
+<p style="margin-left: 90.0px;">  [17] = 0xffffff8098f1f437 "/System/Library/LaunchDaemons/com.seagate.TBDecorator.plist"</p>
+<p style="margin-left: 90.0px;">  [18] = 0xffffff8098f1f473 "/System/Library/LaunchDaemons/de.novamedia.nmnetmgrd.plist"</p>
+<p style="margin-left: 90.0px;">  [19] = 0xffffff8098f1f4ae "/System/Library/PrivateFrameworks/BrowserKit.framework"</p>
+<p style="margin-left: 90.0px;">  [20] = 0xffffff8098f1f4e5 "/System/Library/PrivateFrameworks/Helium.framework"</p>
+<p style="margin-left: 90.0px;">  [21] = 0xffffff8098f1f518 "/System/Library/PrivateFrameworks/LiveType.framework"</p>
+<p style="margin-left: 90.0px;">  [22] = 0xffffff8098f1f54d "/System/Library/PrivateFrameworks/ProKit.framework"</p>
+<p style="margin-left: 90.0px;">  [23] = 0xffffff8098f1f580 "/System/Library/PrivateFrameworks/iLifeSlideshow.framework"</p>
+<p style="margin-left: 90.0px;">  [24] = 0xffffff8098f1f5bb "/System/Library/QuickTime/QuickTimeMPEG2.component"</p>
+<p style="margin-left: 90.0px;">  [25] = 0xffffff8098f1f5ee "/System/Library/QuickTime/WiretapDataHandler.component"</p>
+<p style="margin-left: 90.0px;">  [26] = 0xffffff8098f1f625 "/System/Library/Services/KAVService.service"</p>
+<p style="margin-left: 90.0px;">  [27] = 0xffffff8098f1f651 "/System/Library/Services/Send to Kindle.workflow"</p>
+<p style="margin-left: 90.0px;">  [28] = 0xffffff8098f1f682 "/System/Library/StartupItems"</p>
+<p style="margin-left: 90.0px;">  [29] = 0xffffff8098f1f69f "/System/Library/USBExpressCardCantWake_Huawei.kext"</p>
+<p style="margin-left: 90.0px;">  [30] = 0xffffff8098f1f6d2 "/sbin/amconfig"</p>
+<p style="margin-left: 90.0px;">  [31] = 0xffffff8098f1f6e1 "/sbin/fsck_ufsd_NTFS"</p>
+<p style="margin-left: 90.0px;">  [32] = 0xffffff8098f1f6f6 "/sbin/mount_cifs"</p>
+<p style="margin-left: 90.0px;">  [33] = 0xffffff8098f1f707 "/sbin/mount_fusefs_txantfs"</p>
+<p style="margin-left: 90.0px;">  [34] = 0xffffff8098f1f722 "/sbin/mount_ufsd_NTFS"</p>
+<p style="margin-left: 90.0px;">  [35] = 0xffffff8098f1f738 "/sbin/mount_vmhgfs"</p>
+<p style="margin-left: 90.0px;">  [36] = 0xffffff8098f1f74b "/sbin/newfs_fusefs_txantfs"</p>
+<p style="margin-left: 90.0px;">  [37] = 0xffffff8098f1f766 "/sbin/newfs_ufsd_NTFS"</p>
+<p style="margin-left: 90.0px;">  [38] = 0xffffff8098f1f77c "/sbin/rpctool"</p>
+<p style="margin-left: 90.0px;">  [39] = 0xffffff8098f1f78a "/usr/X11"</p>
+<p style="margin-left: 90.0px;">  [40] = 0xffffff8098f1f793 "/usr/bin/FAHClient"</p>
+<p style="margin-left: 90.0px;">  [41] = 0xffffff8098f1f7a6 "/usr/bin/FAHCoreWrapper"</p>
+<p style="margin-left: 90.0px;">  [42] = 0xffffff8098f1f7be "/usr/bin/FAHViewer"</p>
+<p style="margin-left: 90.0px;">  [43] = 0xffffff8098f1f7d1 "/usr/bin/VBoxAutostart"</p>
+<p style="margin-left: 90.0px;">  [44] = 0xffffff8098f1f7e8 "/usr/bin/VBoxBalloonCtrl"</p>
+<p style="margin-left: 90.0px;">  [45] = 0xffffff8098f1f801 "/usr/bin/VBoxHeadless"</p>
+<p style="margin-left: 90.0px;">  [46] = 0xffffff8098f1f817 "/usr/bin/VBoxManage"</p>
+<p style="margin-left: 90.0px;">  [47] = 0xffffff8098f1f82b "/usr/bin/VBoxVRDP"</p>
+<p style="margin-left: 90.0px;">  [48] = 0xffffff8098f1f83d "/usr/bin/VirtualBox"</p>
+<p style="margin-left: 90.0px;">  [49] = 0xffffff8098f1f851 "/usr/bin/cups-calibrate"</p>
+<p style="margin-left: 90.0px;">  [50] = 0xffffff8098f1f869 "/usr/bin/escputil"</p>
+<p style="margin-left: 90.0px;">  [51] = 0xffffff8098f1f87b "/usr/bin/extlookup2hiera"</p>
+<p style="margin-left: 90.0px;">  [52] = 0xffffff8098f1f894 "/usr/bin/facter"</p>
+<p style="margin-left: 90.0px;">  [53] = 0xffffff8098f1f8a4 "/usr/bin/gnutar"</p>
+<p style="margin-left: 90.0px;">  [54] = 0xffffff8098f1f8b4 "/usr/bin/kashell"</p>
+<p style="margin-left: 90.0px;">  [55] = 0xffffff8098f1f8c5 "/usr/bin/kav"</p>
+<p style="margin-left: 90.0px;">  [56] = 0xffffff8098f1f8d2 "/usr/bin/nortonscanner"</p>
+<p style="margin-left: 90.0px;">  [57] = 0xffffff8098f1f8e9 "/usr/bin/nortonsettings"</p>
+<p style="margin-left: 90.0px;">  [58] = 0xffffff8098f1f901 "/usr/bin/nvconfigurator"</p>
+<p style="margin-left: 90.0px;">  [59] = 0xffffff8098f1f919 "/usr/bin/nvpmgr"</p>
+<p style="margin-left: 90.0px;">  [60] = 0xffffff8098f1f929 "/usr/bin/phidgetwebservice21"</p>
+<p style="margin-left: 90.0px;">  [61] = 0xffffff8098f1f946 "/usr/bin/puppet"</p>
+<p style="margin-left: 90.0px;">  [62] = 0xffffff8098f1f956 "/usr/bin/shake"</p>
+<p style="margin-left: 90.0px;">  [63] = 0xffffff8098f1f965 "/usr/bin/stkLaunchAgent.sh"</p>
+<p style="margin-left: 90.0px;">  [64] = 0xffffff8098f1f980 "/usr/bin/testpattern"</p>
+<p style="margin-left: 90.0px;">  [65] = 0xffffff8098f1f995 "/usr/bin/vagrant"</p>
+<p style="margin-left: 90.0px;">  [66] = 0xffffff8098f1f9a6 "/usr/bin/vboxwebsrv"</p>
+<p style="margin-left: 90.0px;">  [67] = 0xffffff8098f1f9ba "/usr/discreet"</p>
+<p style="margin-left: 90.0px;">  [68] = 0xffffff8098f1f9c8 "/usr/include/gutenprint"</p>
+<p style="margin-left: 90.0px;">  [69] = 0xffffff8098f1f9e0 "/usr/lib/cshost"</p>
+<p style="margin-left: 90.0px;">  [70] = 0xffffff8098f1f9f0 "/usr/lib/gutenprint"</p>
+<p style="margin-left: 90.0px;">  [71] = 0xffffff8098f1fa04 "/usr/lib/libMatroxMpeg2IFrameCodec.dylib"</p>
+<p style="margin-left: 90.0px;">  [72] = 0xffffff8098f1fa2d "/usr/lib/libUFSDNTFS.dylib"</p>
+<p style="margin-left: 90.0px;">  [73] = 0xffffff8098f1fa48 "/usr/lib/libgutenprint.2.0.3.dylib"</p>
+<p style="margin-left: 90.0px;">  [74] = 0xffffff8098f1fa6b "/usr/lib/libgutenprint.2.dylib"</p>
+<p style="margin-left: 90.0px;">  [75] = 0xffffff8098f1fa8a "/usr/lib/libgutenprint.a"</p>
+<p style="margin-left: 90.0px;">  [76] = 0xffffff8098f1faa3 "/usr/lib/libgutenprint.dylib"</p>
+<p style="margin-left: 90.0px;">  [77] = 0xffffff8098f1fac0 "/usr/lib/<span class="external">libgutenprint.la</span>"</p>
+<p style="margin-left: 90.0px;">  [78] = 0xffffff8098f1fada "/usr/lib/libnv6.dylib"</p>
+<p style="margin-left: 90.0px;">  [79] = 0xffffff8098f1faf0 "/usr/lib/libnv6audit.dylib"</p>
+<p style="margin-left: 90.0px;">  [80] = 0xffffff8098f1fb0b "/usr/lib/libnv6cli.dylib"</p>
+<p style="margin-left: 90.0px;">  [81] = 0xffffff8098f1fb24 "/usr/lib/libnv6clit.dylib"</p>
+<p style="margin-left: 90.0px;">  [82] = 0xffffff8098f1fb3e "/usr/lib/libnv6foreignras.dylib"</p>
+<p style="margin-left: 90.0px;">  [83] = 0xffffff8098f1fb5e "/usr/lib/libnv6foreignrast.dylib"</p>
+<p style="margin-left: 90.0px;">  [84] = 0xffffff8098f1fb7f "/usr/lib/libnv6gui.dylib"</p>
+<p style="margin-left: 90.0px;">  [85] = 0xffffff8098f1fb98 "/usr/lib/libnv6guit.dylib"</p>
+<p style="margin-left: 90.0px;">  [86] = 0xffffff8098f1fbb2 "/usr/lib/libnv6http.dylib"</p>
+<p style="margin-left: 90.0px;">  [87] = 0xffffff8098f1fbcc "/usr/lib/libnv6jobs.dylib"</p>
+<p style="margin-left: 90.0px;">  [88] = 0xffffff8098f1fbe6 "/usr/lib/libnv6jobst.dylib"</p>
+<p style="margin-left: 90.0px;">  [89] = 0xffffff8098f1fc01 "/usr/lib/libnv6json.dylib"</p>
+<p style="margin-left: 90.0px;">  [90] = 0xffffff8098f1fc1b "/usr/lib/libnv6jsont.dylib"</p>
+<p style="margin-left: 90.0px;">  [91] = 0xffffff8098f1fc36 "/usr/lib/libnv6ndmp.dylib"</p>
+<p style="margin-left: 90.0px;">  [92] = 0xffffff8098f1fc50 "/usr/lib/libnv6plugin.dylib"</p>
+<p style="margin-left: 90.0px;">  [93] = 0xffffff8098f1fc6c "/usr/lib/libnv6plugint.dylib"</p>
+<p style="margin-left: 90.0px;">  [94] = 0xffffff8098f1fc89 "/usr/lib/libnv6reports.dylib"</p>
+<p style="margin-left: 90.0px;">  [95] = 0xffffff8098f1fca6 "/usr/lib/libnv6reportst.dylib"</p>
+<p style="margin-left: 90.0px;">  [96] = 0xffffff8098f1fcc4 "/usr/lib/libnv6scsi.dylib"</p>
+<p style="margin-left: 90.0px;">  [97] = 0xffffff8098f1fcde "/usr/lib/libnv6stats.dylib"</p>
+<p style="margin-left: 90.0px;">  [98] = 0xffffff8098f1fcf9 "/usr/lib/libnv6statst.dylib"</p>
+<p style="margin-left: 90.0px;">  [99] = 0xffffff8098f1fd15 "/usr/lib/libnv6t.dylib"</p>
+<p style="margin-left: 90.0px;">  [100] = 0xffffff8098f1fd2c "/usr/lib/libnv6xctl.dylib"</p>
+<p style="margin-left: 90.0px;">  [101] = 0xffffff8098f1fd46 "/usr/lib/libnv6xpm.dylib"</p>
+<p style="margin-left: 90.0px;">  [102] = 0xffffff8098f1fd5f "/usr/lib/libphidget21.jnilib"</p>
+<p style="margin-left: 90.0px;">  [103] = 0xffffff8098f1fd7c "/usr/lib/libwkextmac.dylib"</p>
+<p style="margin-left: 90.0px;">  [104] = 0xffffff8098f1fd97 "/usr/lib/<span class="user">User #77712</span>/<span class="external">pam_centrifydc.so</span>"</p>
+<p style="margin-left: 90.0px;">  [105] = 0xffffff8098f1fdb6 "/usr/lib/pkgconfig/gutenprint.pc"</p>
+<p style="margin-left: 90.0px;">  [106] = 0xffffff8098f1fdd7 "/usr/libexec/aksusbd"</p>
+<p style="margin-left: 90.0px;">  [107] = 0xffffff8098f1fdec "/usr/libexec/com.matrox.vpg.Agent"</p>
+<p style="margin-left: 90.0px;">  [108] = 0xffffff8098f1fe0e "/usr/libexec/com.matrox.vpg.MaxAgent"</p>
+<p style="margin-left: 90.0px;">  [109] = 0xffffff8098f1fe33 "/usr/libexec/cups/backend/cifs"</p>
+<p style="margin-left: 90.0px;">  [110] = 0xffffff8098f1fe52 "/usr/libexec/hasplmd"</p>
+<p style="margin-left: 90.0px;">  [111] = 0xffffff8098f1fe67 "/usr/local"</p>
+<p style="margin-left: 90.0px;">  [112] = 0xffffff8098f1fe72 "/usr/netvault"</p>
+<p style="margin-left: 90.0px;">  [113] = 0xffffff8098f1fe80 "/usr/sbin/AELWriter"</p>
+<p style="margin-left: 90.0px;">  [114] = 0xffffff8098f1fe94 "/usr/sbin/cups-genppd.5.2"</p>
+<p style="margin-left: 90.0px;">  [115] = 0xffffff8098f1feae "/usr/sbin/cups-genppdupdate"</p>
+<p style="margin-left: 90.0px;">  [116] = 0xffffff8098f1feca "/usr/sbin/fsctl_ufsd"</p>
+<p style="margin-left: 90.0px;">  [117] = 0xffffff8098f1fedf "/usr/sbin/jamf"</p>
+<p style="margin-left: 90.0px;">  [118] = 0xffffff8098f1feee "/usr/sbin/jamfAgent"</p>
+<p style="margin-left: 90.0px;">  [119] = 0xffffff8098f1ff02 "/usr/sbin/m_agent"</p>
+<p style="margin-left: 90.0px;">  [120] = 0xffffff8098f1ff14 "/usr/sbin/m_agent_upgrade"</p>
+<p style="margin-left: 90.0px;">  [121] = 0xffffff8098f1ff2e "/usr/sbin/nipalsm"</p>
+<p style="margin-left: 90.0px;">  [122] = 0xffffff8098f1ff40 "/usr/sbin/nmnetmgrd"</p>
+<p style="margin-left: 90.0px;">  [123] = 0xffffff8098f1ff54 "/usr/sbin/nmnetmgrd_launchd"</p>
+<p style="margin-left: 90.0px;">  [124] = 0xffffff8098f1ff70 "/usr/sbin/nmnetmgrd_launchd_MT"</p>
+<p style="margin-left: 90.0px;">  [125] = 0xffffff8098f1ff8f "/usr/sbin/palModuleMgr.sh"</p>
+<p style="margin-left: 90.0px;">  [126] = 0xffffff8098f1ffa9 "/usr/sbin/proxyhelper"</p>
+<p style="margin-left: 90.0px;">  [127] = 0xffffff8098f1ffbf "/usr/sbin/qmasterca"</p>
+<p style="margin-left: 90.0px;">  [128] = 0xffffff8098f1ffd3 "/usr/sbin/qmasterd"</p>
+<p style="margin-left: 90.0px;">  [129] = 0xffffff8098f1ffe6 "/usr/sbin/qmasterprefs"</p>
+<p style="margin-left: 90.0px;">  [130] = 0xffffff8098f1fffd "/usr/sbin/qmasterqd"</p>
+<p style="margin-left: 90.0px;">  [131] = 0xffffff8098f20011 "/usr/sbin/<span class="external">rpc.net</span>"</p>
+<p style="margin-left: 90.0px;">  [132] = 0xffffff8098f20023 "/usr/sbin/rpcset"</p>
+<p style="margin-left: 90.0px;">  [133] = 0xffffff8098f20034 "/usr/sbin/rpcstartup"</p>
+<p style="margin-left: 90.0px;">  [134] = 0xffffff8098f20049 "/usr/sbin/setbufsize"</p>
+<p style="margin-left: 90.0px;">  [135] = 0xffffff8098f2005e "/usr/share/centrifydc"</p>
+<p style="margin-left: 90.0px;">  [136] = 0xffffff8098f20074 "/usr/share/cshost"</p>
+<p style="margin-left: 90.0px;">  [137] = 0xffffff8098f20086 "/usr/share/cups/calibrate.ppm"</p>
+<p style="margin-left: 90.0px;">  [138] = 0xffffff8098f200a4 "/usr/share/cups/mime/pharos.convs"</p>
+<p style="margin-left: 90.0px;">  [139] = 0xffffff8098f200c6 "/usr/share/cups/usb"</p>
+<p style="margin-left: 90.0px;">  [140] = 0xffffff8098f200da "/usr/share/doc/facter"</p>
+<p style="margin-left: 90.0px;">  [141] = 0xffffff8098f200f0 "/usr/share/doc/puppet"</p>
+<p style="margin-left: 90.0px;">  [142] = 0xffffff8098f20106 "/usr/share/gutenprint"</p>
+<p style="margin-left: 90.0px;">  [143] = 0xffffff8098f2011c "/usr/share/locale/ca/gutenprint_ca.po"</p>
+<p style="margin-left: 90.0px;">  [144] = 0xffffff8098f20142 "/usr/share/locale/cs/gutenprint_cs.po"</p>
+<p style="margin-left: 90.0px;">  [145] = 0xffffff8098f20168 "/usr/share/locale/da/gutenprint_da.po"</p>
+<p style="margin-left: 90.0px;">  [146] = 0xffffff8098f2018e "/usr/share/locale/de/gutenprint_de.po"</p>
+<p style="margin-left: 90.0px;">  [147] = 0xffffff8098f201b4 "/usr/share/locale/el/gutenprint_el.po"</p>
+<p style="margin-left: 90.0px;">  [148] = 0xffffff8098f201da "/usr/share/locale/en_GB/gutenprint_en_GB.po"</p>
+<p style="margin-left: 90.0px;">  [149] = 0xffffff8098f20206 "/usr/share/locale/es/gutenprint_es.po"</p>
+<p style="margin-left: 90.0px;">  [150] = 0xffffff8098f2022c "/usr/share/locale/fi/gutenprint_fi.po"</p>
+<p style="margin-left: 90.0px;">  [151] = 0xffffff8098f20252 "/usr/share/locale/fr/gutenprint_fr.po"</p>
+<p style="margin-left: 90.0px;">  [152] = 0xffffff8098f20278 "/usr/share/locale/gl/gutenprint_gl.po"</p>
+<p style="margin-left: 90.0px;">  [153] = 0xffffff8098f2029e "/usr/share/locale/hu/gutenprint_hu.po"</p>
+<p style="margin-left: 90.0px;">  [154] = 0xffffff8098f202c4 "/usr/share/locale/it/gutenprint_it.po"</p>
+<p style="margin-left: 90.0px;">  [155] = 0xffffff8098f202ea "/usr/share/locale/ja/gutenprint_ja.po"</p>
+<p style="margin-left: 90.0px;">  [156] = 0xffffff8098f20310 "/usr/share/locale/nb/gutenprint_nb.po"</p>
+<p style="margin-left: 90.0px;">  [157] = 0xffffff8098f20336 "/usr/share/locale/nl/gutenprint_nl.po"</p>
+<p style="margin-left: 90.0px;">  [158] = 0xffffff8098f2035c "/usr/share/locale/pl/gutenprint_pl.po"</p>
+<p style="margin-left: 90.0px;">  [159] = 0xffffff8098f20382 "/usr/share/locale/pt/gutenprint_pt.po"</p>
+<p style="margin-left: 90.0px;">  [160] = 0xffffff8098f203a8 "/usr/share/locale/ru/gutenprint_ru.po"</p>
+<p style="margin-left: 90.0px;">  [161] = 0xffffff8098f203ce "/usr/share/locale/sk/gutenprint_sk.po"</p>
+<p style="margin-left: 90.0px;">  [162] = 0xffffff8098f203f4 "/usr/share/locale/sl/gutenprint_sl.po"</p>
+<p style="margin-left: 90.0px;">  [163] = 0xffffff8098f2041a "/usr/share/locale/sv/gutenprint_sv.po"</p>
+<p style="margin-left: 90.0px;">  [164] = 0xffffff8098f20440 "/usr/share/locale/tr/gutenprint_tr.po"</p>
+<p style="margin-left: 90.0px;">  [165] = 0xffffff8098f20466 "/usr/share/locale/uk/gutenprint_uk.po"</p>
+<p style="margin-left: 90.0px;">  [166] = 0xffffff8098f2048c "/usr/share/locale/vi/gutenprint_vi.po"</p>
+<p style="margin-left: 90.0px;">  [167] = 0xffffff8098f204b2 "/usr/share/locale/zh_CN/gutenprint_zh_CN.po"</p>
+<p style="margin-left: 90.0px;">}</p>
+<p> </p>
+<p> </p>
+<hr>
+<h3>Attachments:</h3>
+<ul>
+<li>
+<p><a href="files/rootless_whitelist_10.11.2.txt.pdf">rootless_whitelist_10.11.2.txt</a></p>
+</li>
+<li>
+<p><a href="files/rootless_whitelist_check.png">rootless_whitelist_check.png</a></p>
+</li>
+</ul>
+<hr>
+<h3>Previous versions:</h3>
+<p>| <a href="page_46628897.html">1</a> <span class="pg-tag"></span>
+| <a href="page_46628899.html">2</a> <span class="pg-tag"></span>
+| <a href="page_46628900.html">3</a> <span class="pg-tag"></span>
+| <a href="page_46628901.html">4</a> <span class="pg-tag"></span>
+|</p>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="../../highlighter/mootools-core-and-more.js"></script>
+            <script type="text/javascript" src="../../highlighter/efatmarker.min.js"></script>
+            <div id="efm-button">
+            <div id="efm-menu">
+                <h3 style="margin:0 0 2px 0">e-Highlighter</h3>
+                <a id="efm-permalink" class="efm-need-highlight" href="page_46628894.html" style="margin-bottom:0;padding-bottom:0;"></a>
+                <p style="margin-top:0;padding-top:0" class="efm-need-highlight">Click to send permalink to address bar, or right-click to copy permalink.</p>
+                <p style="margin:0.5em 0;padding:0;border-top:1px dotted #ccc;height:1px"></p>
+                <a id="efm-unhighlightall" class="efm-need-highlight">Un-highlight all</a>
+                <a id="efm-unhighlight">Un-highlight selection<span>u</span></a>
+                <a id="efm-highlight">Highlight selection<span>h</span></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+
+            (function(){
+            window.addEvent('domready', function(){
+
+                var markerButton = $('efm-button');
+                if ( markerButton ) {
+                    eMarker = new EFatMarker($('uniquer'));
+                    eMarker.tokenToSpans(); // apply whatever token is there
+                    // need to act on mousedown or else selection disappear
+                    markerButton.addEvent('mousedown', function(){
+                        eMarker.interpretSelection(true);
+                        return false;
+                    });
+                    $('efm-unhighlightall').addEvent('mousedown', function(){
+                        eMarker.unhighlightAll(true);
+                        return false;
+                        });
+                    $('efm-unhighlight').addEvent('mousedown', function(){
+                        eMarker.unhighlightSelection(true);
+                        return false;
+                        });
+                    $('efm-highlight').addEvent('mousedown', function(){
+                        eMarker.highlightSelection(true);
+                        return false;
+                        });
+                    $('efm-permalink').addEvent('mousedown', function(){
+                        window.location.href = this.href;
+                        return false;
+                        });
+                    // if Mootools Keyboard is available, use it
+                    if (Keyboard) {
+                        var keyboard = new Keyboard({
+                            defaultEventType: 'keyup',
+                            events: {
+                                'h': function(){
+                                    eMarker.highlightSelection(true);
+                                    },
+                                'u': function(){
+                                    eMarker.unhighlightSelection(true);
+                                    }
+                                }
+                            });
+                        keyboard.activate();
+                        }
+                    eMarker.syncDOM();
+                    // auto scroll to first highlight, if any
+                    if (eMarker.hasSpans()) {
+                        var scroll = new Fx.Scroll(window,{offset:{'x':0,'y':-100}}),
+                            highlights = $$('#uniquer .efm-hi');
+                        if (highlights.length > 0) {
+                            scroll.toElement(highlights[0]);
+                            }
+                        }
+                    }
+                });
+            })();
+            </script>
+            
+
+<link href="../../static/css/styles_footer.css" rel="stylesheet">
+<footer id="page-footer" class="footer-recommendations">
+  <div class="footer-wrapper">
+    <div class="recommendation-container">
+      <a href="page_46628894.html#" class="top">Top</a>
+      
+        <ul class="recommendation-links">
+          
+            <li class="recommendation">
+              <a href="https://www.torproject.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton401.png?1461924517" width="300" height="180" /></div>
+                <p>
+<p>Tor is an encrypted anonymising network that makes it harder to intercept internet communications, or see where communications are coming from or going to.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://tails.boum.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton405.png?1461924517" width="446" height="223" /></div>
+                <p>
+<p>Tails is a live operating system, that you can start on almost any computer from a DVD, USB stick, or SD card. It aims at preserving your privacy and anonymity.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.couragefound.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton404.png?1461924517" width="357" height="50" /></div>
+                <p>
+<p>The Courage Foundation is an international organisation that supports those who risk life or liberty to make significant contributions to the historical record.</p>
+</p>
+              </a>
+            </li>
+          
+            <li class="recommendation">
+              <a href="https://www.bitcoin.org/" target="_blank">
+                <div class="teaser"><img class="spip_logos" alt="" src="../../IMG/arton403.png?1461924517" width="300" height="64" /></div>
+                <p>
+<p>Bitcoin uses peer-to-peer technology to operate with no central authority or banks; managing transactions and the issuing of bitcoins is carried out collectively by the network.</p>
+</p>
+              </a>
+            </li>
+          
+        </ul>
+      
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/wikileaks" target="_blank" alt="Facebook">
+            <img src="../../static/img/fb-logo.png" alt="Facebook" title="Facebook page" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/wikileaks" target="_blank" alt="Twitter">
+            <img src="../../static/img/twitter-logo.png" alt="Twitter" title="Twitter page" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+        </div>
+
+        <script src="../../bootstrap/js/jquery.min.js"></script>
+        <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        </script>
+        <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

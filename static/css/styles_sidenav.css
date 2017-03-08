@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.hot-dog {
+  background: url("../img/hotdog-green.png") center center no-repeat #fff;
+  background-size: 1em;
+  width: 40px; }
+
+.side-nav {
+  border-right: 1px solid #9aabb5;
+  display: none;
+  padding-top: 0;
+  position: fixed;
+  text-align: left;
+  width: auto;
+  z-index: 26; }
+  @media screen and (max-width: 769px) {
+    .side-nav {
+      width: 100%; } }
+
+#menu:target {
+  display: block;
+  top: 0; }
+
+#p-logo {
+  top: 52px; }
+
+#p-cactions {
+  top: 71px; }
+
+.close-btn {
+  background: url("../img/close-green.png") center center no-repeat transparent;
+  background-size: 1.4em;
+  display: inline-block;
+  height: 50px;
+  top: 0;
+  width: 40px; }
+
+/*# sourceMappingURL=styles_sidenav.css.map */
