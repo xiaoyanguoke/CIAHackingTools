@@ -1,0 +1,162 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Farble.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDLG DIALOGEX 0, 0, 300, 301
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "Farble v3.1"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Copy Source",IDC_BUTTON_Source,5,281,62,12
+    PUSHBUTTON      "Copy descramble",IDC_BUTTON_Descramble,125,280,62,12
+    DEFPUSHBUTTON   "Encrypt",IDOK,38,253,111,20
+    EDITTEXT        IDC_output,5,150,183,96,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    EDITTEXT        IDC_Input,7,24,180,108,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    CONTROL         "RXOR",IDC_RADIO_RXOR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,202,90,57,12
+    CONTROL         "XOR",IDC_RADIO_XOR,"Button",BS_AUTORADIOBUTTON,202,107,57,12
+    LTEXT           "Input:",IDC_STATIC,7,13,77,8
+    LTEXT           "Output:",IDC_STATIC,6,142,77,8
+    LTEXT           "0x",IDC_STATIC,243,146,12,8
+    EDITTEXT        IDC_XOR_VAL,254,143,26,12,ES_UPPERCASE | ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "Encrypt/Decrypt",IDC_STATIC,197,21,95,48
+    CONTROL         "Encrypt",IDC_RADIO_Encrypt,"Button",BS_AUTORADIOBUTTON | WS_GROUP,202,33,57,12
+    CONTROL         "Decrypt",IDC_RADIO_Decrypt,"Button",BS_AUTORADIOBUTTON | WS_DISABLED,202,51,57,12
+    CONTROL         "View Source",IDC_RADIO_Source,"Button",BS_AUTORADIOBUTTON | WS_GROUP,200,256,57,12
+    CONTROL         "View Descramble Source",IDC_RADIO_Descramble,"Button",BS_AUTORADIOBUTTON,200,271,91,12
+    GROUPBOX        "View",IDC_STATIC,197,246,95,48
+    GROUPBOX        "Type",IDC_STATIC,197,77,95,48
+    PUSHBUTTON      "Clear",IDC_BUTTON_CLEAR,58,9,47,12
+    GROUPBOX        "XOR Value",IDC_STATIC,197,134,95,48
+    CONTROL         "Manual:",IDC_RADIO_Manual,"Button",BS_AUTORADIOBUTTON | WS_GROUP,202,144,36,12
+    CONTROL         "Randomize",IDC_RADIO_Randomize,"Button",BS_AUTORADIOBUTTON,202,157,57,12
+    GROUPBOX        "Unscrambling Method",IDC_STATIC,197,190,95,48
+    CONTROL         "One-line Scram/Unscram",IDC_RADIO_Line,"Button",BS_AUTORADIOBUTTON | WS_GROUP,200,200,91,12
+    CONTROL         "UNSCRAM Macro",IDC_RADIO_Macro,"Button",BS_AUTORADIOBUTTON,200,212,91,12
+    CONTROL         "Single Unscram Function",IDC_RADIO_Function,"Button",BS_AUTORADIOBUTTON,200,224,91,12
+    CONTROL         "Encrypt as BYTE*",IDC_CHECK_BYTE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,202,171,73,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "Farble Module"
+            VALUE "FileVersion", "3, 0, 0, 0"
+            VALUE "InternalName", "Farble"
+            VALUE "LegalCopyright", "Copyright 2012"
+            VALUE "OriginalFilename", "Farble.exe"
+            VALUE "ProductName", "Farble Module"
+            VALUE "ProductVersion", "3, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_MAINDLG, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Farble"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

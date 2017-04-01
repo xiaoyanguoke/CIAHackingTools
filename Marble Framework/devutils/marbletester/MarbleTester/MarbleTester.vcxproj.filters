@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This project created via the OSB Project Template by Josh S, Keith T. -->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="MarbleTester.cpp" />
+    <ClCompile Include="..\Submodules\MD5Functions\MD5Functions\MD5.cpp">
+      <Filter>MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP1D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP2D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP3D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP4D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP5D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP6D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP7D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP8D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP9D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP10D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP11D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP12D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP1D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP2D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP3D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP4D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP5D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP6D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP7D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP8D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP9D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP10D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP11D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP12D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR1D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR2D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR3D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR4D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR5D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR6D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR7D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR8D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR9D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR10D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR11D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR12D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR1D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR2D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR3D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR4D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR5D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR6D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR7D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR8D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR9D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR10D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR11D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR12D.cpp">
+      <Filter>Marble</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Ascii">
+      <UniqueIdentifier>{4e7206d8-d9af-42fe-bd85-0cdadd4a3292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Unicode">
+      <UniqueIdentifier>{ea7166d3-e102-4f1d-b125-a878914f0419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UTF8">
+      <UniqueIdentifier>{2bff18ce-dc6d-445d-9564-b2be7024141c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MD5">
+      <UniqueIdentifier>{a7e4ea6b-c0fc-42d1-9dbe-c72200fd850c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Marble">
+      <UniqueIdentifier>{ed737483-5d5e-437f-8827-66d44e1bbf8d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ASCII.h">
+      <Filter>Ascii</Filter>
+    </ClInclude>
+    <ClInclude Include="UTF8.h">
+      <Filter>UTF8</Filter>
+    </ClInclude>
+    <ClInclude Include="Unicode.h">
+      <Filter>Unicode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\MD5Functions\MD5Functions\MD5.h">
+      <Filter>MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Shared\Marble.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP9D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP10D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP11D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP12D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP9D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP10D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP11D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP12D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR9D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR10D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR11D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR12D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR9D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR10D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR11D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR12D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP9D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP10D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP11D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP12D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP9D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP10D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP11D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP12D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP5D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP6D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP7D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP8D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR1D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR2D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR3D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR4D.h">
+      <Filter>Marble</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
+<!-- This project created via the OSB Project Template by Josh S, Keith T. -->

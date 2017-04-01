@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This project created via the OSB Project Template by Josh S, Keith T. -->
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E7912369-BDD0-4892-9DCD-DA14A725594C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MarbleTester</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Static|Win32">
+      <Configuration>Release_Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Static|x64">
+      <Configuration>Release_Static</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Dynamic|Win32">
+      <Configuration>Release_Dynamic</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Dynamic|x64">
+      <Configuration>Release_Dynamic</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP10D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP11D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP12D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP1D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP2D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP3D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP4D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP5D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP6D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP7D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP8D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP9D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP10D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP11D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP12D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP1D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP2D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP3D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP4D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP5D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP6D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP7D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP8D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP9D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR10D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR11D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR12D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR1D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR2D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR3D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR4D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR5D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR6D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR7D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR8D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR9D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR10D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR11D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR12D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR1D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR2D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR3D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR4D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR5D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR6D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR7D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR8D.cpp" />
+    <ClCompile Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR9D.cpp" />
+    <ClCompile Include="..\Submodules\MD5Functions\MD5Functions\MD5.cpp" />
+    <ClCompile Include="MarbleTester.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Shared\Marble.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP10D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP11D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP12D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_BUMP9D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP10D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP11D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP12D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RBUMP9D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR10D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR11D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR12D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_RXOR9D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR10D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR11D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR12D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_CLASS_XOR9D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP10D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP11D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP12D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_BUMP9D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP10D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP11D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP12D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_BUMP9D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RBUMP8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_RXOR4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_FUNC_XOR6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP5D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP6D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP7D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RBUMP8D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_RXOR4D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR1D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR2D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR3D.h" />
+    <ClInclude Include="..\Submodules\Corelib\Marble\Deobfuscators\MBL_FORLOOP_XOR4D.h" />
+    <ClInclude Include="..\Submodules\MD5Functions\MD5Functions\MD5.h" />
+    <ClInclude Include="ASCII.h" />
+    <ClInclude Include="Unicode.h" />
+    <ClInclude Include="UTF8.h" />
+  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|Win32'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)props\User_Debug_x86.props" />
+    <Import Project="$(SolutionDir)props\internal\Console.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)props\User_Dynamic_Release_x86.props" />
+    <Import Project="$(SolutionDir)props\internal\Console.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)props\User_Static_Release_x86.props" />
+    <Import Project="$(SolutionDir)props\internal\Console.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)props\User_Debug_x64.props" />
+    <Import Project="$(SolutionDir)props\internal\Console.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)props\User_Static_Release_x64.props" />
+    <Import Project="$(SolutionDir)props\internal\Console.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)props\User_Dynamic_Release_x64.props" />
+    <Import Project="$(SolutionDir)props\internal\Console.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)include;</IncludePath>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
+    <CustomBuildBeforeTargets>
+    </CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|Win32'">
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)include;</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile />
+    <Link />
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(Subs)Corelib\Marble\Deobfuscators;$(Subs)Corelib\Marble;$(Subs)MD5Functions\MD5Functions;$(Subs)Buffers;$(Subs)Corelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)Shared\MarbleIterator.exe $(SolutionDir)Shared\Marble.h
+$(Subs)Corelib\Marble\Mibster.exe $(SolutionDir) $(SolutionDir)Shared\ $(Bin)$(Configuration)\$(Platform)\</Command>
+      <Message>
+      </Message>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>$(Subs)Corelib\Marble\Mender.exe $(SolutionDir)
+$(Subs)Corelib\Marble\Validator.exe $(Bin)$(Configuration)\$(Platform)\MarbleReceipt.xml $(Bin)$(Configuration)\$(Platform)\MarbleTester.exe</Command>
+    </PostBuildEvent>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|Win32'">
+    <ClCompile />
+    <Link />
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(Subs)Corelib\Marble\Deobfuscators;$(Subs)Corelib\Marble;$(Subs)MD5Functions\MD5Functions;$(Subs)Buffers;$(Subs)Corelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>$(Subs)Corelib\Marble\Mender.exe $(SolutionDir)
+$(Subs)Corelib\Marble\Validator.exe $(Bin)$(Configuration)\$(Platform)\MarbleReceipt.xml $(Bin)$(Configuration)\$(Platform)\MarbleTester.exe</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>$(Subs)Corelib\Marble\Mender.exe $(SolutionDir)
+$(SolutionDir)Shared\MarbleIterator.exe $(SolutionDir)Shared\Marble.h
+$(Subs)Corelib\Marble\Mibster.exe $(SolutionDir) $(SolutionDir)Shared\ $(Bin)$(Configuration)\$(Platform)\</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
+    <ClCompile />
+    <Link />
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(Subs)MD5Functions\MD5Functions;$(Subs)Buffers;$(Subs)Corelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile />
+    <Link />
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(Subs)MD5Functions\MD5Functions;$(Subs)Buffers;$(Subs)Corelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|x64'">
+    <ClCompile />
+    <Link />
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(Subs)MD5Functions\MD5Functions;$(Subs)Buffers;$(Subs)Corelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Dynamic|x64'">
+    <ClCompile />
+    <Link />
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(Subs)MD5Functions\MD5Functions;$(Subs)Buffers;$(Subs)Corelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
+<!-- This project created via the OSB Project Template by Josh S, Keith T. -->

