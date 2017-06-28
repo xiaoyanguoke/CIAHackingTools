@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- saved from url=(0180)https://explorer.apis.google.com/embedded.html?discoveryRestUrl=https%3A%2F%2Fcontent.googleapis.com%2Fdiscovery%2Fv1%2Fapis%2Fcalendar%2Fv3%2Frest&methodId=calendar.freebusy.query -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <link rel="stylesheet" type="text/css" href="./css">
+    <link rel="stylesheet" href="./css.css">
+    <script src="./cb=gapi(1).loaded_0" async=""></script><script src="./codemirror_bin.js"></script>
+    <style>
+      html,body {
+        text-size-adjust: 100%;
+      }
+    </style>
+  <style>.title[_ngcontent-c0]{font-size:34px;margin-top:28px;margin-bottom:34px;font-weight:300}.subtitle[_ngcontent-c0]{margin-bottom:16px}.api-load-error[_ngcontent-c0]{width:512px}#terms-of-use[_ngcontent-c0]{padding-top:20px;font-size:13px;line-height:20px}#terms-of-use.terms-sentence[_ngcontent-c0]{font-style:italic}</style><script type="text/javascript" charset="UTF-8" src="./client.js" gapi_processed="true"></script><style>input[_ngcontent-c1], select[_ngcontent-c1]{border-radius:2px;height:36px;transition:border-color .2s}input[_ngcontent-c1]:focus, select[_ngcontent-c1]:focus{outline:none;padding-bottom:6px}a[_ngcontent-c1]:focus{text-decoration:underline;outline:none}button[_ngcontent-c1]:not(.link-button){text-transform:uppercase}button.link-button[_ngcontent-c1]{background:none;border:0;padding:0;margin:0;text-transform:none;outline:none}.section-title[_ngcontent-c1]{font-weight:500;margin-bottom:8px}.statusBar[_ngcontent-c1]{padding:8px;font-size:16px}.response[_ngcontent-c1]{padding-top:20px}.no-method-params[_ngcontent-c1]{padding-bottom:8px}.parameters[_ngcontent-c1]{width:100%;padding-bottom:20px}.parameter-name[_ngcontent-c1]{padding-bottom:2px;font:14px/20px Roboto Mono,monospace}#show-system-parameters[_ngcontent-c1]   md-icon[_ngcontent-c1], #customizeScopes[_ngcontent-c1]   md-icon[_ngcontent-c1]{font-size:inherit;width:inherit;height:inherit;top:2px;position:relative}.scope[_ngcontent-c1]   md-checkbox[_ngcontent-c1]{font-size:14px}#request-body[_ngcontent-c1]{padding-top:20px}#auth[_ngcontent-c1]{padding-bottom:20px}md-spinner[_ngcontent-c1]{height:40px;margin:40px auto}</style><script type="text/javascript" charset="UTF-8" src="./analytics.js"></script><style>.mat-raised-button,.mat-fab,.mat-mini-fab,.mat-button,.mat-icon-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:88px;line-height:36px;padding:0 16px;border-radius:2px}[disabled].mat-raised-button,[disabled].mat-fab,[disabled].mat-mini-fab,[disabled].mat-button,[disabled].mat-icon-button{cursor:default}.cdk-keyboard-focused.mat-raised-button .mat-button-focus-overlay,.cdk-keyboard-focused.mat-fab .mat-button-focus-overlay,.cdk-keyboard-focused.mat-mini-fab .mat-button-focus-overlay,.cdk-keyboard-focused.mat-button .mat-button-focus-overlay,.cdk-keyboard-focused.mat-icon-button .mat-button-focus-overlay{opacity:1}.mat-raised-button::-moz-focus-inner,.mat-fab::-moz-focus-inner,.mat-mini-fab::-moz-focus-inner,.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner{border:0}.mat-raised-button,.mat-fab,.mat-mini-fab{box-shadow:0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button:not([disabled]):active,.mat-fab:not([disabled]):active,.mat-mini-fab:not([disabled]):active{box-shadow:0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)}[disabled].mat-raised-button,[disabled].mat-fab,[disabled].mat-mini-fab{box-shadow:none}.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{transition:none;opacity:0}.mat-button:hover .mat-button-focus-overlay{opacity:1}.mat-fab{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab:not([disabled]):active{box-shadow:0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)}.mat-fab i,.mat-fab .mat-icon{padding:16px 0;line-height:24px}.mat-mini-fab{box-shadow:0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab:not([disabled]):active{box-shadow:0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)}.mat-mini-fab i,.mat-mini-fab .mat-icon{padding:8px 0;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button,.mat-raised-button,.mat-icon-button{color:currentColor}.mat-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*{vertical-align:middle}.mat-button-ripple,.mat-button-focus-overlay{position:absolute;top:0;left:0;bottom:0;right:0;pointer-events:none}.mat-button-focus-overlay{background-color:rgba(0,0,0,0.12);border-radius:inherit;opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}@media screen and (-ms-high-contrast: active){.mat-button-focus-overlay{background-color:rgba(255,255,255,0.5)}}.mat-button-ripple-round{border-radius:50%;z-index:1}@media screen and (-ms-high-contrast: active){.mat-button,.mat-raised-button,.mat-icon-button,.mat-fab,.mat-mini-fab{outline:solid 1px}}
+
+</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}
+
+</style><style>.CodeMirror{max-height:400px}.CodeMirror-scroll{overflow:auto}.CodeMirror-vscrollbar::-webkit-scrollbar,.CodeMirror-hscrollbar::-webkit-scrollbar{height:4px;width:4px}.CodeMirror-empty.CodeMirror-focused{outline:none}.CodeMirror-hints{line-height:24px}.CodeMirror-lines{font-size:14px;line-height:20px}
+
+</style><style>request-body-code-viewer .CodeMirror{height:auto;max-height:initial}.CodeMirror .requestBodyCodeError{background:url("/static/images/error.png") repeat-x bottom}.reqBodyHint{cursor:pointer}.reqBodyHint img{height:1em;width:1em;position:relative;top:2px}.json-request-body-hint{font-style:italic;font-size:13px}
+
+</style><style>.mat-subheader{display:block;box-sizing:border-box;padding:16px;margin:0}.mat-list,.mat-nav-list{padding-top:8px;display:block}.mat-list .mat-subheader,.mat-nav-list .mat-subheader{height:48px}.mat-list .mat-subheader:first-child,.mat-nav-list .mat-subheader:first-child{margin-top:-8px}.mat-list .mat-list-item,.mat-nav-list .mat-list-item{display:block}.mat-list .mat-list-item .mat-list-item-content,.mat-nav-list .mat-list-item .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;height:48px;padding:0 16px;position:relative}.mat-list .mat-list-item .mat-list-item-ripple,.mat-nav-list .mat-list-item .mat-list-item-ripple{position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none}.mat-list .mat-list-item.mat-list-item-avatar .mat-list-item-content,.mat-nav-list .mat-list-item.mat-list-item-avatar .mat-list-item-content{height:56px}.mat-list .mat-list-item.mat-2-line .mat-list-item-content,.mat-nav-list .mat-list-item.mat-2-line .mat-list-item-content{height:72px}.mat-list .mat-list-item.mat-3-line .mat-list-item-content,.mat-nav-list .mat-list-item.mat-3-line .mat-list-item-content{height:88px}.mat-list .mat-list-item.mat-multi-line .mat-list-item-content,.mat-nav-list .mat-list-item.mat-multi-line .mat-list-item-content{height:100%;padding:8px 16px}.mat-list .mat-list-item .mat-list-text,.mat-nav-list .mat-list-item .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0 16px}.mat-list .mat-list-item .mat-list-text>*,.mat-nav-list .mat-list-item .mat-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-list .mat-list-item .mat-list-text:empty,.mat-nav-list .mat-list-item .mat-list-text:empty{display:none}.mat-list .mat-list-item .mat-list-text:nth-child(2),.mat-nav-list .mat-list-item .mat-list-text:nth-child(2){padding:0}.mat-list .mat-list-item .mat-list-avatar,.mat-nav-list .mat-list-item .mat-list-avatar{flex-shrink:0;width:40px;height:40px;border-radius:50%}.mat-list .mat-list-item .mat-list-icon,.mat-nav-list .mat-list-item .mat-list-icon{width:24px;height:24px;font-size:24px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list[dense],.mat-nav-list[dense]{padding-top:4px;display:block}.mat-list[dense] .mat-subheader,.mat-nav-list[dense] .mat-subheader{height:40px}.mat-list[dense] .mat-subheader:first-child,.mat-nav-list[dense] .mat-subheader:first-child{margin-top:-4px}.mat-list[dense] .mat-list-item,.mat-nav-list[dense] .mat-list-item{display:block}.mat-list[dense] .mat-list-item .mat-list-item-content,.mat-nav-list[dense] .mat-list-item .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;height:40px;padding:0 16px;position:relative}.mat-list[dense] .mat-list-item .mat-list-item-ripple,.mat-nav-list[dense] .mat-list-item .mat-list-item-ripple{position:absolute;left:0;top:0;right:0;bottom:0;pointer-events:none}.mat-list[dense] .mat-list-item.mat-list-item-avatar .mat-list-item-content,.mat-nav-list[dense] .mat-list-item.mat-list-item-avatar .mat-list-item-content{height:48px}.mat-list[dense] .mat-list-item.mat-2-line .mat-list-item-content,.mat-nav-list[dense] .mat-list-item.mat-2-line .mat-list-item-content{height:60px}.mat-list[dense] .mat-list-item.mat-3-line .mat-list-item-content,.mat-nav-list[dense] .mat-list-item.mat-3-line .mat-list-item-content{height:76px}.mat-list[dense] .mat-list-item.mat-multi-line .mat-list-item-content,.mat-nav-list[dense] .mat-list-item.mat-multi-line .mat-list-item-content{height:100%;padding:8px 16px}.mat-list[dense] .mat-list-item .mat-list-text,.mat-nav-list[dense] .mat-list-item .mat-list-text{display:flex;flex-direction:column;width:100%;box-sizing:border-box;overflow:hidden;padding:0 16px}.mat-list[dense] .mat-list-item .mat-list-text>*,.mat-nav-list[dense] .mat-list-item .mat-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-list[dense] .mat-list-item .mat-list-text:empty,.mat-nav-list[dense] .mat-list-item .mat-list-text:empty{display:none}.mat-list[dense] .mat-list-item .mat-list-text:nth-child(2),.mat-nav-list[dense] .mat-list-item .mat-list-text:nth-child(2){padding:0}.mat-list[dense] .mat-list-item .mat-list-avatar,.mat-nav-list[dense] .mat-list-item .mat-list-avatar{flex-shrink:0;width:40px;height:40px;border-radius:50%}.mat-list[dense] .mat-list-item .mat-list-icon,.mat-nav-list[dense] .mat-list-item .mat-list-icon{width:20px;height:20px;font-size:20px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-divider{display:block;border-top-style:solid;border-top-width:1px;margin:0}.mat-nav-list a{text-decoration:none;color:inherit}.mat-nav-list .mat-list-item-content{cursor:pointer}.mat-nav-list .mat-list-item-content:hover,.mat-nav-list .mat-list-item-content.mat-list-item-focus{outline:none}
+
+</style><style>@keyframes mat-checkbox-fade-in-background{0%{opacity:0}50%{opacity:1}}@keyframes mat-checkbox-fade-out-background{0%,50%{opacity:1}100%{opacity:0}}@keyframes mat-checkbox-unchecked-checked-checkmark-path{0%,50%{stroke-dashoffset:22.91026}50%{animation-timing-function:cubic-bezier(0, 0, 0.2, 0.1)}100%{stroke-dashoffset:0}}@keyframes mat-checkbox-unchecked-indeterminate-mixedmark{0%,68.2%{transform:scaleX(0)}68.2%{animation-timing-function:cubic-bezier(0, 0, 0, 1)}100%{transform:scaleX(1)}}@keyframes mat-checkbox-checked-unchecked-checkmark-path{from{animation-timing-function:cubic-bezier(0.4, 0, 1, 1);stroke-dashoffset:0}to{stroke-dashoffset:-22.91026}}@keyframes mat-checkbox-checked-indeterminate-checkmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 0.1);opacity:1;transform:rotate(0deg)}to{opacity:0;transform:rotate(45deg)}}@keyframes mat-checkbox-indeterminate-checked-checkmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);opacity:0;transform:rotate(45deg)}to{opacity:1;transform:rotate(360deg)}}@keyframes mat-checkbox-checked-indeterminate-mixedmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 0.1);opacity:0;transform:rotate(-45deg)}to{opacity:1;transform:rotate(0deg)}}@keyframes mat-checkbox-indeterminate-checked-mixedmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);opacity:1;transform:rotate(0deg)}to{opacity:0;transform:rotate(315deg)}}@keyframes mat-checkbox-indeterminate-unchecked-mixedmark{0%{animation-timing-function:linear;opacity:1;transform:scaleX(1)}32.8%,100%{opacity:0;transform:scaleX(0)}}.mat-checkbox-frame,.mat-checkbox-background,.mat-checkbox-checkmark{bottom:0;left:0;position:absolute;right:0;top:0}.mat-checkbox-checkmark,.mat-checkbox-mixedmark{width:calc(100% - 4px)}.mat-checkbox-frame,.mat-checkbox-background{border-radius:2px;box-sizing:border-box;pointer-events:none}.mat-checkbox{transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);cursor:pointer}.mat-checkbox-layout{cursor:inherit;align-items:baseline;vertical-align:middle;display:inline-flex}.mat-checkbox-inner-container{display:inline-block;height:20px;line-height:0;margin:auto;margin-right:8px;order:0;position:relative;vertical-align:middle;white-space:nowrap;width:20px;flex-shrink:0}[dir='rtl'] .mat-checkbox-inner-container{margin-left:8px;margin-right:auto}.mat-checkbox-inner-container-no-side-margin{margin-left:0;margin-right:0}.mat-checkbox-frame{background-color:transparent;transition:border-color 90ms cubic-bezier(0, 0, 0.2, 0.1);border-width:2px;border-style:solid}.mat-checkbox-background{align-items:center;display:inline-flex;justify-content:center;transition:background-color 90ms cubic-bezier(0, 0, 0.2, 0.1),opacity 90ms cubic-bezier(0, 0, 0.2, 0.1)}.mat-checkbox-checkmark{width:100%}.mat-checkbox-checkmark-path{stroke-dashoffset:22.91026;stroke-dasharray:22.91026;stroke-width:2.66667px}.mat-checkbox-mixedmark{height:2px;opacity:0;transform:scaleX(0) rotate(0deg)}.mat-checkbox-label-before .mat-checkbox-inner-container{order:1;margin-left:8px;margin-right:auto}[dir='rtl'] .mat-checkbox-label-before .mat-checkbox-inner-container{margin-left:auto;margin-right:8px}.mat-checkbox-checked .mat-checkbox-checkmark{opacity:1}.mat-checkbox-checked .mat-checkbox-checkmark-path{stroke-dashoffset:0}.mat-checkbox-checked .mat-checkbox-mixedmark{transform:scaleX(1) rotate(-45deg)}.mat-checkbox-indeterminate .mat-checkbox-checkmark{opacity:0;transform:rotate(45deg)}.mat-checkbox-indeterminate .mat-checkbox-checkmark-path{stroke-dashoffset:0}.mat-checkbox-indeterminate .mat-checkbox-mixedmark{opacity:1;transform:scaleX(1) rotate(0deg)}.mat-checkbox-unchecked .mat-checkbox-background{background-color:transparent}.mat-checkbox-disabled{cursor:default}.mat-checkbox-anim-unchecked-checked .mat-checkbox-background{animation:180ms linear 0ms mat-checkbox-fade-in-background}.mat-checkbox-anim-unchecked-checked .mat-checkbox-checkmark-path{animation:180ms linear 0ms mat-checkbox-unchecked-checked-checkmark-path}.mat-checkbox-anim-unchecked-indeterminate .mat-checkbox-background{animation:180ms linear 0ms mat-checkbox-fade-in-background}.mat-checkbox-anim-unchecked-indeterminate .mat-checkbox-mixedmark{animation:90ms linear 0ms mat-checkbox-unchecked-indeterminate-mixedmark}.mat-checkbox-anim-checked-unchecked .mat-checkbox-background{animation:180ms linear 0ms mat-checkbox-fade-out-background}.mat-checkbox-anim-checked-unchecked .mat-checkbox-checkmark-path{animation:90ms linear 0ms mat-checkbox-checked-unchecked-checkmark-path}.mat-checkbox-anim-checked-indeterminate .mat-checkbox-checkmark{animation:90ms linear 0ms mat-checkbox-checked-indeterminate-checkmark}.mat-checkbox-anim-checked-indeterminate .mat-checkbox-mixedmark{animation:90ms linear 0ms mat-checkbox-checked-indeterminate-mixedmark}.mat-checkbox-anim-indeterminate-checked .mat-checkbox-checkmark{animation:500ms linear 0ms mat-checkbox-indeterminate-checked-checkmark}.mat-checkbox-anim-indeterminate-checked .mat-checkbox-mixedmark{animation:500ms linear 0ms mat-checkbox-indeterminate-checked-mixedmark}.mat-checkbox-anim-indeterminate-unchecked .mat-checkbox-background{animation:180ms linear 0ms mat-checkbox-fade-out-background}.mat-checkbox-anim-indeterminate-unchecked .mat-checkbox-mixedmark{animation:300ms linear 0ms mat-checkbox-indeterminate-unchecked-mixedmark}.mat-checkbox-input{bottom:0;left:50%}.mat-checkbox-ripple{position:absolute;left:-15px;top:-15px;right:-15px;bottom:-15px;border-radius:50%;z-index:1;pointer-events:none}
+
+</style><style>input[_ngcontent-c3], select[_ngcontent-c3], button[_ngcontent-c3]{padding:7px 10px;box-sizing:border-box}button[_ngcontent-c3]{height:33px;line-height:inherit;margin-bottom:14px;margin-left:10px;min-width:inherit;padding:4px 1px;text-align:center;vertical-align:top;width:35px}input[_ngcontent-c3], select[_ngcontent-c3]{border-radius:2px;font:14px/20px Roboto Mono,monospace;height:36px;transition:border-color .2s;width:100%}input[_ngcontent-c3]:focus, select[_ngcontent-c3]:focus{outline:none;padding-bottom:6px}select[_ngcontent-c3]{padding:6px}.param[_ngcontent-c3]{margin-bottom:12px}.repeated[_ngcontent-c3]   .param[_ngcontent-c3]{width:calc(100% - 35px - 10px);float:left}</style><style>[_nghost-c9]{display:block;height:100px;width:100px;overflow:hidden}[_nghost-c9]   svg[_ngcontent-c9]{height:100%;width:100%;transform-origin:center}[_nghost-c9]   path[_ngcontent-c9]{fill:transparent;transition:stroke 300ms cubic-bezier(0.35, 0, 0.25, 1)}[mode='indeterminate'][_nghost-c9]   svg[_ngcontent-c9]{animation-duration:5250ms,2887.5ms;animation-name:mat-progress-spinner-sporadic-rotate, mat-progress-spinner-linear-rotate;animation-timing-function:cubic-bezier(0.35, 0, 0.25, 1),linear;animation-iteration-count:infinite;transition:none}@keyframes mat-progress-spinner-linear-rotate{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes mat-progress-spinner-sporadic-rotate{12.5%{transform:rotate(135deg)}25%{transform:rotate(270deg)}37.5%{transform:rotate(405deg)}50%{transform:rotate(540deg)}62.5%{transform:rotate(675deg)}75%{transform:rotate(810deg)}87.5%{transform:rotate(945deg)}100%{transform:rotate(1080deg)}}</style></head>
+  <body>
+    <embedded-explorer _nghost-c0="" ng-version="0.0.0-PLACEHOLDER"><!----><div _ngcontent-c0="" class="affects-height">
+  <!----><!---->
+    <api-method _ngcontent-c0="" _nghost-c1=""><!----><div _ngcontent-c1="" class="explorer-container">
+  <div _ngcontent-c1="" class="explorer-parameters">
+    <div _ngcontent-c1="">
+      <div _ngcontent-c0="" class="api-method-header">
+        <!----><div _ngcontent-c0="" class="title color-secondary">Try this API</div>
+        <div _ngcontent-c0="" class="subtitle">
+          Call this method on live data to see the API request and response. Need help with the API
+          Explorer? Check the
+          <a _ngcontent-c0="" aria-label="API Explorer Support Page" class="forumLink" href="https://developers.google.com/explorer-help/support" target="_blank">
+              support page</a>.
+        </div>
+        <!---->
+      </div>
+    </div>
+    <div _ngcontent-c1="">
+      <form _ngcontent-c1="" novalidate="" class="ng-valid ng-dirty ng-touched">
+        <div _ngcontent-c1="" class="parameters">
+          <div _ngcontent-c1="" class="section-title">Request parameters</div>
+          <!---->
+          <!----><div _ngcontent-c1="" class="parameter">
+            <div _ngcontent-c1="" class="parameter-name color-secondary">alt</div>
+            <div _ngcontent-c1="" class="parameter-value">
+              <parameter _ngcontent-c1="" _nghost-c3=""><!---->
+<!----><div _ngcontent-c3="" class="param">
+  <!----><div _ngcontent-c3="">
+    
+    <select _ngcontent-c3="" id="alt" name="alt" class="ng-valid ng-dirty ng-touched">
+      <option _ngcontent-c3="" value=""></option>
+      <!----><option _ngcontent-c3="" value="json">
+        json
+        <!----><span _ngcontent-c3="">
+          (default)
+        </span>
+      </option>
+    </select>
+  </div>
+  <!---->
+  <!---->
+</div>
+</parameter>
+            </div>
+          </div><div _ngcontent-c1="" class="parameter">
+            <div _ngcontent-c1="" class="parameter-name color-secondary">fields</div>
+            <div _ngcontent-c1="" class="parameter-value">
+              <parameter _ngcontent-c1="" _nghost-c3=""><!---->
+<!----><div _ngcontent-c3="" class="param">
+  <!---->
+  <!----><div _ngcontent-c3="">
+    <!----><div _ngcontent-c3="">
+      <!---->
+      <!----><span _ngcontent-c3="">
+        <input _ngcontent-c3="" placeholder="string" type="text" id="fields" name="fields" class="ng-untouched ng-pristine ng-valid">
+      </span>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </div>
+  <!---->
+</div>
+</parameter>
+            </div>
+          </div><div _ngcontent-c1="" class="parameter">
+            <div _ngcontent-c1="" class="parameter-name color-secondary">prettyPrint</div>
+            <div _ngcontent-c1="" class="parameter-value">
+              <parameter _ngcontent-c1="" _nghost-c3=""><!---->
+<!----><div _ngcontent-c3="" class="param">
+  <!---->
+  <!----><div _ngcontent-c3="">
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!----><span _ngcontent-c3="">
+      <select _ngcontent-c3="" id="prettyPrint" name="prettyPrint" class="ng-untouched ng-pristine ng-valid">
+        <option _ngcontent-c3="" value=""></option>
+        <option _ngcontent-c3="" value="true">true
+          <!---->
+        </option>
+        <option _ngcontent-c3="" value="false">
+          false
+          <!---->
+        </option>
+      </select>
+    </span>
+  </div>
+  <!---->
+</div>
+</parameter>
+            </div>
+          </div><div _ngcontent-c1="" class="parameter">
+            <div _ngcontent-c1="" class="parameter-name color-secondary">quotaUser</div>
+            <div _ngcontent-c1="" class="parameter-value">
+              <parameter _ngcontent-c1="" _nghost-c3=""><!---->
+<!----><div _ngcontent-c3="" class="param">
+  <!---->
+  <!----><div _ngcontent-c3="">
+    <!----><div _ngcontent-c3="">
+      <!---->
+      <!----><span _ngcontent-c3="">
+        <input _ngcontent-c3="" placeholder="string" type="text" id="quotaUser" name="quotaUser" class="ng-untouched ng-pristine ng-valid">
+      </span>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </div>
+  <!---->
+</div>
+</parameter>
+            </div>
+          </div><div _ngcontent-c1="" class="parameter">
+            <div _ngcontent-c1="" class="parameter-name color-secondary">userIp</div>
+            <div _ngcontent-c1="" class="parameter-value">
+              <parameter _ngcontent-c1="" _nghost-c3=""><!---->
+<!----><div _ngcontent-c3="" class="param">
+  <!---->
+  <!----><div _ngcontent-c3="">
+    <!----><div _ngcontent-c3="">
+      <!---->
+      <!----><span _ngcontent-c3="">
+        <input _ngcontent-c3="" placeholder="string" type="text" id="userIp" name="userIp" class="ng-untouched ng-pristine ng-valid">
+      </span>
+    </div>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+  </div>
+  <!---->
+</div>
+</parameter>
+            </div>
+          </div>
+          <!----><button _ngcontent-c1="" class="link-button" id="show-system-parameters" type="button">
+            Hide standard parameters
+            <md-icon _ngcontent-c1="" role="img" class="material-icons mat-icon" aria-label="expand_less">expand_less</md-icon>
+          </button>
+          <!----><div _ngcontent-c1="" id="request-body">
+            <div _ngcontent-c1="" class="section-title">Request body</div>
+            <request-body-editor _ngcontent-c1="" id="requestBody" mode="application/json" placeholder="Click here to add a request body..."><textarea id="code-viewer-requestBody" class="ng-untouched ng-pristine ng-valid" style="display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 65px; left: 319.328px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="bottom: 15px;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="right: 0px; left: 12px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 15px; width: 15px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 12px; margin-bottom: -15px; border-right-width: 15px; min-height: 268px; min-width: 317.719px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 306.328px; top: 60px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string cm-property requestBodyCodeError">"kind"</span>: <span class="cm-string">"calendar#freeBusy"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string cm-property">"timeMin"</span>: <span class="cm-number requestBodyCodeError">2017</span><span class="cm-operator requestBodyCodeError">-</span><span class="cm-number">06</span><span class="cm-operator">-</span><span class="cm-number">25</span><span class="cm-variable">T09</span>:<span class="cm-number">00</span>:<span class="cm-number">00</span><span class="cm-operator">-</span><span class="cm-number">07</span>:<span class="cm-number">00</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string">"timeMax"</span>: <span class="cm-number">2017</span><span class="cm-operator">-</span><span class="cm-number">07</span><span class="cm-operator">-</span><span class="cm-number">26</span><span class="cm-variable">T09</span>:<span class="cm-number">00</span>:<span class="cm-number">00</span><span class="cm-operator">-</span><span class="cm-number">07</span>:<span class="cm-number">00</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">      <span class="cm-string cm-property">"groupExpansionMax"</span>: <span class="cm-number">1</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">      <span class="cm-string cm-property">"calendarExpansionMax"</span>: <span class="cm-number">1</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">      <span class="cm-string cm-property">"items"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">          <span class="cm-string cm-property">"id"</span>: <span class="cm-string">"hoangdov@gmail.com"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">      ]</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 15px; width: 1px; border-bottom: 0px solid transparent; top: 268px;"></div><div class="CodeMirror-gutters" style="height: 283px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+<!----><div class="json-request-body-error">
+  Unknown property kind
+</div><div class="json-request-body-error">
+  Expected string but found [2017]
+</div><div class="json-request-body-error">
+  Expected one of , or } but found - after property value.
+</div>
+<!---->
+</request-body-editor>
+          </div>
+        </div>
+
+        <div _ngcontent-c1="" id="auth">
+          <!----><div _ngcontent-c1="">
+            <div _ngcontent-c1="">
+              <!----><span _ngcontent-c1="">
+                Using OAuth (with demo Client ID) to authorize and authenticate request.
+              </span>
+              <!---->
+              <button _ngcontent-c1="" class="link-button" id="customizeScopes" type="button">
+                Show scopes
+                <md-icon _ngcontent-c1="" role="img" class="material-icons mat-icon" aria-label="expand_more">expand_more</md-icon>
+              </button>
+            </div>
+            <!---->
+          </div>
+          <!---->
+        </div>
+
+        <div _ngcontent-c1="">
+          
+          <button _ngcontent-c1="" class="mat-raised-button mat-accent" color="accent" id="execute" md-raised-button="" type="submit"><span class="mat-button-wrapper">
+            Execute
+          </span>
+<div class="mat-button-ripple mat-ripple" md-ripple=""></div>
+<div class="mat-button-focus-overlay"></div>
+</button>
+        </div>
+      </form>
+
+      <!---->
+      <!----><div _ngcontent-c1="" class="response">
+        <div _ngcontent-c1="" class="statusBar">
+          <!----><span _ngcontent-c1="">400 </span>
+          
+        </div>
+        <code-viewer _ngcontent-c1="" id="responseBody">
+    <textarea id="code-viewer-responseBody" class="ng-untouched ng-pristine ng-valid" style="display: none;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 17px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 15px;"><div style="min-width: 1px; height: 288px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="display: block; right: 15px; left: 12px;"><div style="height: 100%; min-height: 1px; width: 368px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="display: block; height: 15px; width: 15px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 12px; margin-bottom: -15px; border-right-width: 15px; min-height: 288px; min-width: 368px; padding-right: 15px; padding-bottom: 15px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">{</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-string cm-property">"error"</span>: {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string cm-property">"errors"</span>: [</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">   {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-string cm-property">"domain"</span>: <span class="cm-string">"global"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-string cm-property">"reason"</span>: <span class="cm-string">"required"</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-string cm-property">"message"</span>: <span class="cm-string">"Missing timeMin parameter."</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">   }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  ],</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string cm-property">"code"</span>: <span class="cm-number">400</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  <span class="cm-string cm-property">"message"</span>: <span class="cm-string">"Missing timeMin parameter."</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 15px; width: 1px; border-bottom: 15px solid transparent; top: 288px;"></div><div class="CodeMirror-gutters" style="height: 318px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div>
+  </code-viewer>
+        <!---->
+      </div>
+    </div>
+    
+    <div _ngcontent-c1="">
+      <div _ngcontent-c0="" class="api-method-footer">
+        <!---->
+        <!----><div _ngcontent-c0="" class="color-secondary" id="terms-of-use">
+          <a _ngcontent-c0="" href="https://www.google.com/policies/terms/" target="_blank">Terms</a> |
+          <a _ngcontent-c0="" href="https://www.google.com/policies/privacy/" target="_blank">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->
+</div>
+<!---->
+</api-method>
+  
+  <!---->
+  
+  <!---->
+</div>
+</embedded-explorer>
+    <script src="./embedded.js"></script>
+  
+
+<iframe name="oauth2relay560812300" id="oauth2relay560812300" src="./postmessageRelay.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><iframe id="apiproxydbd0817e9d20ebb493bc75315b96db3b2c855c2d0.8703238868720622" name="apiproxydbd0817e9d20ebb493bc75315b96db3b2c855c2d0.8703238868720622" src="./proxy.html" tabindex="-1" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px; display: none;"></iframe><iframe src="./auth.html" aria-hidden="true" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>
