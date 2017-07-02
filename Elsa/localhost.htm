@@ -1,0 +1,422 @@
+
+<!-- saved from url=(0027)http://localhost:8000/home/ -->
+<html class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link media="screen" href="./localhost_files/envision.css" rel="stylesheet">
+    <link media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="./localhost_files/mobile-envision.css" rel="stylesheet">
+    <link rel="stylesheet" href="./localhost_files/animate.min.css">
+    <link href="./localhost_files/css" rel="stylesheet">
+    <link href="./localhost_files/css(1)" rel="stylesheet">
+    <link rel="stylesheet" href="./localhost_files/icon">
+    <script defer="" src="./localhost_files/material.min.js"></script>
+    <link rel="stylesheet" href="./localhost_files/material.css">
+</head>
+
+<body class="main">
+    <!-- Services with Hover Animation -->
+    <div class="annotation">
+        <div id="browse">
+            <div id="hover-content" class="animated fadeIn">
+                <div id="left-annotation">
+                    <img src="./localhost_files/left-annotation.png">
+                </div>
+                <div id="service-left">
+                    Browse Extention
+                </div>
+            </div>
+        </div>
+        <div id="eyes">  
+            <div id="hover-content" class="animated fadeIn">
+                <div id="right-annotation" style="
+    margin-left: 100%;
+">
+                    <img src="./localhost_files/right-annotation.png">
+                </div>
+                <div id="service-right">
+                    Eyes 
+                </div>
+            </div>
+        </div>
+        <div id="lip">  
+            <div id="hover-content" class="animated fadeIn">
+                <div id="right-annotation">
+                    <img src="./localhost_files/right-annotation.png">
+                </div>
+                <div id="service-right">
+                    Lips
+                </div>
+            </div>
+        </div>
+        <div id="skin"> 
+            <div id="hover-content" class="animated In">
+                <div id="left-annotation">
+                    <img src="./localhost_files/left-annotation.png">
+                </div>
+                <div id="service-left">
+                    Skin Now
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation to Content and Booking -->
+    <footer>
+        <div class="booking">
+            <button class="mdl-js-ripple-effect mdl-js-button" onclick="showSection(&#39;Booking&#39;)" data-upgraded=",MaterialButton,MaterialRipple">
+            BOOK NOW
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+            
+            <div id="Booking" class="animated zoomIn">
+                <img src="./localhost_files/logoWhite.png" id="logo">
+                <div class="closeButton" style="float: right; margin: -160px 40px">
+                    <i class="material-icons" onclick="closeSection(&#39;Booking&#39;)">close</i>
+                </div>
+                <!-- Booking Information -->
+                <div class="mdl-grid" id="booking-info">
+                    <div class="mdl-cell mdl-cell--5-col mdl-cell--2-offset">
+                        <form action="http://localhost:8000/home/#">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label customer-info is-upgraded" data-upgraded=",MaterialTextfield">
+                                <input class="mdl-textfield__input" type="text" id="name">
+                                <label class="mdl-textfield__label" for="Name">Full Name</label>
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label customer-info is-upgraded" data-upgraded=",MaterialTextfield">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="number">
+                                <label class="mdl-textfield__label" for="Name">Phone Number</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mdl-cell mdl-cell--5-col">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--5-col" id="">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Microblading" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Microblading" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Microblading</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Eyelash Extenstions" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Eyelash Extenstions" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Eyelash Extenstions</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Lash Lift" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Lash Lift" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Lash Lift</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="3D Brows" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="3D Brows" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">3D Brows</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Facials" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Facials" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Facials</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col">
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Dermaplaning" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Dermaplaning" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Dermaplaning</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Brow Threading" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Brow Threading" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Brow Threading</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Lash &amp; Brow Tinting" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Lash &amp; Brow Tinting" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Lash &amp; Brow Tinting</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Spray Tanning" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Spray Tanning" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Spray Tanning</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                                <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events is-upgraded" for="Microneedling" data-upgraded=",MaterialCheckbox,MaterialRipple">
+                                    <input type="checkbox" id="Microneedling" class="mdl-checkbox__input">
+                                    <span class="mdl-checkbox__label">Microneedling</span>
+                                <span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Booking Button -->
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--3-col mdl-cell--4-offset">
+                        <button class="confirm-button">
+                            Pay $20 to Confirm Appointment
+                        </button>
+                    </div>
+                </div>
+                <!-- Booking via Phone -->
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--5-offset call-now">
+                        <div>or call</div>
+                        <div style="font-size: 30px; margin-top: 30px">(480) 524-3303
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img id="exclusiveDiamond" src="./localhost_files/exclusiveDiamond.png">
+        <ul style="font-family: &#39;Playfair Display&#39;, serif;">
+            <!-- About Section -->
+            <div>
+                <li><a onclick="showSection(&#39;About&#39;)">About</a></li>
+                <div id="About" class="animated slideInDown">
+                    <img src="./localhost_files/logoWhite.png" id="logo" style="">
+                    <div class="closeButton">
+                        <i class="material-icons" onclick="closeSection(&#39;About&#39;)">close</i>
+                    </div>
+                    <div id="about-content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--8-col mdl-cell--2-offset">
+                                <p>
+                                    <strong>Exclusive Beauty</strong> was established to accommodate individuals requesting private professional beauty and skincare services. 
+                                </p>
+                                <br>
+                                <p>
+                                     We are a cosmetic beauty studio offering the latest beauty treatments available. 
+                                </p> 
+                                <br>
+                                <p>
+                                    We staff licensed estheticians who provide select beauty services for exclusive clientele in multiple cities.
+                                </p>
+                                <br>
+                                <p>
+                                     Exclusive Beauty operates by appointment only. Appointments times are scheduled via online or via phone at (480) 524-3303.
+                                </p>
+                            </div>
+                            <div id="mdl-cell mdl-cell--4-col mdl-cell--4-offset">
+                                <img src="./localhost_files/alicia-2.png" width="270px" id="alica-profile">
+                            </div>
+                            <div class="mdl-cell mdl-cell--8-col">
+                                <p>
+                                    Licensed Esthetician • Makeup Artist • Laser Technician • Microblading Specialist Alicia attended aesthetics school at The Skin and Makeup Institute, graduating at the
+                                    <br>
+                                    <br>
+                                    After aesthetics school, she advanced her education by attending The National Laser Institute.
+                                    <br>
+                                    <br>
+                                    In late 2014, she dreamed of starting her own beauty business. Several months later, Exclusive Beauty opened for business. She actively elevates her beauty education by completing advanced training courses, and makes it a priority to become certified in the newest beauty trends. She graduated from Glendale Community College in May 2016, with an Associate's Degree in Arts
+                                    <br>
+                                    <br>
+                                    She is a proud veteran who has served 5 years in the United States Air Force.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divider"></div>
+            </div>
+
+            <!-- Clients Section -->
+            <div>
+                <li><a onclick="showSection(&#39;Clients&#39;)">Clients</a></li>
+                <div id="Clients" class="animated slideInDown">
+                    <div class="mdl-row">
+                        <img src="./localhost_files/logoWhite.png" id="logo" style="">
+                    </div>
+                    <div class="closeButton" style="float: right; margin: -160px 40px">
+                        <i class="material-icons" onclick="closeSection(&#39;Clients&#39;)">close</i>
+                    </div>
+                    <div id="reviews">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col mdl mdl-cell--1-offset">
+                                <img src="./localhost_files/review1.png" id="review1">
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col ">
+                                <p style="margin: 4% 8%;">
+                                    I had lash extensions done by Alicia. Very professional and timely manner. My lashes are gorgeous, I will definitely be returning for more work.
+                                </p>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                        <div class="mdl-grid" style="margin: -1% 0">
+                            <div class="mdl-cell mdl-cell--5-col mdl mdl-cell--5-offset">
+                                <p style="text-align: right">
+                                    I had lash extensions done by Alicia. Very professional and timely manner. My lashes are gorgeous, I will definitely be returning for more work.
+                                </p>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col ">
+                                <img src="./localhost_files/review2.png" id="review2" style="margin: -50px 5%">
+                            </div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col mdl mdl-cell--1-offset">
+                                <img src="./localhost_files/review3.png" id="review3" style="margin: -5%">
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col ">
+                                <p style="margin: 2% 8%; ">
+                                    Had my eyebrows microbladed and I could not believe my results! Alicia did such a perfect job and she exceeded my expectations! She was very informative and also made the appointment comfortable and fun!
+                                </p>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                        <div class="mdl-grid" style="margin-top: %">
+                            <div class="mdl-cell mdl-cell--7-col mdl mdl-cell--3-offset">
+                                <p style="text-align: right">
+                                    I had eyelash extensions and a deep pore facial done by Alicia in Las Vegas. I completely loved her work! I am receiving so many compliments on my lashes. I highly recommend Exclusive Beauty for any of your beauty needs. Alicia is very talented and professional.
+                                </p>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <img src="./localhost_files/review4.png" id="review4" style="margin: -40px 5%">
+                            </div>
+                        </div>
+                         <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col mdl mdl-cell--1-offset">
+                                <img src="./localhost_files/review1.png" id="review1">
+                            </div>
+                            <div class="mdl-cell mdl-cell--5-col ">
+                                <p style="margin: 4% 8%;">
+                                    I had lash extensions done by Alicia. Very professional and timely manner. My lashes are gorgeous, I will definitely be returning for more work.
+                                </p>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                        <div class="mdl-grid" style="margin: -1% 0">
+                            <div class="mdl-cell mdl-cell--5-col mdl mdl-cell--5-offset =">
+                                <p style="text-align: right">
+                                    I had lash extensions done by Alicia. Very professional and timely manner. My lashes are gorgeous, I will definitely be returning for more work.
+                                </p>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col ">
+                                <img src="./localhost_files/review2.png" id="review2" style="margin: -50px 5%">
+                            </div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--1-col mdl mdl-cell--1-offset">
+                                <img src="./localhost_files/review3.png" id="review3" style="margin: -5%">
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col ">
+                                <p style="margin: 2% 8%; ">
+                                    Had my eyebrows microbladed and I could not believe my results! Alicia did such a perfect job and she exceeded my expectations! She was very informative and also made the appointment comfortable and fun!
+                                </p>
+                            </div>
+                            <div class="mdl-layout-spacer"></div>
+                        </div>
+                        <div class="mdl-grid" style="margin-top: %">
+                            <div class="mdl-cell mdl-cell--7-col mdl mdl-cell--3-offset">
+                                <p style="text-align: right">
+                                    I had eyelash extensions and a deep pore facial done by Alicia in Las Vegas. I completely loved her work! I am receiving so many compliments on my lashes. I highly recommend Exclusive Beauty for any of your beauty needs. Alicia is very talented and professional.
+                                </p>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col">
+                                <img src="./localhost_files/review4.png" id="review4" style="margin: -40px 5%">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divider"></div>
+                </div>     
+            </div>
+
+            <!-- Services Section -->
+            <div>
+                <li><a onclick="showSection(&#39;Services&#39;)">Services</a></li>
+                <div id="Services" class="animated slideInDown">
+                    <div class="mdl-row">
+                        <img src="./localhost_files/logoWhite.png" id="logo" style="">
+                    </div>
+                    <div class="closeButton" style="float: right; margin: -160px 40px">
+                        <i class="material-icons" onclick="closeSection(&#39;Services&#39;)">close</i>
+                    </div>
+                    <div id="services-content">
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--3-col mdl-cell--2-offset" style="text-align: right;">
+                                <div id="service-item">Microblading</div> 
+                                <div id="service-item">Eyelash Extenstions </div>
+                                <div id="service-item">Lash Lift</div>
+                                <div id="service-item">Makeup Applications</div> 
+                                <div id="service-item">Facials</div>
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col" id="services-price">
+                                <div id="service-item">$595</div> 
+                                <div id="service-item">$150</div> 
+                                <div id="service-item">$65</div> 
+                                <div id="service-item">$65</div> 
+                                <div id="service-item">$85</div> 
+                            </div>
+                            <div class="mdl-cell mdl-cell--1-col" id="services-price">
+                                <div id="service-item">$65</div> 
+                                <div id="service-item">$15</div> 
+                                <div id="service-item">$35</div> 
+                                <div id="service-item">$30</div> 
+                                <div id="service-item">$350</div> 
+                            </div>
+                            <div class="mdl-cell mdl-cell--4-col" id="service-right">
+                                <div id="service-item">Dermaplaning</div>
+                                <div id="service-item">Brow Threading</div>
+                                <div id="service-item">Lash and Brow Tinting</div>
+                                <div id="service-item">Spray Tanning</div>
+                                <div id="service-item">Microneedling</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divider">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div>
+                <li><a onclick="showSection(&#39;Contact&#39;)">Contact</a></li>
+                <div id="Contact" class="animated slideInDown">
+                    <div class="mdl-row">
+                        <img src="./localhost_files/logoWhite.png" id="logo" style="">
+                    </div>
+                    <div class="closeButton" style="float: right; margin: -160px 40px">
+                        <i class="material-icons" onclick="closeSection(&#39;Contact&#39;)">close</i>
+                    </div>
+                    <div class="mdl-grid" style="margin-top:21px">
+                        <div class="mdl-cell mdl-cell--3-col-desktop mdl-cell--2-offset">
+                            <div class="Contact" style="font-size: 21px; text-align: center;">
+                                <strong>Location 1<br> Las Vegas, NV</strong>
+                                <!--  <br> In Glendale, AZ we are conveniently located at Westgate Entertainment District. We neighbor Gila Bend Arena and the University of Phoenix Stadium, which are home to the NHL Arizona Coyotes, and the NFL Arizona Cardinals. This Contact is only a short distance away from shopping at Tanger Outlets and plenty of restuarants, bars, and live events which our clients enjoy. -->
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--2-col-desktop">
+                            <div style="font-size: 21px; text-align: center;">
+                                <span class="sf-new-mexico"></span>
+                                <strong>
+                                Location 2
+                                <br> Glendale, AZ
+                            </strong>
+                                <!-- <br> In Las Vegas, NV our Contact is disclosed to respect privacy of high profile clients. -->
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--3-col-desktop">
+                            <div style="font-size: 21px; text-align: center;">
+                                <strong>Location 3<br> 
+                                Carbondale, PA </strong>
+                                <!-- <br> In Carbondale, PA we are located inside Soulshine Inner Wellness at . This Contact is a full service yoga and holistic center housing yoga classes, meditation, reiki, massage, beauty, skincare, and boutique shopping allowing our clients accelerated access to indulge in health and wellness. -->
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset" id="call-to-action">
+                            Book Now and See You at One of Our 3 Locations
+                        </div>
+                    </div>
+                    <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset" style="margin-top: 21px;">
+                        <img src="./localhost_files/Shop-Locations.png" width="100%" height="auto" style="margin: auto;">
+                        <!-- <iframe src="https://www.google.com/maps/d/embed?mid=1v3_dwIuITlLYRtLMNUUV0QSJKRY&z=4&ll=50.50,-135.13" width="900" height="300" style="position:relative;border:none; padding: 10px"></iframe> -->
+                         <!-- 50.50,-135.13 -->
+                    </div>
+                </div>
+            </div>
+        </div></ul>
+    </footer>
+    <script type="text/javascript">
+    var c = 0;
+    function showSection(section) {
+        console.log("showing " + section);
+        document.getElementById(section).setAttribute("style", "display: block;");
+        sections = ["About", "Clients", "Booking", "Services", "Contact"];
+        i = sections.indexOf(section);
+        console.log(i);
+        sections.splice(i, 1);
+        console.log(sections);
+        for (var s of sections) {
+            document.getElementById(s).setAttribute("style", "display: none;");
+        }
+    }
+
+    function closeSection(section) {
+        console.log('closing' + section);
+        document.getElementById(section).setAttribute("style", "display: none;");
+    }
+    </script>
+
+</body></html>
