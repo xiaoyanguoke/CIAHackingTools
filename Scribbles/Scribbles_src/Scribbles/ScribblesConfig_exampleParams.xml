@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Scribble_WatermarkParameters>
+    <URL_Scheme         Value="http"/>
+    <HostServerNameList Value="watermarks.example.com"/>
+    <HostRootPathList   Value="rootPath1,rootPath2"/>
+    <HostSubDirsList    Value="subDir1,subDir2,subDir3"/>
+    <HostFileNameList   Value="fakeFileName1,fakeFileName2,fakeFileName3"/>
+    <HostFileExtList    Value=".jpg,.png,.gif"/>
+
+    <Input__Directory    Value=".\InputDir"/>
+    <Output_Directory    Value=".\OutputDir"/>
+
+    <Input__WatermarkLog Value=".\WatermarkLog.tsv"/>
+    <Output_WatermarkLog Value=".\WatermarkLog.tsv"/>
+</Scribble_WatermarkParameters>
+

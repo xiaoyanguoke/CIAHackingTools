@@ -1,0 +1,444 @@
+@import url("https://propublica.github.com/stateface/reference/stateface.css");
+@font-face {
+    font-family: 'StateFaceRegular';
+    src: url('https://propublica.github.com/stateface/font/webfont/stateface-regular-webfont.eot');
+    src: url('https://propublica.github.com/stateface/font/webfont/stateface-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('https://propublica.github.com/stateface/font/webfont/stateface-regular-webfont.woff') format('woff'),
+         url('https://propublica.github.com/stateface/font/webfont/stateface-regular-webfont.ttf') format('truetype'),
+         url('https://propublica.github.com/stateface/font/webfont/stateface-regular-webfont.svg#StateFaceRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.annotation {
+    display: none;
+}
+
+.left-annotation {
+    z-index: 2;
+    background-image: url("/static/img/right-annotation.png") no-repeat center top fixed;
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+}
+
+.pulse {
+    margin: 100px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ED8384;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(69, 63, 88, 0.4);
+    }
+    70% {
+        -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+        box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    }
+}
+
+#hover-content {
+    display: none;
+    position: fixed;
+    width: 250px;
+    height: 300px;
+    background-color: rgba(0,0,0,.6);
+    /*background-color: rgba(216, 216, 216, .86);*/
+    color: white;
+}
+
+#hover-content #service {
+    margin: 42% 42%;
+}
+
+label {
+    background-color: black;
+    width: 100%;
+    height: 40px;
+}
+
+#browse {
+    background: url(/static/img/left-annotation.png) no-repeat center top fixed;
+    position: absolute;
+    margin: 42px 210px;
+    text-align: center center;
+}
+
+#browse:hover #hover-content{
+    display: block;
+    margin: -110px 0px;
+    z-index: 1;
+}
+
+
+#eyes {
+    position: absolute;
+    margin: 100px 900px;
+}
+#eyes:hover #hover-content{
+    display: block;
+    margin: -110px 107px;
+}
+
+
+#lip {
+    position: absolute;
+    margin: 350px 800px;
+}
+#lip:hover #hover-content{
+    display: block;
+    margin: -110px 107px;
+}
+
+
+#skin {
+    position: absolute;
+    margin: 420px 200px;
+}
+#skin:hover #hover-content{
+    display: block;
+    margin: -110px 0px;
+}
+
+body {
+    position: fixed;
+    background: url(/static/img/background.png) no-repeat center top fixed;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: auto 100%;
+    font-family: 'Playfair Display', serif;
+    z-index: 1;
+    margin:0; padding:0;
+}
+
+#logo {
+    width: 50%;
+    margin-left: 50px;
+    position: relative;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 5px 5px 5px 5px;
+    padding: 0;
+    overflow: hidden;
+    font-size: 11px;
+    background-color: rgba(0,0,0, 0.8);
+    height: 60px;
+}
+
+li {
+    float: left;
+    margin: 5px 6px;
+    text-align: center; 
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 15px ;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*li a:hover #hover-content{
+    margin: -1000px 100px;
+    display: block;
+}*/
+#About{
+    z-index: 2;
+    position: fixed;
+    display: none;
+    bottom: 80;
+    left: 8px;
+    right: 8px;
+    background-color: rgba(32,26,28,.77);
+    width: 96%;
+    height: 86%;
+    color: #fff;
+    font-variant: normal;
+    font-family: 'Playfair Display', serif;
+}
+
+#About #about-content {
+    position: relative;
+    margin: 25px auto;
+    width: 100%;
+    height: 300px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+#about-content p {
+    font-size: 18px;
+    margin: 0px 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+#about-content img {
+    margin: 10px auto;
+}
+
+#about-content #alica-profile {
+    margin: 10px;
+    width: 250px;
+    left: 100px;
+}
+
+::-webkit-scrollbar -moz-scrollbar {
+    width: 2px;
+}
+
+#divider {
+    z-index: 2;
+    width: 700px;
+    height: 4px;
+    background: white;
+    -moz-border-radius: 350px / 2px;
+    -webkit-border-radius: 350px / 2px;
+    border-radius: 350px / 2px;
+    margin: 50px auto;
+}
+
+#Clients{
+    z-index: 2;
+    position: fixed;
+    display: none;
+    bottom: 80;
+    left: 8px;
+    right: 8px;
+    background-color: rgba(32,26,28,.77);
+    width: 99%;
+    height: 88%;
+    color: #fff;
+    font-variant: normal;
+    font-family: 'Playfair Display', serif;
+}
+
+#Clients p {
+    margin-top: -25px;
+    position: relative;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+#Clients #reviews {
+    position: relative;
+    margin: 25px auto;
+    width: 80%;
+    height: 400px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+/*#reviews::-webkit-scrollbar{
+
+}*/
+
+#Services{
+    position: fixed;
+    bottom: 80;
+    left: 8px;
+    right: 8px;
+    background-color: rgba(32,26,28,.77);
+    display: none;
+    width: 99%;
+    height: 88%;
+    color: #fff;
+    font-variant: normal;
+    font-family: 'Playfair Display', serif;
+}
+
+#Services p {
+    margin-top: -25px;
+    position: relative;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+#Services #services-content {
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+}
+
+#service-item {
+    margin: 30px;
+}
+
+#services-price {
+    font-family: 'Muli', sans-serif;
+}
+
+#Contact{
+    position: fixed;
+    bottom: 80;
+    left: 8px;
+    right: 8px;
+    background-color: rgba(32,26,28,.77);
+    display: none;
+    width: 99%;
+    height: 88%;
+    color: #fff;
+    font-variant: normal;
+    font-family: 'Playfair Display', serif;
+}
+
+#Contact p {
+    margin-top: -25px;
+    position: relative;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+#Contact #myMap {
+    position: fixed;
+    top: 35%;
+    left: 20%;
+    bottom: 0;
+    width: 100%;
+}
+
+#Contact #call-to-action {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-top: 42px;
+}
+
+#map-image {
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.location {
+    text-align: right;
+    font-size: 100px;
+}
+
+button {
+    z-index: 3;
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    color: #000000;
+    border-width: 0;
+    border-radius: 35px;
+}
+
+button .mdl-button__ripple-container {
+    border-radius: 50%;
+}
+.booking {
+    position: fixed;
+    left: 42%;
+    bottom: 6%;
+    font-family: 'Playfair Display', serif;
+    z-index: 3;    
+    font-size: 15px;
+}
+
+.book-now {
+    width: 80px;
+    height: 80px;
+    background-color: #99878E;
+    color: #fff;
+    border-width: 0;
+    box-shadow: 2px 2px 2px #888888;
+    border-radius: 40px;
+}
+
+#Booking{
+    position: fixed;
+    bottom: 80;
+    left: 8px;
+    right: 8px;
+    background-color: rgba(32,26,28,.77);
+    display: none;
+    width: 99%;
+    height: 88%;
+    color: #fff;
+    font-variant: normal;
+    font-family: 'Playfair Display', serif;
+}
+#Booking .customer-info {
+    position: relative;
+    background-color: transparent;
+}
+#Booking input {
+    border-bottom: 1px solid rgba(255, 255, 255, 1)
+}
+
+#Booking label {
+    background-color: transparent;
+    color: gray;
+}
+#Booking label:after {
+    background-color: transparent;
+    color: gray;
+}
+
+#Booking .mdl-checkbox__label{
+    color: white;
+}
+
+#Booking .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+    border: 2px solid rgb(255,255,255);
+    background-color: rgb(255,255,255);
+}
+
+#Booking .mdl-checkbox .mdl-checkbox__box-outline {
+    border: 2px solid rgb(255,255,255);
+    color: blue;
+}
+
+.confirm-button {
+    margin-left: 20%;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+}
+.call-now {
+    text-align: center;
+}
+
+.closeButton {
+    float: right; 
+    margin: -100px 20px;
+}

@@ -1,0 +1,8 @@
+>>> import create_str
+>>> create_str.generateCode( "tests/client_strings", "build/client_strings", "moo")
+###########wrote build/client_strings.h
+###########wrote build/client_strings.c
+>>> create_str.obfuscateValue('c')
+'0x9c'
+
+
