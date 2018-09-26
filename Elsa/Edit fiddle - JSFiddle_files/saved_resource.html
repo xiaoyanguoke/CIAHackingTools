@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://fiddle.jshell.net/b3ozk00p/4/show/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="./jquery-2.1.0.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    .button
+{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    
+    margin-right: 10px;
+    
+    background-color: dodgerblue;
+    border: 1px solid black;
+}
+
+.button.clicked {
+    background-color: indianred;
+}
+.button.clicked:hover {
+    background-color: dodgerblue;
+}
+.button:hover {
+    background-color: indianred;
+}
+  </style>
+
+  <title></title>
+
+  
+    
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+var aryButtons = $('.button');
+
+// IMPORTANT - If you comment this section out, the hover effect disappears, but the click function works. However, I need to have both working at once, so that when a button is clicked, it will stay indian red even when the user leaves the element. In addition, they need to be able to hover over other elements again.
+
+aryButtons.on('click', function() {
+    $(this).toggleClass('clicked');
+}
+);
+});//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <section class="button clicked">    
+</section>
+
+<section class="button">    
+</section>
+
+<section class="button clicked">    
+</section>
+  
+  <script>
+  // tell the embed parent frame the height of the content
+  if (window.parent && window.parent.parent){
+    window.parent.parent.postMessage(["resultsFrame", {
+      height: document.body.getBoundingClientRect().height,
+      slug: "b3ozk00p"
+    }], "*")
+  }
+</script>
+
+
+
+
+
+</body></html>
